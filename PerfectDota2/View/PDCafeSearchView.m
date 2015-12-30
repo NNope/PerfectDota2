@@ -7,6 +7,7 @@
 //
 
 #import "PDCafeSearchView.h"
+#import "PDLocationTool.h"
 
 @implementation PDCafeSearchView
 
@@ -22,11 +23,12 @@
 {
     [super layoutSubviews];
     
-    NSString *lastCityName = [[NSUserDefaults standardUserDefaults] objectForKey:lastCityNameKey];
-    if (!lastCityName && lastCityName.length == 0)
-    {
-        lastCityName = @"定位";
-    }
+    NSString *lastCityName = [[PDLocationTool shareTocationTool] readLastCity];
+//    NSString *lastCityName = [[NSUserDefaults standardUserDefaults] objectForKey:lastCityNameKey];
+//    if (!lastCityName || lastCityName.length == 0)
+//    {
+//        lastCityName = @"定位";
+//    }
     [self.btnCity setTitle:lastCityName forState:UIControlStateNormal];
     self.whiteView.layer.cornerRadius = 4;
     self.whiteView.layer.masksToBounds = YES;

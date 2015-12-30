@@ -9,10 +9,8 @@
 #import "PDBaseViewController.h"
 #import "PDCafeSearchView.h"
 #import "PDCafeTabelHeaderView.h"
-#import <BaiduMapAPI_Location/BMKLocationComponent.h>
-#import <BaiduMapAPI_Search/BMKSearchComponent.h>
-#import <BaiduMapAPI_Map/BMKMapComponent.h>
-@interface PDCafeTableViewController : PDBaseViewController<UITableViewDataSource,UITableViewDelegate,PDCafeSearchViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate>
+#import "PDLocationTool.h"
+@interface PDCafeTableViewController : PDBaseViewController<UITableViewDataSource,UITableViewDelegate,PDCafeSearchViewDelegate,PDLocationToolDelegate>
 {
     
     BMKLocationService* _locService;
@@ -26,6 +24,10 @@
  *  当前定位城市名 - 区别于按钮当前显示名，如果不同 提示切换
  */
 @property (nonatomic, copy) NSString *locationCity;
+/**
+ *  当前选择的城市 - 可能在城市列表更改后回来的
+ */
+@property (nonatomic, copy) NSString *currentCity;
 /**
  *  全部身份列表
  */

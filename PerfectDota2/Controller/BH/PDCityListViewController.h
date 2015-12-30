@@ -7,23 +7,17 @@
 //
 
 #import "PDBaseViewController.h"
-#import <BaiduMapAPI_Location/BMKLocationComponent.h>
-#import <BaiduMapAPI_Search/BMKSearchComponent.h>
-#import <BaiduMapAPI_Map/BMKMapComponent.h>
+#import "PDLocationTool.h"
 
-@interface PDCityListViewController : PDBaseViewController<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate,BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate>
+@interface PDCityListViewController : PDBaseViewController<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate,PDLocationToolDelegate>
 {
     
-    BMKLocationService* _locService;
-    BMKGeoCodeSearch* _geocodesearch;
 }
 
-
+// 当前选择的城市
+@property (nonatomic, copy) NSString *currentCity;
+// 定位城市
 @property (nonatomic, copy) NSString *locationCity;
 @property (nonatomic, weak) UITableView *cityTableView;
-// 纬度
-@property (nonatomic, assign) CGFloat Latitude;
-// 经度
-@property (nonatomic, assign) CGFloat Longitude;
 
 @end

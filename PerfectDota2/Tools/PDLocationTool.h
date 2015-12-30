@@ -11,10 +11,44 @@
 #import <BaiduMapAPI_Search/BMKSearchComponent.h>
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 
-@interface PDLocationTool : NSObject<BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate>
-{
-}
+@protocol PDLocationToolDelegate <NSObject>
 
-+ (void)getLocationCity;
+@optional
+/**
+ *  返回定位结果
+ *  一般只需用这个
+ */
+- (void)PDLocationToolGetLocationCity:(NSString *)cityName result:(BMKReverseGeoCodeResult *)result;
+/**
+ *  定位结束后
+ */
+- (void)PDLocationToolDidUpdateLocation:(BMKUserLocation *)userLocation;
+/**
+ *  反向地理编码后
+ */
+- (void)PDLocationToolGetReverseGeoCodeResult:(BMKGeoCodeSearch *)searcher result:(BMKReverseGeoCodeResult *)result errorCode:(BMKSearchErrorCode)error;
+
+@end
+
+@interface PDLocationTool : NSObject<BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate>
+
+@property (nonatomic, assign) id<PDLocationToolDelegate> delegate;
+
+@property (nonatomic, copy) NSString *locationCity;
+// 纬度
+@property (nonatomic, assign) CGFloat Latitude;
+// 经度
+@property (nonatomic, assign) CGFloat Longitude;
+
++ (instancetype)shareTocationTool;
+
+/**
+ *  读取本地保存的城市
+ */
+- (NSString *)readLastCity;
+/**
+ *  定位最新的城市
+ */
+- (void)getLocationCity;
 
 @end

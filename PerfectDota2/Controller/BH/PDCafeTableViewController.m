@@ -10,6 +10,7 @@
 #import "PDCityModel.h"
 #import "PDCityListViewController.h"
 #import "PDProvinceModel.h"
+#import "PDLocationTool.h"
 
 static CGFloat const kSearchViewHeight = 42;
 static CGFloat const kHeaderViewHeight = 36;
@@ -27,7 +28,8 @@ static CGFloat const kHeaderViewHeight = 36;
     self.titleView.titleType = PDTitleTypeInfoAndShare;
     self.view.backgroundColor = PDGrayColor;
     
-    [self startLocationService];
+    [PDLocationTool shareTocationTool].delegate = self;
+    [[PDLocationTool shareTocationTool] getLocationCity];
     
     [self setupTableAndHeader];
 
@@ -71,40 +73,7 @@ static CGFloat const kHeaderViewHeight = 36;
 
 }
 
-- (void)startLocationService
-{
-    // 定位
-    //初始化BMKLocationService
-    _locService = [[BMKLocationService alloc]init];
-    _locService.delegate = self;
-    //启动LocationService
-    [_locService startUserLocationService];
-}
 
-/**
- *  反地理编码 得到城市
- */
-- (void)reverseGeocode
-{
-    //初始化检索对象
-    _geocodesearch =[[BMKGeoCodeSearch alloc]init];
-    _geocodesearch.delegate = self;
-    //发起反向地理编码检索
-    CLLocationCoordinate2D pt = (CLLocationCoordinate2D){self.Latitude, self.Longitude};
-    BMKReverseGeoCodeOption *reverseGeoCodeSearchOption = [[
-                                                            BMKReverseGeoCodeOption alloc]init];
-    reverseGeoCodeSearchOption.reverseGeoPoint = pt;
-    BOOL flag = [_geocodesearch reverseGeoCode:reverseGeoCodeSearchOption];
-    if(flag)
-    {
-        NSLog(@"反geo检索发送成功");
-    }
-    else
-    {
-        NSLog(@"反geo检索发送失败");
-    }
-    
-}
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -137,49 +106,20 @@ static CGFloat const kHeaderViewHeight = 36;
 -(void)pdCafeSearchView:(PDCafeSearchView *)searchview clickCityButton:(UIButton *)citybtn
 {
     PDCityListViewController *cityVc = [[PDCityListViewController alloc] init];
-    cityVc.locationCity = self.locationCity;
+    cityVc.selectCity = self.locationCity;
     [self.navigationController pushViewController:cityVc animated:YES];
 }
 
-#pragma mark - BMKGeoCodeSearchDelegate
--(void) onGetReverseGeoCodeResult:(BMKGeoCodeSearch *)searcher result:(BMKReverseGeoCodeResult *)result errorCode:(BMKSearchErrorCode)error
+#pragma mark - PDLocationToolDelegate
+- (void)PDLocationToolGetLocationCity:(NSString *)cityName result:(BMKReverseGeoCodeResult *)result
 {
-    if (error == BMK_SEARCH_NO_ERROR)
+    self.locationCity = cityName;
+    // 第一次定位后，记录当前选择的为定位城市
+    if (!self.currentCity)
     {
-        self.locationCity = [result.addressDetail.city substringToIndex:2];
-        [self.cafeSearchView.btnCity setTitle:self.locationCity forState:UIControlStateNormal];
-        // 本地存一下 下次优先显示
-        [[NSUserDefaults standardUserDefaults]setObject:self.locationCity forKey:lastCityNameKey];
-        [[NSUserDefaults standardUserDefaults] synchronize]; // 同步
+        self.currentCity = self.locationCity;
     }
-    else
-    {
-        PDLog(@"抱歉，未找到结果");
-    }
+    [self.cafeSearchView.btnCity setTitle:self.locationCity forState:UIControlStateNormal];
 }
-#pragma mark - BMKLocationServiceDelegate
-//处理方向变更信息
-- (void)didUpdateUserHeading:(BMKUserLocation *)userLocation
-{
-    //NSLog(@"heading is %@",userLocation.heading);
-}
-
-//处理位置坐标更新
-- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
-{
-    if (userLocation.location.coordinate.latitude)
-    {
-        PDLog(@"didUpdateUserLocation lat %f,long %f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
-        
-        [_locService stopUserLocationService];
-        
-        // 有了经纬度 可以反地理编码
-        self.Latitude = userLocation.location.coordinate.latitude;
-        self.Longitude = userLocation.location.coordinate.longitude;
-        [self reverseGeocode];
-    }
-}
-
-
 
 @end
