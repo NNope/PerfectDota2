@@ -1,0 +1,58 @@
+//
+//  PrefixHeader.pch
+//  PrefectDota2
+//
+//  Created by 谈Xx on 15/12/2.
+//  Copyright © 2015年 谈Xx. All rights reserved.
+//
+#ifdef __OBJC__
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "GlobeConst.h"
+#import "NSString+Extension.h"
+#import "UIView+Frame.h"
+#import "PDBaseViewController.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "MBProgressHUD.h"
+#import "PDNetworkTool.h"
+#import "UIImageView+WebCache.h"
+
+
+//根据屏幕判断设备
+#define IS_Iphone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IS_Iphone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(375, 667), [UIScreen mainScreen].bounds.size) : NO)
+#define IS_Iphone6P ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(375, 667), [UIScreen mainScreen].bounds.size) || CGSizeEqualToSize(CGSizeMake(414, 736), [UIScreen mainScreen].bounds.size)) : NO)
+
+
+#define IS_IOS(x) ([[UIDevice currentDevice].systemVersion intValue] >= x)
+
+
+#ifdef DEBUG // 处于开发阶段
+#define PDLog(...) NSLog(__VA_ARGS__)
+#else // 处于发布阶段
+#define PDLog(...)
+#endif
+
+// 颜色
+#define PDRedColor [UIColor colorWithRed:252/255.0 green:13/255.0 blue:27/255.0 alpha:1.0]
+#define PDBlackColor [UIColor colorWithRed:19/255.0 green:18/255.0 blue:22/255.0 alpha:1.0]
+#define PDGrayColor [UIColor colorWithRed:225/255.0 green:225/255.0 blue:225/255.0 alpha:1.0]
+#define PDRandomColor [UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:1.0]
+
+#define APP1PATH [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"app1"]
+#define HEROESPATH [APP1PATH stringByAppendingPathComponent:@"heroes/index.html"]
+#define ITEMSPATH [APP1PATH stringByAppendingPathComponent:@"items/index.html"]
+
+// 屏幕宽高
+#define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
+#define NAVIBARHEIGHT 64
+#define TABBARHEIGHT 49
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+#endif

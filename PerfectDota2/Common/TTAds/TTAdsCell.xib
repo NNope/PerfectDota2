@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AdsCell" id="aS5-fC-5Gt" customClass="TTAdsCell">
+            <rect key="frame" x="0.0" y="0.0" width="316" height="369"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="316" height="369"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TuM-W2-wK1">
+                        <rect key="frame" x="0.0" y="0.0" width="316" height="369"/>
+                        <animations/>
+                    </imageView>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <animations/>
+            <constraints>
+                <constraint firstItem="TuM-W2-wK1" firstAttribute="top" secondItem="aS5-fC-5Gt" secondAttribute="top" id="GnU-Yi-fSF"/>
+                <constraint firstAttribute="trailing" secondItem="TuM-W2-wK1" secondAttribute="trailing" id="Rtj-5b-2BO"/>
+                <constraint firstItem="TuM-W2-wK1" firstAttribute="leading" secondItem="aS5-fC-5Gt" secondAttribute="leading" id="YK6-K2-FOd"/>
+                <constraint firstAttribute="bottom" secondItem="TuM-W2-wK1" secondAttribute="bottom" id="z3j-X2-hVe"/>
+            </constraints>
+            <size key="customSize" width="316" height="369"/>
+            <connections>
+                <outlet property="imgView" destination="TuM-W2-wK1" id="3ll-fW-EHd"/>
+            </connections>
+            <point key="canvasLocation" x="94" y="487.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
