@@ -43,9 +43,24 @@
 + (instancetype)shareTocationTool;
 
 /**
- *  读取本地保存的城市
+ *  读取上次选择的城市
  */
-- (NSString *)readLastCity;
+- (NSString *)readLastChooseCity;
+/**
+ *  读取上次定位的城市
+ */
+- (NSString *)readLastLocationCity;
+/**
+ *  读取历史城市
+ */
+- (NSMutableArray *)readHistoryCity;
+
+/**
+ *  保存新的选择城市
+ *
+ */
+- (void)saveChooseCity:(NSString *)chooseCityName;
+
 /**
  *  定位最新的城市
  */

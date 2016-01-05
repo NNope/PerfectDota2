@@ -27,9 +27,9 @@
 /**
  *  当前选择的城市 - 可能在城市列表更改后回来的
  */
-@property (nonatomic, copy) NSString *currentCity;
+@property (nonatomic, copy) NSString *chooseCity;
 /**
- *  全部身份列表
+ *  全部省份列表
  */
 @property (nonatomic, strong) NSMutableArray *provinceList;
 /**

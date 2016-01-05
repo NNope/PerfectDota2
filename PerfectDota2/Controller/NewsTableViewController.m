@@ -130,6 +130,7 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
             [self.tableView reloadData];
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             PDLog(@"%@",error);
+            [self.tableView headerEndRefreshing];
         }];
     }
     else // 视频模块
@@ -186,6 +187,7 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         PDLog(@"%@",error);
+        [self.tableView headerEndRefreshing];
     }];
 
 }
@@ -200,6 +202,7 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         PDLog(@"%@",error);
+        [self.tableView headerEndRefreshing];
     }];
 
 }
@@ -215,6 +218,7 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
         self.topSuccess = YES;
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         PDLog(@"%@",error);
+        [self.tableView headerEndRefreshing];
     }];
     
     // 请求全部
@@ -226,6 +230,7 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
         self.newSuccess = YES;
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         PDLog(@"%@",error);
+        [self.tableView headerEndRefreshing];
     }];
 }
 

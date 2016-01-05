@@ -28,11 +28,16 @@ static CGFloat const kHeaderViewHeight = 36;
     self.titleView.titleType = PDTitleTypeInfoAndShare;
     self.view.backgroundColor = PDGrayColor;
     
+    [self setupTableAndHeader];
+    
+    // 定位
     [PDLocationTool shareTocationTool].delegate = self;
     [[PDLocationTool shareTocationTool] getLocationCity];
     
-    [self setupTableAndHeader];
-
+    // 监听通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(PDchooseCityChanged:) name:PDChooseCityChanged object:nil];
+    
+    // 得到对应的市辖区
     self.provinceList = [PDProvinceModel mj_objectArrayWithFilename:@"dotacityData.plist"];
     for (PDProvinceModel *provice in self.provinceList)
     {
@@ -48,6 +53,17 @@ static CGFloat const kHeaderViewHeight = 36;
     }
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    // 比较城市是否相同
+    if (![self.locationCity isEqualToString:self.chooseCity])
+    {
+        // 提示是否切换
+        
+    }
+}
+
 - (void)setupTableAndHeader
 {
     // searchView
@@ -55,6 +71,8 @@ static CGFloat const kHeaderViewHeight = 36;
     cafeSearch.frame = CGRectMake(0, NAVIBARHEIGHT, SCREENWIDTH, kSearchViewHeight);
     self.cafeSearchView = cafeSearch;
     self.cafeSearchView.delegate = self;
+    [self updateBtnChooseCityTitle];
+
     [self.view addSubview:cafeSearch];
     
     // header
@@ -73,6 +91,19 @@ static CGFloat const kHeaderViewHeight = 36;
 
 }
 
+// 修改了选择的城市 通知
+- (void)PDchooseCityChanged:(NSNotification *)noti
+{
+    self.chooseCity = noti.userInfo[chooseCityInfoKey];
+    [[PDLocationTool shareTocationTool] saveChooseCity:self.chooseCity];
+    [self updateBtnChooseCityTitle];
+    
+}
+// 更新选择的城市按钮
+- (void)updateBtnChooseCityTitle
+{
+    [self.cafeSearchView.btnCity setTitle:self.chooseCity forState:UIControlStateNormal];
+}
 
 
 #pragma mark - UITableViewDataSource
@@ -106,7 +137,7 @@ static CGFloat const kHeaderViewHeight = 36;
 -(void)pdCafeSearchView:(PDCafeSearchView *)searchview clickCityButton:(UIButton *)citybtn
 {
     PDCityListViewController *cityVc = [[PDCityListViewController alloc] init];
-    cityVc.selectCity = self.locationCity;
+    cityVc.chooseCity = self.chooseCity;
     [self.navigationController pushViewController:cityVc animated:YES];
 }
 
@@ -114,12 +145,20 @@ static CGFloat const kHeaderViewHeight = 36;
 - (void)PDLocationToolGetLocationCity:(NSString *)cityName result:(BMKReverseGeoCodeResult *)result
 {
     self.locationCity = cityName;
-    // 第一次定位后，记录当前选择的为定位城市
-    if (!self.currentCity)
-    {
-        self.currentCity = self.locationCity;
-    }
-    [self.cafeSearchView.btnCity setTitle:self.locationCity forState:UIControlStateNormal];
+    [self updateBtnChooseCityTitle];
+}
+
+
+#pragma mark - Getter Setter
+-(NSString *)chooseCity
+{
+    _chooseCity = [[PDLocationTool shareTocationTool] readLastChooseCity];
+    return _chooseCity;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

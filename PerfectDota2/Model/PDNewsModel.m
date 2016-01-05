@@ -37,7 +37,7 @@
         _type = @"官方";
     }
     else
-        _type = type;
+        _type = [type copy];
     
 }
 @end

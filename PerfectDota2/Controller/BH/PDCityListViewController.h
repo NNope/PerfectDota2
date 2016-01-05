@@ -14,10 +14,31 @@
     
 }
 
-// 当前选择的城市
-@property (nonatomic, copy) NSString *currentCity;
+// 当前选择的城市 - 传进来的 以及后续修改的
+@property (nonatomic, copy) NSString *chooseCity;
 // 定位城市
 @property (nonatomic, copy) NSString *locationCity;
+/**
+ *  全部城市列表
+ */
+@property (nonatomic, strong) NSMutableArray *cityAllList;
+/**
+ *  拼音分组后的列表
+ */
+@property (nonatomic, strong) NSMutableArray *cityGroupList;
+/**
+ *  城市名列表
+ */
+@property (nonatomic, strong) NSMutableArray *cityNameList;
+/**
+ *  历史城市列表
+ */
+@property (nonatomic, strong) NSMutableArray *cityHistoryList;
+/**
+ *  索引列表
+ */
+@property (nonatomic, strong) NSMutableArray *indexList;
+
 @property (nonatomic, weak) UITableView *cityTableView;
 
 @end

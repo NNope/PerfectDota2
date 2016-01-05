@@ -14,5 +14,6 @@
 @property (nonatomic, assign) NSInteger ID;
 @property (nonatomic, assign) NSInteger type;
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *pinyin;
 
 @end

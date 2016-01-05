@@ -46,23 +46,89 @@ static PDLocationTool *locationTool;
 }
 
 /**
- *  读取当前保存到城市名
+ *  读取上次选择的城市名
  */
--(NSString *)readLastCity
+-(NSString *)readLastChooseCity
 {
-    NSString *city = [[NSUserDefaults standardUserDefaults] objectForKey:lastCityNameKey];
+    NSString *city = [[NSUserDefaults standardUserDefaults] objectForKey:lastChooseCityNameKey];
     if (!city || city.length == 0)
     {
         city = @"定位中";
     }
     return city;
 }
+
+/**
+  *  读取上次定位的城市
+  */
+-(NSString *)readLastLocationCity
+{
+    NSString *city = [[NSUserDefaults standardUserDefaults] objectForKey:lastLocationCityNameKey];
+    if (!city || city.length == 0)
+    {
+        city = @"定位中...";
+    }
+    return city;
+}
+
+-(NSMutableArray *)readHistoryCity
+{
+    NSMutableArray *arrHis = [NSMutableArray arrayWithContentsOfFile:historyCityFileNameKey];
+    if (!arrHis || arrHis.count == 0)
+    {
+        arrHis = [NSMutableArray array];
+    }
+    return arrHis;
+}
+
+// 保存选择城市
+- (void)saveChooseCity:chooseCityName
+{
+    
+    [[NSUserDefaults standardUserDefaults] setObject:chooseCityName forKey:lastChooseCityNameKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    PDLog(@"更新选择城市！");
+    
+    // 更新历史
+    if ([self updateHistoryCity:chooseCityName])
+        PDLog(@"更新本地历史城市成功!");
+    else
+        PDLog(@"更新本地历史城市失败!");
+}
+
 /**
  *  定位当前城市名
  */
 - (void)getLocationCity
 {
     [self startLocationService];
+}
+
+# pragma mark - private
+
+// 更新历史城市
+- (BOOL)updateHistoryCity:(NSString *)newChooseCity
+{
+    // 存cache
+    NSMutableArray *arrHis = [NSMutableArray arrayWithContentsOfFile:historyCityFileNameKey];
+    PDLog(@"%@", arrHis);
+    
+    if (!arrHis || arrHis.count == 0) // 第一次
+    {
+        arrHis = [NSMutableArray array];
+        [arrHis addObject:newChooseCity];
+    }
+    else if (arrHis.count == 3) // 已经有3个了
+    {
+        [arrHis removeObjectAtIndex:0];
+        [arrHis addObject:newChooseCity];
+    }
+    else // 小于3
+    {
+        [arrHis addObject:newChooseCity];
+    }
+    PDLog(@"历史城市保存路径 -- %@",historyCityFileNameKey);
+    return [arrHis writeToFile:historyCityFileNameKey atomically:YES];
     
 }
 
@@ -115,14 +181,24 @@ static PDLocationTool *locationTool;
 {
     if (error == BMK_SEARCH_NO_ERROR)
     {
-        self.locationCity = [result.addressDetail.city substringToIndex:2];
-        // 本地存一下 下次优先显示
-        [[NSUserDefaults standardUserDefaults]setObject:self.locationCity forKey:lastCityNameKey];
+        self.locationCity = [result.addressDetail.city substringToIndex:result.addressDetail.city.length-1];
+        if ([self.locationCity hasSuffix:@"特别行政"])
+        {
+            self.locationCity  = [self.locationCity substringToIndex:2];
+        }
+        PDLog(@"定位城市---%@",self.locationCity);
+        // 本地存定位城市
+        // 如选择城市为空 默认选择城市也是这个
+        [[NSUserDefaults standardUserDefaults]setObject:self.locationCity forKey:lastLocationCityNameKey];
+        if (![[NSUserDefaults standardUserDefaults] objectForKey:lastChooseCityNameKey])
+        {
+            [[NSUserDefaults standardUserDefaults]setObject:self.locationCity forKey:lastChooseCityNameKey];
+        }
         [[NSUserDefaults standardUserDefaults] synchronize]; // 同步
     }
     else
     {
-        self.locationCity = @"抱歉，未找到结果";
+        self.locationCity = @"定位失败";
         PDLog(@"抱歉，未找到结果");
     }
     if ([self.delegate respondsToSelector:@selector(PDLocationToolGetLocationCity:result:)])
@@ -133,6 +209,7 @@ static PDLocationTool *locationTool;
     {
         [self.delegate PDLocationToolGetReverseGeoCodeResult:searcher result:result errorCode:error];
     }
+    self.delegate = nil;
 }
 #pragma mark - BMKLocationServiceDelegate
 

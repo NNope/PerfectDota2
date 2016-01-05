@@ -16,7 +16,7 @@
 //-----  返回tableview右方indexArray
 +(NSMutableArray*)IndexArray:(NSArray*)stringArr;
 
-//-----  返回联系人
+//-----  返回分组列表
 +(NSMutableArray*)LetterSortArray:(NSArray*)stringArr;
 
 

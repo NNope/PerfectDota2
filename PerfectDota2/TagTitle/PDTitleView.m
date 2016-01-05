@@ -239,7 +239,7 @@
 // 更改title名称
 -(void)setTitle:(NSString *)title
 {
-    _title = title;
+    _title = [title copy];
     self.titleLabel.text = title;
 }
 

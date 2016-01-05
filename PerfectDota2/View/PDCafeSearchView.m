@@ -22,13 +22,8 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-    
-    NSString *lastCityName = [[PDLocationTool shareTocationTool] readLastCity];
-//    NSString *lastCityName = [[NSUserDefaults standardUserDefaults] objectForKey:lastCityNameKey];
-//    if (!lastCityName || lastCityName.length == 0)
-//    {
-//        lastCityName = @"定位";
-//    }
+    // 显示上一次选择的城市
+    NSString *lastCityName = [[PDLocationTool shareTocationTool] readLastChooseCity];
     [self.btnCity setTitle:lastCityName forState:UIControlStateNormal];
     self.whiteView.layer.cornerRadius = 4;
     self.whiteView.layer.masksToBounds = YES;
@@ -42,6 +37,8 @@
     }
     [UIView animateWithDuration:0.3 animations:^{
         self.imgArrow.transform = CGAffineTransformRotate(self.imgArrow.transform,M_PI);
+    } completion:^(BOOL finished) {
+        self.imgArrow.transform = CGAffineTransformIdentity;
     }];
 }
 @end

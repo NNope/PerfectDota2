@@ -99,7 +99,7 @@
         NSString *initialStr = [chineseString.string length]?[chineseString.string substringToIndex:1]:@"";
         if ([predicate evaluateWithObject:initialStr])
         {
-            NSLog(@"chineseString.string== %@",chineseString.string);
+//            NSLog(@"chineseString.string== %@",chineseString.string);
             //首字母大写
             chineseString.pinYin = [chineseString.string capitalizedString] ;
         }else{
@@ -127,7 +127,7 @@
 //    for(int i=0;i<[chineseStringsArray count];i++){
 //        NSLog(@"chineseStringsArray====%@",((ChineseString*)[chineseStringsArray objectAtIndex:i]).pinYin);
 //    }
-    NSLog(@"-----------------------------");
+    NSLog(@"排序结束 -----------------------------");
     return chineseStringsArray;
 }
 

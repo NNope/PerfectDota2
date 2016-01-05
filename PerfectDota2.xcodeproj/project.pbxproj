@@ -17,7 +17,6 @@
 		AD1064051C322CA300EB6350 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1064041C322CA300EB6350 /* CoreTelephony.framework */; };
 		AD1064061C322CAE00EB6350 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1063FE1C322C3B00EB6350 /* libc++.1.tbd */; };
 		AD1064081C322E1800EB6350 /* BaiduMapAPI_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1064071C322E1800EB6350 /* BaiduMapAPI_Map.framework */; };
-		AD10640A1C322EE800EB6350 /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AD1064091C322EE800EB6350 /* Location.gpx */; };
 		AD277F3A1C0F335B003E9AA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD277EBC1C0F335B003E9AA0 /* AppDelegate.m */; };
 		AD277F3B1C0F335B003E9AA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD277EBD1C0F335B003E9AA0 /* LaunchScreen.storyboard */; };
 		AD277F3C1C0F335B003E9AA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD277EBF1C0F335B003E9AA0 /* Main.storyboard */; };
@@ -57,6 +56,7 @@
 		AD277F841C0F335B003E9AA0 /* PDTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD277F301C0F335B003E9AA0 /* PDTabBarButton.m */; };
 		AD277F851C0F335B003E9AA0 /* PDTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD277F321C0F335B003E9AA0 /* PDTabBarViewController.m */; };
 		AD277F861C0F335B003E9AA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD277F351C0F335B003E9AA0 /* ViewController.m */; };
+		AD30534D1C3B9FDD00BD8225 /* Location11.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AD30534C1C3B9FDD00BD8225 /* Location11.gpx */; };
 		AD44D4611C22833800B436A0 /* PDVideoAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44D4601C22833800B436A0 /* PDVideoAlbumModel.m */; };
 		AD44D4641C22841100B436A0 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44D4631C22841100B436A0 /* NSString+Extension.m */; };
 		AD44D48A1C228A1B00B436A0 /* PDVideoAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44D4891C228A1B00B436A0 /* PDVideoAlbumCell.m */; };
@@ -140,6 +140,8 @@
 		ADEC32CC1C2CE145008FEAC7 /* OpenShare+Weixin.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEC32C41C2CE145008FEAC7 /* OpenShare+Weixin.m */; };
 		ADEC32CD1C2CE145008FEAC7 /* OpenShare.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEC32C61C2CE145008FEAC7 /* OpenShare.m */; };
 		ADEC32DC1C2D092E008FEAC7 /* PDShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEC32DB1C2D092E008FEAC7 /* PDShareModel.m */; };
+		ADF199CD1C3B587F00C493FA /* ChineseString.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF199CA1C3B587F00C493FA /* ChineseString.m */; };
+		ADF199CE1C3B587F00C493FA /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = ADF199CB1C3B587F00C493FA /* pinyin.c */; };
 		ADF2FF761C2A6FE50021B733 /* PDAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF2FF751C2A6FE50021B733 /* PDAVPlayerViewController.m */; };
 		ADF2FF781C2A70000021B733 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF2FF771C2A70000021B733 /* AVKit.framework */; };
 		ADF6AD381C19AB0200BE12DF /* PDNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF6AD361C19AB0200BE12DF /* PDNewsCell.m */; };
@@ -185,7 +187,6 @@
 		AD1064021C322C8200EB6350 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		AD1064041C322CA300EB6350 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		AD1064071C322E1800EB6350 /* BaiduMapAPI_Map.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Map.framework; path = SDK/BaiduMapAPI_Map.framework; sourceTree = "<group>"; };
-		AD1064091C322EE800EB6350 /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		AD277D2B1C0E8125003E9AA0 /* PerfectDota2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectDota2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD277EBB1C0F335B003E9AA0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD277EBC1C0F335B003E9AA0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -264,6 +265,7 @@
 		AD277F331C0F335B003E9AA0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		AD277F341C0F335B003E9AA0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AD277F351C0F335B003E9AA0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AD30534C1C3B9FDD00BD8225 /* Location11.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location11.gpx; sourceTree = "<group>"; };
 		AD44D45F1C22833800B436A0 /* PDVideoAlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDVideoAlbumModel.h; sourceTree = "<group>"; };
 		AD44D4601C22833800B436A0 /* PDVideoAlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDVideoAlbumModel.m; sourceTree = "<group>"; };
 		AD44D4621C22841100B436A0 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
@@ -415,6 +417,10 @@
 		ADEC32C71C2CE145008FEAC7 /* OpenShareHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenShareHeader.h; sourceTree = "<group>"; };
 		ADEC32DA1C2D092E008FEAC7 /* PDShareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDShareModel.h; sourceTree = "<group>"; };
 		ADEC32DB1C2D092E008FEAC7 /* PDShareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDShareModel.m; sourceTree = "<group>"; };
+		ADF199C91C3B587F00C493FA /* ChineseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseString.h; sourceTree = "<group>"; };
+		ADF199CA1C3B587F00C493FA /* ChineseString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseString.m; sourceTree = "<group>"; };
+		ADF199CB1C3B587F00C493FA /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
+		ADF199CC1C3B587F00C493FA /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
 		ADF2FF741C2A6FE50021B733 /* PDAVPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDAVPlayerViewController.h; sourceTree = "<group>"; };
 		ADF2FF751C2A6FE50021B733 /* PDAVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDAVPlayerViewController.m; sourceTree = "<group>"; };
 		ADF2FF771C2A70000021B733 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -567,6 +573,7 @@
 				AD277EC71C0F335B003E9AA0 /* AFNetworking */,
 				AD277EDB1C0F335B003E9AA0 /* SDWebImage */,
 				ADDA7ECA1C2806660030208A /* SSZipArchive */,
+				ADF199C81C3B587F00C493FA /* ChineseSorting */,
 				AD277EFD1C0F335B003E9AA0 /* TTAds */,
 			);
 			path = Common;
@@ -993,10 +1000,10 @@
 		ADDA7F001C280D180030208A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				AD30534C1C3B9FDD00BD8225 /* Location11.gpx */,
 				ADF8FDF21C31137800E38C80 /* dotacityData.plist */,
 				ADF8FDF31C31137800E38C80 /* dotacitylist.plist */,
 				ADDA7F011C280D180030208A /* app1.zip */,
-				AD1064091C322EE800EB6350 /* Location.gpx */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1019,6 +1026,17 @@
 				ADEC32C71C2CE145008FEAC7 /* OpenShareHeader.h */,
 			);
 			path = openshare;
+			sourceTree = "<group>";
+		};
+		ADF199C81C3B587F00C493FA /* ChineseSorting */ = {
+			isa = PBXGroup;
+			children = (
+				ADF199C91C3B587F00C493FA /* ChineseString.h */,
+				ADF199CA1C3B587F00C493FA /* ChineseString.m */,
+				ADF199CB1C3B587F00C493FA /* pinyin.c */,
+				ADF199CC1C3B587F00C493FA /* pinyin.h */,
+			);
+			path = ChineseSorting;
 			sourceTree = "<group>";
 		};
 		ADF6AD401C19BC8100BE12DF /* MJExtension */ = {
@@ -1138,7 +1156,7 @@
 				ADF8FE221C3131D100E38C80 /* PDCafeTabelHeaderView.xib in Resources */,
 				ADDA7E861C2803960030208A /* 37x-Checkmark@2x.png in Resources */,
 				ADDA7E8B1C2803960030208A /* Default@2x.png in Resources */,
-				AD10640A1C322EE800EB6350 /* Location.gpx in Resources */,
+				AD30534D1C3B9FDD00BD8225 /* Location11.gpx in Resources */,
 				AD277F591C0F335B003E9AA0 /* TTAdsCell.xib in Resources */,
 				AD5E99FD1C16DB98009E14DE /* QRCodeScanLine@2x.png in Resources */,
 				ADDA7E891C2803960030208A /* Default-iOS7@2x.png in Resources */,
@@ -1184,6 +1202,8 @@
 				AD277F831C0F335B003E9AA0 /* PDTabBar.m in Sources */,
 				AD277F5A1C0F335B003E9AA0 /* TTAdsView.m in Sources */,
 				ADDA69DA1C27D1A00030208A /* PDVideoDetailViewController.m in Sources */,
+				ADF199CE1C3B587F00C493FA /* pinyin.c in Sources */,
+				ADF199CD1C3B587F00C493FA /* ChineseString.m in Sources */,
 				ADDA69E11C27D1AC0030208A /* TopNewsCell.m in Sources */,
 				ADDA7EFD1C2808A50030208A /* prng.c in Sources */,
 				ADFC9F2D1C201689007DC20B /* PDNewestVideoModel.m in Sources */,

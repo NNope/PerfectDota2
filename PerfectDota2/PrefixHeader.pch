@@ -41,9 +41,13 @@
 #define PDGrayColor [UIColor colorWithRed:225/255.0 green:225/255.0 blue:225/255.0 alpha:1.0]
 #define PDRandomColor [UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:1.0]
 
+// APP1目录
 #define APP1PATH [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"app1"]
 #define HEROESPATH [APP1PATH stringByAppendingPathComponent:@"heroes/index.html"]
 #define ITEMSPATH [APP1PATH stringByAppendingPathComponent:@"items/index.html"]
+
+// 历史城市数组
+#define historyCityFileNameKey [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"historyCity.plist"]
 
 // 屏幕宽高
 #define SCREENWIDTH [UIScreen mainScreen].bounds.size.width

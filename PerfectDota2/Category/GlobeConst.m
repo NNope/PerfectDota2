@@ -13,15 +13,20 @@
  */
 // 程序启动刷新通知
 NSString *const PDNewsAllRefresh = @"PDNewsAllRefresh";
-
+NSString *const PDChooseCityChanged = @"PDChooseCityChanged";
+NSString *const chooseCityInfoKey = @"chooseCityInfoKey";
 
 /**
  *  存储
  */
+
 // 程序启动第一次不要执行didappear
 NSString *const isFirstRefresh = @"isFirstRefresh";
-// 定位后城市的保存
-NSString *const lastCityNameKey = @"lastCityNameKey";
+// 上次选择的城市名
+NSString *const lastChooseCityNameKey = @"lastChooseCityNameKey";
+// 上次定位的城市名
+NSString *const lastLocationCityNameKey = @"lastLocationCityNameKey";
+
 
 @implementation GlobeConst
 

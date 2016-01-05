@@ -61,6 +61,7 @@ static NSString * const reuseIdentifier = @"PDBHcollectionCellID";
         self.collectionView.backgroundColor = [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         PDLog(@"%@",error);
+        [self.collectionView headerEndRefreshing];
     }];
 }
 // 视频下拉没有加载
