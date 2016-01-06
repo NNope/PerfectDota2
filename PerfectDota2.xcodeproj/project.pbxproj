@@ -170,6 +170,9 @@
 		ADF8FE201C31319900E38C80 /* PDCafeTabelHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF8FE1F1C31319900E38C80 /* PDCafeTabelHeaderView.m */; };
 		ADF8FE221C3131D100E38C80 /* PDCafeTabelHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF8FE211C3131D100E38C80 /* PDCafeTabelHeaderView.xib */; };
 		ADF98F531C2A734A0083BA40 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF98F521C2A734A0083BA40 /* AVFoundation.framework */; };
+		ADFAC7EA1C3CAA5200473EA5 /* PDHistoryCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFAC7E81C3CAA5200473EA5 /* PDHistoryCityCell.m */; };
+		ADFAC7EB1C3CAA5200473EA5 /* PDHistoryCityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADFAC7E91C3CAA5200473EA5 /* PDHistoryCityCell.xib */; };
+		ADFAC7EE1C3CAC6000473EA5 /* PDHistoryCityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFAC7ED1C3CAC6000473EA5 /* PDHistoryCityButton.m */; };
 		ADFC9F2A1C20163A007DC20B /* PDAuthorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFC9F291C20163A007DC20B /* PDAuthorModel.m */; };
 		ADFC9F2D1C201689007DC20B /* PDNewestVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFC9F2C1C201689007DC20B /* PDNewestVideoModel.m */; };
 /* End PBXBuildFile section */
@@ -472,6 +475,11 @@
 		ADF8FE1F1C31319900E38C80 /* PDCafeTabelHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeTabelHeaderView.m; sourceTree = "<group>"; };
 		ADF8FE211C3131D100E38C80 /* PDCafeTabelHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDCafeTabelHeaderView.xib; sourceTree = "<group>"; };
 		ADF98F521C2A734A0083BA40 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		ADFAC7E71C3CAA5200473EA5 /* PDHistoryCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDHistoryCityCell.h; sourceTree = "<group>"; };
+		ADFAC7E81C3CAA5200473EA5 /* PDHistoryCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDHistoryCityCell.m; sourceTree = "<group>"; };
+		ADFAC7E91C3CAA5200473EA5 /* PDHistoryCityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDHistoryCityCell.xib; sourceTree = "<group>"; };
+		ADFAC7EC1C3CAC6000473EA5 /* PDHistoryCityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDHistoryCityButton.h; sourceTree = "<group>"; };
+		ADFAC7ED1C3CAC6000473EA5 /* PDHistoryCityButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDHistoryCityButton.m; sourceTree = "<group>"; };
 		ADFC9F281C20163A007DC20B /* PDAuthorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDAuthorModel.h; sourceTree = "<group>"; };
 		ADFC9F291C20163A007DC20B /* PDAuthorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDAuthorModel.m; sourceTree = "<group>"; };
 		ADFC9F2B1C201689007DC20B /* PDNewestVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNewestVideoModel.h; sourceTree = "<group>"; };
@@ -771,6 +779,8 @@
 				ADF8FE1E1C31319900E38C80 /* PDCafeTabelHeaderView.h */,
 				ADF8FE1F1C31319900E38C80 /* PDCafeTabelHeaderView.m */,
 				ADF8FE211C3131D100E38C80 /* PDCafeTabelHeaderView.xib */,
+				ADFAC7EC1C3CAC6000473EA5 /* PDHistoryCityButton.h */,
+				ADFAC7ED1C3CAC6000473EA5 /* PDHistoryCityButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -860,6 +870,9 @@
 				AD44D4891C228A1B00B436A0 /* PDVideoAlbumCell.m */,
 				AD44D4941C22B4FF00B436A0 /* PDBHcollectionCell.h */,
 				AD44D4951C22B4FF00B436A0 /* PDBHcollectionCell.m */,
+				ADFAC7E71C3CAA5200473EA5 /* PDHistoryCityCell.h */,
+				ADFAC7E81C3CAA5200473EA5 /* PDHistoryCityCell.m */,
+				ADFAC7E91C3CAA5200473EA5 /* PDHistoryCityCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1142,6 +1155,7 @@
 				ADDA7E881C2803960030208A /* Default-iOS7-568h@2x.png in Resources */,
 				ADDA7E8F1C2803960030208A /* Icon.png in Resources */,
 				AD277F3B1C0F335B003E9AA0 /* LaunchScreen.storyboard in Resources */,
+				ADFAC7EB1C3CAA5200473EA5 /* PDHistoryCityCell.xib in Resources */,
 				AD5E99FC1C16DB98009E14DE /* cor4.png in Resources */,
 				ADDA69E21C27D1AC0030208A /* TopNewsCell.xib in Resources */,
 				AD5E99FB1C16DB98009E14DE /* cor3.png in Resources */,
@@ -1234,6 +1248,7 @@
 				ADF8FE201C31319900E38C80 /* PDCafeTabelHeaderView.m in Sources */,
 				ADDA7EF81C2808A50030208A /* aeskey.c in Sources */,
 				AD44D4611C22833800B436A0 /* PDVideoAlbumModel.m in Sources */,
+				ADFAC7EE1C3CAC6000473EA5 /* PDHistoryCityButton.m in Sources */,
 				ADDA7EFF1C2808A50030208A /* sha1.c in Sources */,
 				AD5E99F01C16D991009E14DE /* QRCodeReaderViewController.m in Sources */,
 				ADDA7EF91C2808A50030208A /* aestab.c in Sources */,
@@ -1259,6 +1274,7 @@
 				AD4EFC5A1C11804D00407C0C /* PDTagLabel.m in Sources */,
 				ADDA7ED91C2806660030208A /* unzip.c in Sources */,
 				AD1063F11C3219DC00EB6350 /* PDCityListViewController.m in Sources */,
+				ADFAC7EA1C3CAA5200473EA5 /* PDHistoryCityCell.m in Sources */,
 				ADC3F90F1C184B0F0028E58D /* TopNewsModel.m in Sources */,
 				AD277F411C0F335B003E9AA0 /* AFHTTPSessionManager.m in Sources */,
 				AD75FFB91C191C6100A48FA3 /* UIScrollView+MJExtension.m in Sources */,

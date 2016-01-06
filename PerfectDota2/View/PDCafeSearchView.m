@@ -15,6 +15,8 @@
 {
     if (self = [super initWithCoder:aDecoder])
     {
+        // 监听通知
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(PDchooseCityChanged:) name:PDChooseCityChanged object:nil];
     }
     return self;
 }
@@ -23,11 +25,17 @@
 {
     [super layoutSubviews];
     // 显示上一次选择的城市
-    NSString *lastCityName = [[PDLocationTool shareTocationTool] readLastChooseCity];
-    [self.btnCity setTitle:lastCityName forState:UIControlStateNormal];
+    [self updateBtnChooseCityTitle];
     self.whiteView.layer.cornerRadius = 4;
     self.whiteView.layer.masksToBounds = YES;
 }
+
+// 更新选择的城市按钮
+- (void)updateBtnChooseCityTitle
+{
+    [self.btnCity setTitle:[[PDLocationTool shareTocationTool] readLastChooseCity] forState:UIControlStateNormal];
+}
+
 
 - (IBAction)btnCityClick:(id)sender
 {
@@ -40,5 +48,21 @@
     } completion:^(BOOL finished) {
         self.imgArrow.transform = CGAffineTransformIdentity;
     }];
+}
+
+#pragma mark - Private
+// 修改了选择的城市 通知
+- (void)PDchooseCityChanged:(NSNotification *)noti
+{
+    NSString *choose = noti.userInfo[chooseCityInfoKey];
+    [[PDLocationTool shareTocationTool] saveChooseCity:choose];
+    [self.btnCity setTitle:choose forState:UIControlStateNormal];
+    
+}
+
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end

@@ -25,5 +25,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnCity;
 @property (nonatomic, strong) PDCityModel *city;
 @property (nonatomic, weak) id<PDCafeSearchViewDelegate> delegate;
+
+// 更新选择的城市按钮
+- (void)updateBtnChooseCityTitle;
 - (IBAction)btnCityClick:(id)sender;
 @end

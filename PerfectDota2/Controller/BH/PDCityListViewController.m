@@ -13,6 +13,7 @@
 static CGFloat const KsearchBarHeight = 40;
 static CGFloat const KsectionHeaderHeight = 30;
 static NSString *const KcityCellID = @"KcityCellID";
+static NSString *const KhistoryCityCellID = @"KhistoryCityCellID";
 
 @interface PDCityListViewController ()
 
@@ -32,6 +33,9 @@ static NSString *const KcityCellID = @"KcityCellID";
     // 1.-----根据id 注册一个自定义Cell
     [self.cityTableView registerClass:[UITableViewCell class]
       forCellReuseIdentifier:KcityCellID];
+    //————————如果是xib的注册cell↓↓↓↓↓↓↓↓↓↓↓↓
+    UINib *cellNib = [UINib nibWithNibName:@"PDHistoryCityCell" bundle:nil];
+    [self.cityTableView registerNib:cellNib forCellReuseIdentifier:KhistoryCityCellID];
     
 }
 
@@ -64,13 +68,31 @@ static NSString *const KcityCellID = @"KcityCellID";
 
 }
 
+/**
+ *  选择城市
+ */
+- (void)didChooseCity:(NSString *)chooseCity
+{
+    self.chooseCity = chooseCity;
+    [[NSNotificationCenter defaultCenter] postNotificationName:PDChooseCityChanged object:nil userInfo:@{chooseCityInfoKey:self.chooseCity}];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (section == 0 || section == 1) // 定位城市 历史城市
+    if (section == 0) // 定位城市 历史城市
     {
         return 1;
+    }
+    else if (section == 1)
+    {
+        if ([[PDLocationTool shareTocationTool] readHistoryCity].count < 1)
+        {
+            return 0;
+        }
+        else
+            return 1;
     }
     else // 其他分组
     {
@@ -83,26 +105,34 @@ static NSString *const KcityCellID = @"KcityCellID";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    // 2.-------事先注册过后 就可以直接用这个方法取出Cell 在CellForRow里
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KcityCellID forIndexPath:indexPath];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    NSString *cellText = @"";
-    if (indexPath.section == 0) // 定位城市
+    if (indexPath.section == 1)
     {
-        cellText = self.locationCity;
-    }
-    else if (indexPath.section == 1) // 最近选择城市
-    {
-        
+        // 历史城市
+        PDHistoryCityCell *cell = [tableView dequeueReusableCellWithIdentifier:KhistoryCityCellID forIndexPath:indexPath];
+        cell.delegate = self;
+        return cell;
     }
     else
     {
-        cellText = self.cityGroupList[indexPath.section - 2][indexPath.row];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KcityCellID forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        
+        NSString *cellText = @"";
+        if (indexPath.section == 0) // 定位城市
+        {
+            cellText = self.locationCity;
+        }
+        else // 普通城市
+        {
+            cellText = self.cityGroupList[indexPath.section - 2][indexPath.row];
+        }
+        cell.textLabel.font = [UIFont systemFontOfSize:16];
+        cell.textLabel.text = cellText;
+        
+        return cell;
     }
-    cell.textLabel.font = [UIFont systemFontOfSize:16];
-    cell.textLabel.text = cellText;
     
-    return cell;
 }
 // section
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -110,23 +140,6 @@ static NSString *const KcityCellID = @"KcityCellID";
     return self.indexList.count;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section == 0 || indexPath.section == 1)
-    {
-        
-    }
-    else
-    {
-        // 选择了新的城市
-        self.chooseCity = self.cityGroupList[indexPath.section-2][indexPath.row];
-        // 保存本地的选择城市 以及历史城市
-        [[PDLocationTool shareTocationTool] saveChooseCity:self.chooseCity];
-        [[NSNotificationCenter defaultCenter] postNotificationName:PDChooseCityChanged object:nil userInfo:@{chooseCityInfoKey:self.chooseCity}];
-        
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-}
 
 
 #pragma mark - UITableViewDelegate
@@ -134,7 +147,6 @@ static NSString *const KcityCellID = @"KcityCellID";
 // 索引
 -(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
-//    [self.indexList addObject:UITableViewIndexSearch];
     return self.indexList;
 }
 // sectionHeader高度
@@ -171,12 +183,42 @@ static NSString *const KcityCellID = @"KcityCellID";
     return sectionHeaderView;
 }
 
+// cell高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 1)
+    {
+        return 59;
+    }
+    return 44;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0)
+    {
+        [self didChooseCity:self.locationCity];
+    }
+    else if (indexPath.section != 1)
+    {
+        // 选择了新的城市
+        // 保存本地的选择城市 以及历史城市
+        [self didChooseCity:self.cityGroupList[indexPath.section-2][indexPath.row]];
+    }
+}
+
+
 #pragma mark - PDLocationToolDelegate
 -(void)PDLocationToolGetLocationCity:(NSString *)cityName result:(BMKReverseGeoCodeResult *)result
 {
     self.locationCity = cityName;
     [self.cityTableView reloadData];
     
+}
+#pragma mark - PDHistoryCityCellDelegate
+-(void)pdHistoryCityButtonDidClick:(PDHistoryCityButton *)btn
+{
+    [self didChooseCity:btn.currentTitle];
 }
 
 #pragma mark - Getter Setter

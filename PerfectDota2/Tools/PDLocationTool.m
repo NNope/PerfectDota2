@@ -118,15 +118,26 @@ static PDLocationTool *locationTool;
         arrHis = [NSMutableArray array];
         [arrHis addObject:newChooseCity];
     }
-    else if (arrHis.count == 3) // 已经有3个了
+    else
     {
-        [arrHis removeObjectAtIndex:0];
-        [arrHis addObject:newChooseCity];
+        // 如果相同
+        for (NSString *temp in arrHis)
+        {
+            if ([newChooseCity isEqualToString:temp])
+                return NO;
+        }
+        
+        if (arrHis.count == 3) // 已经有3个了
+        {
+            [arrHis removeObjectAtIndex:0];
+            [arrHis addObject:newChooseCity];
+        }
+        else // 小于3
+        {
+            [arrHis addObject:newChooseCity];
+        }
     }
-    else // 小于3
-    {
-        [arrHis addObject:newChooseCity];
-    }
+    
     PDLog(@"历史城市保存路径 -- %@",historyCityFileNameKey);
     return [arrHis writeToFile:historyCityFileNameKey atomically:YES];
     

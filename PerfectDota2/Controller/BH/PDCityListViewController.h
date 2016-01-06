@@ -8,8 +8,9 @@
 
 #import "PDBaseViewController.h"
 #import "PDLocationTool.h"
+#import "PDHistoryCityCell.h"
 
-@interface PDCityListViewController : PDBaseViewController<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate,PDLocationToolDelegate>
+@interface PDCityListViewController : PDBaseViewController<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate,PDLocationToolDelegate,PDHistoryCityCellDelegate>
 {
     
 }

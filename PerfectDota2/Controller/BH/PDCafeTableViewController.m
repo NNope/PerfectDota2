@@ -34,9 +34,6 @@ static CGFloat const kHeaderViewHeight = 36;
     [PDLocationTool shareTocationTool].delegate = self;
     [[PDLocationTool shareTocationTool] getLocationCity];
     
-    // 监听通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(PDchooseCityChanged:) name:PDChooseCityChanged object:nil];
-    
     // 得到对应的市辖区
     self.provinceList = [PDProvinceModel mj_objectArrayWithFilename:@"dotacityData.plist"];
     for (PDProvinceModel *provice in self.provinceList)
@@ -56,12 +53,7 @@ static CGFloat const kHeaderViewHeight = 36;
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    // 比较城市是否相同
-    if (![self.locationCity isEqualToString:self.chooseCity])
-    {
-        // 提示是否切换
-        
-    }
+   
 }
 
 - (void)setupTableAndHeader
@@ -71,7 +63,7 @@ static CGFloat const kHeaderViewHeight = 36;
     cafeSearch.frame = CGRectMake(0, NAVIBARHEIGHT, SCREENWIDTH, kSearchViewHeight);
     self.cafeSearchView = cafeSearch;
     self.cafeSearchView.delegate = self;
-    [self updateBtnChooseCityTitle];
+    [self.cafeSearchView updateBtnChooseCityTitle];
 
     [self.view addSubview:cafeSearch];
     
@@ -91,18 +83,26 @@ static CGFloat const kHeaderViewHeight = 36;
 
 }
 
-// 修改了选择的城市 通知
-- (void)PDchooseCityChanged:(NSNotification *)noti
+- (void)ChooseIsEqualToLocation
 {
-    self.chooseCity = noti.userInfo[chooseCityInfoKey];
-    [[PDLocationTool shareTocationTool] saveChooseCity:self.chooseCity];
-    [self updateBtnChooseCityTitle];
-    
-}
-// 更新选择的城市按钮
-- (void)updateBtnChooseCityTitle
-{
-    [self.cafeSearchView.btnCity setTitle:self.chooseCity forState:UIControlStateNormal];
+    // 比较城市是否相同
+    if (![self.locationCity isEqualToString:self.chooseCity] && self.locationCity)
+    {
+        // 提示是否切换
+        PDLog(@"当前选择的城市和定位不一致，是否切换？");
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"当前选择的城市和定位不一致，是否切换？" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *action1  = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        [alert addAction:action1];
+        UIAlertAction *action2  = [UIAlertAction actionWithTitle:@"切换" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [[PDLocationTool shareTocationTool] saveChooseCity:self.locationCity];
+            [self.cafeSearchView updateBtnChooseCityTitle];
+        }];
+        [alert addAction:action2];
+        
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 
@@ -145,7 +145,10 @@ static CGFloat const kHeaderViewHeight = 36;
 - (void)PDLocationToolGetLocationCity:(NSString *)cityName result:(BMKReverseGeoCodeResult *)result
 {
     self.locationCity = cityName;
-    [self updateBtnChooseCityTitle];
+    [self.cafeSearchView updateBtnChooseCityTitle];
+    
+    // 比较城市是否相同
+    [self ChooseIsEqualToLocation];
 }
 
 
@@ -156,9 +159,5 @@ static CGFloat const kHeaderViewHeight = 36;
     return _chooseCity;
 }
 
--(void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
 
 @end
