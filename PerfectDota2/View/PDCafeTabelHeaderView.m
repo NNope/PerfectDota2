@@ -10,12 +10,62 @@
 
 @implementation PDCafeTabelHeaderView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(void)awakeFromNib
+{
+    self.BtnScale.selected = YES;
 }
-*/
 
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self distanceClick:nil];
+}
+
+
+
+-(void)setPDCafeTabelHeaderViewClickBlock:(clickHandle)clickhandle
+{
+    self.clickhandle = clickhandle;
+}
+
+- (IBAction)areaClick:(id)sender
+{
+    if (self.clickhandle)
+    {
+        self.clickhandle(PDCafeTabelHeaderBtnArea);
+    }
+}
+
+- (IBAction)distanceClick:(id)sender
+{
+    if (self.BtnDistance.selected == YES)
+    {
+        return;
+    }
+    self.BtnScale.selected = !self.BtnScale.selected;
+    self.BtnDistance.selected = !self.BtnDistance.selected;
+    if (self.clickhandle)
+    {
+        self.clickhandle(PDCafeTabelHeaderBtnDistance);
+    }
+//    self.BtnDistance.enabled = NO;
+//    self.BtnScale.enabled = YES;
+}
+
+- (IBAction)scaleClick:(id)sender
+{
+    if (self.BtnScale.selected == YES)
+    {
+        return;
+    }
+    self.BtnScale.selected = !self.BtnScale.selected;
+    self.BtnDistance.selected = !self.BtnDistance.selected;
+
+    if (self.clickhandle)
+    {
+        self.clickhandle(PDCafeTabelHeaderBtnScale);
+    }
+//    self.BtnDistance.enabled = YES;
+//    self.BtnScale.enabled = NO;
+}
 @end

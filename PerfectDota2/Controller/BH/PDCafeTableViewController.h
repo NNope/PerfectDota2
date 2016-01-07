@@ -10,6 +10,8 @@
 #import "PDCafeSearchView.h"
 #import "PDCafeTabelHeaderView.h"
 #import "PDLocationTool.h"
+#import "PDCafeAreaView.h"
+
 @interface PDCafeTableViewController : PDBaseViewController<UITableViewDataSource,UITableViewDelegate,PDCafeSearchViewDelegate,PDLocationToolDelegate>
 {
     
@@ -20,6 +22,9 @@
 @property (nonatomic, weak) UITableView *cafeTableView;
 @property (nonatomic, weak) PDCafeSearchView *cafeSearchView;
 @property (nonatomic, weak) PDCafeTabelHeaderView *headView;
+@property (nonatomic, weak) PDCafeAreaView *areaView;
+@property (nonatomic, weak) UIView *bgAreaView;
+
 /**
  *  当前定位城市名 - 区别于按钮当前显示名，如果不同 提示切换
  */

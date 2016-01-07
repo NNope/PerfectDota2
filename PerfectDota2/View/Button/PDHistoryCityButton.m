@@ -33,4 +33,20 @@
     self.layer.masksToBounds = YES;
 }
 
+-(void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    if (selected == YES)
+    {
+        self.backgroundColor = RedColor;
+        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+    }
+    else
+    {
+        self.backgroundColor = [UIColor clearColor];
+        [self setTitleColor:RedColor forState:UIControlStateNormal];
+    }
+    
+}
+
 @end

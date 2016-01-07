@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD01FF241C3E4D3400EAC4F9 /* PDCafeConditionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD01FF1F1C3E4D3400EAC4F9 /* PDCafeConditionButton.m */; };
+		AD01FF251C3E4D3400EAC4F9 /* PDHistoryCityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD01FF211C3E4D3400EAC4F9 /* PDHistoryCityButton.m */; };
+		AD01FF261C3E4D3400EAC4F9 /* PDShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD01FF231C3E4D3400EAC4F9 /* PDShareButton.m */; };
+		AD01FF321C3E5D5100EAC4F9 /* PDCafeAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD01FF311C3E5D5100EAC4F9 /* PDCafeAreaView.m */; };
 		AD03BE4E1C328AD3003CB7A6 /* PDLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = AD03BE4D1C328AD3003CB7A6 /* PDLocationTool.m */; };
 		AD1063F11C3219DC00EB6350 /* PDCityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1063F01C3219DC00EB6350 /* PDCityListViewController.m */; };
 		AD1063FB1C322ACE00EB6350 /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1063F81C322ACE00EB6350 /* BaiduMapAPI_Base.framework */; };
@@ -96,7 +100,6 @@
 		ADC3F9051C1841CE0028E58D /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F9041C1841CE0028E58D /* News.storyboard */; };
 		ADC3F90F1C184B0F0028E58D /* TopNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F90E1C184B0F0028E58D /* TopNewsModel.m */; };
 		ADC3F9581C1862350028E58D /* PDTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F9571C1862350028E58D /* PDTransitionAnimator.m */; };
-		ADC8A0EA1C2BCD6F0027AE5B /* PDShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC8A0E91C2BCD6F0027AE5B /* PDShareButton.m */; };
 		ADDA69DA1C27D1A00030208A /* PDVideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA69D21C27D1A00030208A /* PDVideoDetailViewController.m */; };
 		ADDA69DB1C27D1A00030208A /* PDVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA69D41C27D1A00030208A /* PDVideoListViewController.m */; };
 		ADDA69E11C27D1AC0030208A /* TopNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA69DF1C27D1AC0030208A /* TopNewsCell.m */; };
@@ -172,12 +175,19 @@
 		ADF98F531C2A734A0083BA40 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF98F521C2A734A0083BA40 /* AVFoundation.framework */; };
 		ADFAC7EA1C3CAA5200473EA5 /* PDHistoryCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFAC7E81C3CAA5200473EA5 /* PDHistoryCityCell.m */; };
 		ADFAC7EB1C3CAA5200473EA5 /* PDHistoryCityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADFAC7E91C3CAA5200473EA5 /* PDHistoryCityCell.xib */; };
-		ADFAC7EE1C3CAC6000473EA5 /* PDHistoryCityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFAC7ED1C3CAC6000473EA5 /* PDHistoryCityButton.m */; };
 		ADFC9F2A1C20163A007DC20B /* PDAuthorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFC9F291C20163A007DC20B /* PDAuthorModel.m */; };
 		ADFC9F2D1C201689007DC20B /* PDNewestVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFC9F2C1C201689007DC20B /* PDNewestVideoModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD01FF1E1C3E4D3400EAC4F9 /* PDCafeConditionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeConditionButton.h; sourceTree = "<group>"; };
+		AD01FF1F1C3E4D3400EAC4F9 /* PDCafeConditionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeConditionButton.m; sourceTree = "<group>"; };
+		AD01FF201C3E4D3400EAC4F9 /* PDHistoryCityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDHistoryCityButton.h; sourceTree = "<group>"; };
+		AD01FF211C3E4D3400EAC4F9 /* PDHistoryCityButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDHistoryCityButton.m; sourceTree = "<group>"; };
+		AD01FF221C3E4D3400EAC4F9 /* PDShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDShareButton.h; sourceTree = "<group>"; };
+		AD01FF231C3E4D3400EAC4F9 /* PDShareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDShareButton.m; sourceTree = "<group>"; };
+		AD01FF301C3E5D5100EAC4F9 /* PDCafeAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeAreaView.h; sourceTree = "<group>"; };
+		AD01FF311C3E5D5100EAC4F9 /* PDCafeAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeAreaView.m; sourceTree = "<group>"; };
 		AD03BE4C1C328AD3003CB7A6 /* PDLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDLocationTool.h; sourceTree = "<group>"; };
 		AD03BE4D1C328AD3003CB7A6 /* PDLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDLocationTool.m; sourceTree = "<group>"; };
 		AD1063EF1C3219DC00EB6350 /* PDCityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCityListViewController.h; sourceTree = "<group>"; };
@@ -341,8 +351,6 @@
 		ADC3F90E1C184B0F0028E58D /* TopNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopNewsModel.m; sourceTree = "<group>"; };
 		ADC3F9561C1862350028E58D /* PDTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTransitionAnimator.h; sourceTree = "<group>"; };
 		ADC3F9571C1862350028E58D /* PDTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTransitionAnimator.m; sourceTree = "<group>"; };
-		ADC8A0E81C2BCD6F0027AE5B /* PDShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDShareButton.h; sourceTree = "<group>"; };
-		ADC8A0E91C2BCD6F0027AE5B /* PDShareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDShareButton.m; sourceTree = "<group>"; };
 		ADDA69D11C27D1A00030208A /* PDVideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDVideoDetailViewController.h; sourceTree = "<group>"; };
 		ADDA69D21C27D1A00030208A /* PDVideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDVideoDetailViewController.m; sourceTree = "<group>"; };
 		ADDA69D31C27D1A00030208A /* PDVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDVideoListViewController.h; sourceTree = "<group>"; };
@@ -478,8 +486,6 @@
 		ADFAC7E71C3CAA5200473EA5 /* PDHistoryCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDHistoryCityCell.h; sourceTree = "<group>"; };
 		ADFAC7E81C3CAA5200473EA5 /* PDHistoryCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDHistoryCityCell.m; sourceTree = "<group>"; };
 		ADFAC7E91C3CAA5200473EA5 /* PDHistoryCityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDHistoryCityCell.xib; sourceTree = "<group>"; };
-		ADFAC7EC1C3CAC6000473EA5 /* PDHistoryCityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDHistoryCityButton.h; sourceTree = "<group>"; };
-		ADFAC7ED1C3CAC6000473EA5 /* PDHistoryCityButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDHistoryCityButton.m; sourceTree = "<group>"; };
 		ADFC9F281C20163A007DC20B /* PDAuthorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDAuthorModel.h; sourceTree = "<group>"; };
 		ADFC9F291C20163A007DC20B /* PDAuthorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDAuthorModel.m; sourceTree = "<group>"; };
 		ADFC9F2B1C201689007DC20B /* PDNewestVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNewestVideoModel.h; sourceTree = "<group>"; };
@@ -508,6 +514,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD01FF1D1C3E4D3400EAC4F9 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				AD01FF1E1C3E4D3400EAC4F9 /* PDCafeConditionButton.h */,
+				AD01FF1F1C3E4D3400EAC4F9 /* PDCafeConditionButton.m */,
+				AD01FF201C3E4D3400EAC4F9 /* PDHistoryCityButton.h */,
+				AD01FF211C3E4D3400EAC4F9 /* PDHistoryCityButton.m */,
+				AD01FF221C3E4D3400EAC4F9 /* PDShareButton.h */,
+				AD01FF231C3E4D3400EAC4F9 /* PDShareButton.m */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		AD277D221C0E8124003E9AA0 = {
 			isa = PBXGroup;
 			children = (
@@ -767,10 +786,9 @@
 		ADBE9DD51C2A93AD00FBA767 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD01FF1D1C3E4D3400EAC4F9 /* Button */,
 				ADBE9DD61C2A93BE00FBA767 /* PDShareView.h */,
 				ADBE9DD71C2A93BE00FBA767 /* PDShareView.m */,
-				ADC8A0E81C2BCD6F0027AE5B /* PDShareButton.h */,
-				ADC8A0E91C2BCD6F0027AE5B /* PDShareButton.m */,
 				ADF8FDC01C31061200E38C80 /* PDSearchBar.h */,
 				ADF8FDC11C31061200E38C80 /* PDSearchBar.m */,
 				ADF8FDE61C31075100E38C80 /* PDCafeSearchView.h */,
@@ -779,8 +797,8 @@
 				ADF8FE1E1C31319900E38C80 /* PDCafeTabelHeaderView.h */,
 				ADF8FE1F1C31319900E38C80 /* PDCafeTabelHeaderView.m */,
 				ADF8FE211C3131D100E38C80 /* PDCafeTabelHeaderView.xib */,
-				ADFAC7EC1C3CAC6000473EA5 /* PDHistoryCityButton.h */,
-				ADFAC7ED1C3CAC6000473EA5 /* PDHistoryCityButton.m */,
+				AD01FF301C3E5D5100EAC4F9 /* PDCafeAreaView.h */,
+				AD01FF311C3E5D5100EAC4F9 /* PDCafeAreaView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1206,7 +1224,6 @@
 				AD75FFB51C191C6100A48FA3 /* MJRefreshBaseView.m in Sources */,
 				ADF6AD5C1C19BC8100BE12DF /* MJPropertyKey.m in Sources */,
 				ADF6AD5B1C19BC8100BE12DF /* MJProperty.m in Sources */,
-				ADC8A0EA1C2BCD6F0027AE5B /* PDShareButton.m in Sources */,
 				AD277F511C0F335B003E9AA0 /* UIButton+WebCache.m in Sources */,
 				ADDA7ED81C2806660030208A /* mztools.c in Sources */,
 				AD75FFB71C191C6100A48FA3 /* MJRefreshFooterView.m in Sources */,
@@ -1218,6 +1235,7 @@
 				ADDA69DA1C27D1A00030208A /* PDVideoDetailViewController.m in Sources */,
 				ADF199CE1C3B587F00C493FA /* pinyin.c in Sources */,
 				ADF199CD1C3B587F00C493FA /* ChineseString.m in Sources */,
+				AD01FF321C3E5D5100EAC4F9 /* PDCafeAreaView.m in Sources */,
 				ADDA69E11C27D1AC0030208A /* TopNewsCell.m in Sources */,
 				ADDA7EFD1C2808A50030208A /* prng.c in Sources */,
 				ADFC9F2D1C201689007DC20B /* PDNewestVideoModel.m in Sources */,
@@ -1248,7 +1266,6 @@
 				ADF8FE201C31319900E38C80 /* PDCafeTabelHeaderView.m in Sources */,
 				ADDA7EF81C2808A50030208A /* aeskey.c in Sources */,
 				AD44D4611C22833800B436A0 /* PDVideoAlbumModel.m in Sources */,
-				ADFAC7EE1C3CAC6000473EA5 /* PDHistoryCityButton.m in Sources */,
 				ADDA7EFF1C2808A50030208A /* sha1.c in Sources */,
 				AD5E99F01C16D991009E14DE /* QRCodeReaderViewController.m in Sources */,
 				ADDA7EF91C2808A50030208A /* aestab.c in Sources */,
@@ -1267,6 +1284,7 @@
 				AD03BE4E1C328AD3003CB7A6 /* PDLocationTool.m in Sources */,
 				AD277F431C0F335B003E9AA0 /* AFSecurityPolicy.m in Sources */,
 				AD7399EF1C11C299001D17F8 /* PDBaseViewController.m in Sources */,
+				AD01FF251C3E4D3400EAC4F9 /* PDHistoryCityButton.m in Sources */,
 				AD277F4D1C0F335B003E9AA0 /* SDWebImageDownloader.m in Sources */,
 				ADDA7EDB1C2806660030208A /* SSZipArchive.m in Sources */,
 				ADC3F8FF1C1841400028E58D /* ScanViewController.m in Sources */,
@@ -1297,7 +1315,9 @@
 				AD75FFB81C191C6100A48FA3 /* MJRefreshHeaderView.m in Sources */,
 				ADF2FF761C2A6FE50021B733 /* PDAVPlayerViewController.m in Sources */,
 				AD44D48A1C228A1B00B436A0 /* PDVideoAlbumCell.m in Sources */,
+				AD01FF241C3E4D3400EAC4F9 /* PDCafeConditionButton.m in Sources */,
 				AD277F561C0F335B003E9AA0 /* UIImageView+WebCache.m in Sources */,
+				AD01FF261C3E4D3400EAC4F9 /* PDShareButton.m in Sources */,
 				ADDA7EFE1C2808A50030208A /* pwd2key.c in Sources */,
 				AD75FFB61C191C6100A48FA3 /* MJRefreshConst.m in Sources */,
 				ADDA7EFA1C2808A50030208A /* entropy.c in Sources */,

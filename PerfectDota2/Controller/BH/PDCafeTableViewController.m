@@ -28,7 +28,7 @@ static CGFloat const kHeaderViewHeight = 36;
     self.titleView.titleType = PDTitleTypeInfoAndShare;
     self.view.backgroundColor = PDGrayColor;
     
-    [self setupTableAndHeader];
+    [self setupTableAndSubViews];
     
     // 定位
     [PDLocationTool shareTocationTool].delegate = self;
@@ -56,7 +56,7 @@ static CGFloat const kHeaderViewHeight = 36;
    
 }
 
-- (void)setupTableAndHeader
+- (void)setupTableAndSubViews
 {
     // searchView
     PDCafeSearchView *cafeSearch = [[[NSBundle mainBundle] loadNibNamed:@"PDCafeSearchView" owner:nil options:nil] lastObject];
@@ -69,9 +69,27 @@ static CGFloat const kHeaderViewHeight = 36;
     
     // header
     PDCafeTabelHeaderView *head = [[[NSBundle mainBundle] loadNibNamed:@"PDCafeTabelHeaderView" owner:nil options:nil] lastObject];
+    // 点击block
+    [head setPDCafeTabelHeaderViewClickBlock:^(PDCafeTabelHeaderBtnType btnType) {
+        if (btnType == PDCafeTabelHeaderBtnArea)
+        {
+            PDLog(@"全区");
+        }
+        else if (btnType == PDCafeTabelHeaderBtnDistance)
+        {
+            PDLog(@"距离");
+        }
+        else if (btnType == PDCafeTabelHeaderBtnScale)
+        {
+            PDLog(@"规模");
+        }
+    }];
     head.frame = CGRectMake(0, NAVIBARHEIGHT+kSearchViewHeight, SCREENWIDTH, kHeaderViewHeight);
     self.headView = head;
     [self.view addSubview:head];
+    
+    // areaView
+    PDCafeAreaView *area = [PDCafeAreaView alloc] initWithFrame:<#(CGRect)#> areaList:<#(NSMutableArray *)#>
     
     // table
     UITableView *table = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIBARHEIGHT + kSearchViewHeight + kHeaderViewHeight, SCREENWIDTH, SCREENHEIGHT - kSearchViewHeight - NAVIBARHEIGHT -kHeaderViewHeight)];
@@ -79,7 +97,6 @@ static CGFloat const kHeaderViewHeight = 36;
     [self.view addSubview:self.cafeTableView];
     self.cafeTableView.delegate = self;
     self.cafeTableView.dataSource = self;
-    self.cafeTableView.backgroundColor = PDRedColor;
 
 }
 

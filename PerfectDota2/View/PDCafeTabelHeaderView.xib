@@ -11,16 +11,23 @@
             <rect key="frame" x="0.0" y="0.0" width="573" height="68"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcO-EE-sWo">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcO-EE-sWo" customClass="PDCafeConditionButton">
                     <rect key="frame" x="256" y="19" width="60" height="30"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="距离优先">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="0.9882352941176471" green="0.050980392156862744" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="disabled">
+                        <color key="titleColor" red="0.98823529409999999" green="0.050980392159999999" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <state key="selected" title="距离优先">
+                        <color key="titleColor" red="0.98823529409999999" green="0.050980392159999999" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" title="距离优先"/>
+                    <connections>
+                        <action selector="distanceClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="vwa-Vq-d9G"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mme-8A-cqR">
                     <rect key="frame" x="35" y="19" width="30" height="30"/>
@@ -29,22 +36,31 @@
                     <state key="normal" title="全区">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="areaClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="lNq-nF-A1m"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtV-Fq-aTn">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafe_drop_down_arraw" translatesAutoresizingMaskIntoConstraints="NO" id="3pd-xF-Che">
+                    <rect key="frame" x="75" y="30" width="14" height="7"/>
+                    <animations/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtV-Fq-aTn" customClass="PDCafeConditionButton">
                     <rect key="frame" x="478" y="19" width="60" height="30"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="规模优先">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="disabled">
+                        <color key="titleColor" red="0.98823529409999999" green="0.050980392159999999" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <state key="selected">
                         <color key="titleColor" red="0.98823529409999999" green="0.050980392159999999" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="scaleClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="i64-fT-kjs"/>
+                    </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafe_drop_down_arraw" translatesAutoresizingMaskIntoConstraints="NO" id="3pd-xF-Che">
-                    <rect key="frame" x="75" y="30" width="14" height="7"/>
-                    <animations/>
-                </imageView>
             </subviews>
             <animations/>
             <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,6 +76,11 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="BtnArea" destination="mme-8A-cqR" id="cR0-TO-cEJ"/>
+                <outlet property="BtnDistance" destination="EcO-EE-sWo" id="JBv-On-084"/>
+                <outlet property="BtnScale" destination="gtV-Fq-aTn" id="KvG-hJ-5pQ"/>
+            </connections>
             <point key="canvasLocation" x="345.5" y="96"/>
         </view>
     </objects>

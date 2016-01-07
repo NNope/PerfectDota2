@@ -632,7 +632,7 @@
                   moduleName = "PerfectDota2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/TXx/Documents/Code/Tan/%E9%A1%B9%E7%9B%AE/PerfectDota2/PerfectDota2/Common/MJExtension/NSObject+MJKeyValue.m"
-                  timestampString = "473752706.324709"
+                  timestampString = "473843379.08671"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "218"
@@ -647,7 +647,7 @@
                   moduleName = "PerfectDota2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/TXx/Documents/Code/Tan/%E9%A1%B9%E7%9B%AE/PerfectDota2/PerfectDota2/Common/MJExtension/NSObject+MJKeyValue.m"
-                  timestampString = "473752706.325069"
+                  timestampString = "473843379.08697"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "218"
@@ -680,7 +680,7 @@
                   moduleName = "PerfectDota2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/TXx/Documents/Code/Tan/%E9%A1%B9%E7%9B%AE/PerfectDota2/PerfectDota2/Common/MJExtension/NSObject+MJKeyValue.m"
-                  timestampString = "473752706.32724"
+                  timestampString = "473843379.088264"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "225"
@@ -695,7 +695,7 @@
                   moduleName = "PerfectDota2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/TXx/Documents/Code/Tan/%E9%A1%B9%E7%9B%AE/PerfectDota2/PerfectDota2/Common/MJExtension/NSObject+MJKeyValue.m"
-                  timestampString = "473752706.327707"
+                  timestampString = "473843379.08869"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "225"
@@ -872,11 +872,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PerfectDota2/Controller/BH/PDCafeTableViewController.m"
-            timestampString = "473737530.919931"
+            timestampString = "473841194.477733"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "-ChooseIsEqualToLocation"
             landmarkType = "5">
          </BreakpointContent>
@@ -910,6 +910,38 @@
             startingLineNumber = "124"
             endingLineNumber = "124"
             landmarkName = "-updateHistoryCity:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PerfectDota2/View/PDCafeTabelHeaderView.m"
+            timestampString = "473843323.907133"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-distanceClick:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PerfectDota2/View/PDCafeTabelHeaderView.m"
+            timestampString = "473843325.527037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-scaleClick:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
