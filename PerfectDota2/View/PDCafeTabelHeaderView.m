@@ -32,7 +32,7 @@
 {
     if (self.clickhandle)
     {
-        self.clickhandle(PDCafeTabelHeaderBtnArea);
+        self.clickhandle(PDCafeTabelHeaderBtnArea,sender);
     }
 }
 
@@ -46,7 +46,7 @@
     self.BtnDistance.selected = !self.BtnDistance.selected;
     if (self.clickhandle)
     {
-        self.clickhandle(PDCafeTabelHeaderBtnDistance);
+        self.clickhandle(PDCafeTabelHeaderBtnDistance,sender);
     }
 //    self.BtnDistance.enabled = NO;
 //    self.BtnScale.enabled = YES;
@@ -63,7 +63,7 @@
 
     if (self.clickhandle)
     {
-        self.clickhandle(PDCafeTabelHeaderBtnScale);
+        self.clickhandle(PDCafeTabelHeaderBtnScale,sender);
     }
 //    self.BtnDistance.enabled = YES;
 //    self.BtnScale.enabled = NO;

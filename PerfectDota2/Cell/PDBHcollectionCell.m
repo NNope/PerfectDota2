@@ -15,7 +15,7 @@
 {
     _pdBHModel = pdBHModel;
     
-    [self.imgView sd_setImageWithURL:[NSURL URLWithString:pdBHModel.pic] placeholderImage:nil];
+    [self.imgView sd_setImageWithURL:[NSURL URLWithString:pdBHModel.pic] placeholderImage:[UIImage imageNamed:@"common_instruct_img"]];
     self.titleLabel.text = pdBHModel.title;
 }
 

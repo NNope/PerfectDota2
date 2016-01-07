@@ -40,7 +40,7 @@
 /**
  *  市辖区列表
  */
-@property (nonatomic, strong) NSArray *citybaseList;
+@property (nonatomic, strong) NSArray *cityAreaList;
 
 // 纬度
 @property (nonatomic, assign) CGFloat Latitude;

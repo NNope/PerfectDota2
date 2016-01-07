@@ -16,7 +16,7 @@ typedef enum {
     
 }PDCafeTabelHeaderBtnType;
 
-typedef void(^clickHandle)(PDCafeTabelHeaderBtnType btnType);
+typedef void(^clickHandle)(PDCafeTabelHeaderBtnType btnType,id btn);
 
 @interface PDCafeTabelHeaderView : UIView
 

@@ -14,7 +14,7 @@
 @implementation PDCafeAreaView
 
 
--(instancetype)initWithFrame:(CGRect)frame areaList:(NSMutableArray *)arealist
+-(instancetype)initWithFrame:(CGRect)frame areaList:(NSArray *)arealist
 {
     self.btnsArr = [NSMutableArray array];
     self.areaList = arealist;

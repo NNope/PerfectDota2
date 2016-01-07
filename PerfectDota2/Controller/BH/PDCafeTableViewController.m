@@ -41,10 +41,10 @@ static CGFloat const kHeaderViewHeight = 36;
         // 每个省份
         for (PDCityModel *city in provice.citylist)
         {
-            if ([city.name isEqualToString:@"杭州"])
+            if ([city.name isEqualToString:self.chooseCity])
             {
                 // 是杭州里的区
-                self.citybaseList = city.arealist;
+                self.cityAreaList = city.arealist;
             }
         }
     }
@@ -70,10 +70,15 @@ static CGFloat const kHeaderViewHeight = 36;
     // header
     PDCafeTabelHeaderView *head = [[[NSBundle mainBundle] loadNibNamed:@"PDCafeTabelHeaderView" owner:nil options:nil] lastObject];
     // 点击block
-    [head setPDCafeTabelHeaderViewClickBlock:^(PDCafeTabelHeaderBtnType btnType) {
+    [head setPDCafeTabelHeaderViewClickBlock:^(PDCafeTabelHeaderBtnType btnType, id btn) {
+      
         if (btnType == PDCafeTabelHeaderBtnArea)
         {
             PDLog(@"全区");
+            PDCafeConditionButton *Btn = (PDCafeConditionButton *)btn;
+            PDLog(@"当前选择的市辖区 - %@",Btn.currentTitle);
+            // show areaView
+            
         }
         else if (btnType == PDCafeTabelHeaderBtnDistance)
         {
@@ -84,12 +89,22 @@ static CGFloat const kHeaderViewHeight = 36;
             PDLog(@"规模");
         }
     }];
+    
     head.frame = CGRectMake(0, NAVIBARHEIGHT+kSearchViewHeight, SCREENWIDTH, kHeaderViewHeight);
     self.headView = head;
     [self.view addSubview:head];
     
     // areaView
-    PDCafeAreaView *area = [PDCafeAreaView alloc] initWithFrame:<#(CGRect)#> areaList:<#(NSMutableArray *)#>
+    PDCafeAreaView *area = [[PDCafeAreaView alloc] initWithFrame:CGRectMake(0, self.headView.y, 0, 0) areaList:self.cityAreaList];
+    area.hidden = YES;
+    
+    [area setAreaBlock:^(PDHistoryCityButton *btn) {
+        btn.selected = !btn.selected;
+        PDLog(@"选择了%@",btn.currentTitle);
+        // 要修改headerView 的 btn，并刷新
+    }];
+    [self.view addSubview:area];
+    self.areaView = area;
     
     // table
     UITableView *table = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIBARHEIGHT + kSearchViewHeight + kHeaderViewHeight, SCREENWIDTH, SCREENHEIGHT - kSearchViewHeight - NAVIBARHEIGHT -kHeaderViewHeight)];
