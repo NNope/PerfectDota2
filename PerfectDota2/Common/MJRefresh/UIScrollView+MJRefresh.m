@@ -289,4 +289,24 @@ static char MJRefreshFooterViewKey;
 {
     return self.header.refreshingText;
 }
+
+
+/**
+ *  Tan
+ */
+// 加载不了更多了
+- (void)tableViewNoMore
+{
+    for (UIView *view in self.subviews)
+    {
+        if ([view isKindOfClass:[MJRefreshFooterView class]])
+        {
+            MJRefreshFooterView *foot = (MJRefreshFooterView *)view;
+            foot.pullToRefreshText = @"没有更多了";
+            foot.releaseToRefreshText = @"没有更多了";
+            foot.refreshingText = @"没有更多了";
+        }
+    }
+    [self footerEndRefreshing];
+}
 @end

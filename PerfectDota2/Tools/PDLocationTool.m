@@ -71,6 +71,23 @@ static PDLocationTool *locationTool;
     return city;
 }
 
+- (CGFloat)readLastLocationLatitude
+{
+    CGFloat la = [[NSUserDefaults standardUserDefaults] doubleForKey:lastChooseLatitudeKey];
+    return la;
+}
+- (CGFloat)readLastLocationLongitude
+{
+    CGFloat lo = [[NSUserDefaults standardUserDefaults] doubleForKey:lastChooseLongitudeKey];
+    return lo;
+}
+
+
+/**
+ *  读取历史城市
+ *
+ *  @return <#return value description#>
+ */
 -(NSMutableArray *)readHistoryCity
 {
     NSMutableArray *arrHis = [NSMutableArray arrayWithContentsOfFile:historyCityFileNameKey];
@@ -124,7 +141,10 @@ static PDLocationTool *locationTool;
         for (NSString *temp in arrHis)
         {
             if ([newChooseCity isEqualToString:temp])
+            {
+                PDLog(@"更新本地历史城市有重复");
                 return NO;
+            }
         }
         
         if (arrHis.count == 3) // 已经有3个了
@@ -200,11 +220,14 @@ static PDLocationTool *locationTool;
         PDLog(@"定位城市---%@",self.locationCity);
         // 本地存定位城市
         // 如选择城市为空 默认选择城市也是这个
-        [[NSUserDefaults standardUserDefaults]setObject:self.locationCity forKey:lastLocationCityNameKey];
+        [[NSUserDefaults standardUserDefaults] setObject:self.locationCity forKey:lastLocationCityNameKey];
         if (![[NSUserDefaults standardUserDefaults] objectForKey:lastChooseCityNameKey])
         {
-            [[NSUserDefaults standardUserDefaults]setObject:self.locationCity forKey:lastChooseCityNameKey];
+            [[NSUserDefaults standardUserDefaults] setObject:self.locationCity forKey:lastChooseCityNameKey];
         }
+//        
+//        [[NSUserDefaults standardUserDefaults] setDouble:self.Latitude forKey:lastChooseLatitudeKey];
+//        [[NSUserDefaults standardUserDefaults] setDouble:self.Longitude forKey:lastChooseLongitudeKey];
         [[NSUserDefaults standardUserDefaults] synchronize]; // 同步
     }
     else
@@ -212,9 +235,9 @@ static PDLocationTool *locationTool;
         self.locationCity = @"定位失败";
         PDLog(@"抱歉，未找到结果");
     }
-    if ([self.delegate respondsToSelector:@selector(PDLocationToolGetLocationCity:result:)])
+    if ([self.delegate respondsToSelector:@selector(PDLocationToolGetLocationCity:result:Latitude:Longitude:)])
     {
-        [self.delegate PDLocationToolGetLocationCity:self.locationCity result:result];
+        [self.delegate PDLocationToolGetLocationCity:self.locationCity result:result Latitude:self.Latitude Longitude:self.Longitude];
     }
     if ([self.delegate respondsToSelector:@selector(PDLocationToolGetReverseGeoCodeResult:result:errorCode:)])
     {
@@ -239,9 +262,9 @@ static PDLocationTool *locationTool;
         self.Longitude = userLocation.location.coordinate.longitude;
         [self reverseGeocode];
     }
-    if ([self.delegate respondsToSelector:@selector(PDLocationToolDidUpdateLocation:)])
+    if ([self.delegate respondsToSelector:@selector(PDLocationToolDidUpdateLocation:Latitude:Longitude:)])
     {
-        [self.delegate PDLocationToolDidUpdateLocation:userLocation];
+        [self.delegate PDLocationToolDidUpdateLocation:userLocation Latitude:self.Latitude Longitude:self.Longitude];
     }
 }
 

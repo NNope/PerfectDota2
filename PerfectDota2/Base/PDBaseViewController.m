@@ -55,6 +55,9 @@
 {
     [super viewDidAppear:animated];
     
+    // titleView 最上面
+    [self.view bringSubviewToFront:self.titleView];
+    
     // pop到外面的时候 把tabbar还给人家
     for (PDTabBar *tabbar in self.view.subviews)
     {
@@ -112,7 +115,8 @@
         case PDTitleTypeInfo: // 信息 暂时只考虑一种
         {
             // 特权网吧的信息
-            
+            PDBaseViewController *vc = [[PDBaseViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case PDTitleTypeShare: // 分享

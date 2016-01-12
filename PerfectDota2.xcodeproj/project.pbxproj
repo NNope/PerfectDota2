@@ -89,6 +89,8 @@
 		AD75FFB91C191C6100A48FA3 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = AD75FFAF1C191C6100A48FA3 /* UIScrollView+MJExtension.m */; };
 		AD75FFBA1C191C6100A48FA3 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = AD75FFB11C191C6100A48FA3 /* UIScrollView+MJRefresh.m */; };
 		AD75FFBB1C191C6100A48FA3 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = AD75FFB31C191C6100A48FA3 /* UIView+MJExtension.m */; };
+		AD7F30261C449AB400192647 /* PDCafeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7F30251C449AB400192647 /* PDCafeCell.m */; };
+		AD7F30281C449AC000192647 /* PDCafeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7F30271C449AC000192647 /* PDCafeCell.xib */; };
 		ADBE9DD81C2A93BE00FBA767 /* PDShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBE9DD71C2A93BE00FBA767 /* PDShareView.m */; };
 		ADC3F8F11C1840DB0028E58D /* PDAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F8EE1C1840DB0028E58D /* PDAdManager.m */; };
 		ADC3F8F21C1840DB0028E58D /* PDNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F8F01C1840DB0028E58D /* PDNetworkTool.m */; };
@@ -147,6 +149,7 @@
 		ADF199CE1C3B587F00C493FA /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = ADF199CB1C3B587F00C493FA /* pinyin.c */; };
 		ADF2FF761C2A6FE50021B733 /* PDAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF2FF751C2A6FE50021B733 /* PDAVPlayerViewController.m */; };
 		ADF2FF781C2A70000021B733 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF2FF771C2A70000021B733 /* AVKit.framework */; };
+		ADF485BD1C43B6D800857F4D /* NSString+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF485BC1C43B6D800857F4D /* NSString+Json.m */; };
 		ADF6AD381C19AB0200BE12DF /* PDNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF6AD361C19AB0200BE12DF /* PDNewsCell.m */; };
 		ADF6AD3C1C19B5F600BE12DF /* PDNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF6AD3B1C19B5F600BE12DF /* PDNewsModel.m */; };
 		ADF6AD3F1C19BC5D00BE12DF /* MJExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF6AD3E1C19BC5D00BE12DF /* MJExtensionConfig.m */; };
@@ -172,6 +175,7 @@
 		ADF8FE1D1C3126E200E38C80 /* PDCafeSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF8FE1C1C3126E200E38C80 /* PDCafeSearchView.xib */; };
 		ADF8FE201C31319900E38C80 /* PDCafeTabelHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF8FE1F1C31319900E38C80 /* PDCafeTabelHeaderView.m */; };
 		ADF8FE221C3131D100E38C80 /* PDCafeTabelHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF8FE211C3131D100E38C80 /* PDCafeTabelHeaderView.xib */; };
+		ADF928E31C437127000751A1 /* PDCafeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF928E21C437127000751A1 /* PDCafeModel.m */; };
 		ADF98F531C2A734A0083BA40 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF98F521C2A734A0083BA40 /* AVFoundation.framework */; };
 		ADFAC7EA1C3CAA5200473EA5 /* PDHistoryCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFAC7E81C3CAA5200473EA5 /* PDHistoryCityCell.m */; };
 		ADFAC7EB1C3CAA5200473EA5 /* PDHistoryCityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADFAC7E91C3CAA5200473EA5 /* PDHistoryCityCell.xib */; };
@@ -330,6 +334,9 @@
 		AD75FFB11C191C6100A48FA3 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		AD75FFB21C191C6100A48FA3 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		AD75FFB31C191C6100A48FA3 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		AD7F30241C449AB400192647 /* PDCafeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeCell.h; sourceTree = "<group>"; };
+		AD7F30251C449AB400192647 /* PDCafeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeCell.m; sourceTree = "<group>"; };
+		AD7F30271C449AC000192647 /* PDCafeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDCafeCell.xib; sourceTree = "<group>"; };
 		ADBE9DD61C2A93BE00FBA767 /* PDShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDShareView.h; sourceTree = "<group>"; };
 		ADBE9DD71C2A93BE00FBA767 /* PDShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDShareView.m; sourceTree = "<group>"; };
 		ADC3F8ED1C1840DB0028E58D /* PDAdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDAdManager.h; sourceTree = "<group>"; };
@@ -435,6 +442,8 @@
 		ADF2FF741C2A6FE50021B733 /* PDAVPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDAVPlayerViewController.h; sourceTree = "<group>"; };
 		ADF2FF751C2A6FE50021B733 /* PDAVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDAVPlayerViewController.m; sourceTree = "<group>"; };
 		ADF2FF771C2A70000021B733 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		ADF485BB1C43B6D800857F4D /* NSString+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Json.h"; sourceTree = "<group>"; };
+		ADF485BC1C43B6D800857F4D /* NSString+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Json.m"; sourceTree = "<group>"; };
 		ADF6AD351C19AB0200BE12DF /* PDNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNewsCell.h; sourceTree = "<group>"; };
 		ADF6AD361C19AB0200BE12DF /* PDNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNewsCell.m; sourceTree = "<group>"; };
 		ADF6AD3A1C19B5F600BE12DF /* PDNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNewsModel.h; sourceTree = "<group>"; };
@@ -482,6 +491,8 @@
 		ADF8FE1E1C31319900E38C80 /* PDCafeTabelHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeTabelHeaderView.h; sourceTree = "<group>"; };
 		ADF8FE1F1C31319900E38C80 /* PDCafeTabelHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeTabelHeaderView.m; sourceTree = "<group>"; };
 		ADF8FE211C3131D100E38C80 /* PDCafeTabelHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDCafeTabelHeaderView.xib; sourceTree = "<group>"; };
+		ADF928E11C437127000751A1 /* PDCafeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeModel.h; sourceTree = "<group>"; };
+		ADF928E21C437127000751A1 /* PDCafeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeModel.m; sourceTree = "<group>"; };
 		ADF98F521C2A734A0083BA40 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		ADFAC7E71C3CAA5200473EA5 /* PDHistoryCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDHistoryCityCell.h; sourceTree = "<group>"; };
 		ADFAC7E81C3CAA5200473EA5 /* PDHistoryCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDHistoryCityCell.m; sourceTree = "<group>"; };
@@ -551,9 +562,9 @@
 				ADC3F8F61C1841400028E58D /* MainViewController */,
 				ADC3F8F31C1841400028E58D /* Controller */,
 				ADBE9DD51C2A93AD00FBA767 /* View */,
+				ADC3F90B1C184AAE0028E58D /* Model */,
 				AD277F2C1C0F335B003E9AA0 /* PDTabBar */,
 				ADC3F90C1C184ADE0028E58D /* Cell */,
-				ADC3F90B1C184AAE0028E58D /* Model */,
 				AD7399EA1C11C299001D17F8 /* Base */,
 				AD4EFC531C11804D00407C0C /* TagTitle */,
 				AD277EC11C0F335B003E9AA0 /* Category */,
@@ -583,6 +594,8 @@
 				AD277EC51C0F335B003E9AA0 /* UIView+Frame.m */,
 				AD44D4621C22841100B436A0 /* NSString+Extension.h */,
 				AD44D4631C22841100B436A0 /* NSString+Extension.m */,
+				ADF485BB1C43B6D800857F4D /* NSString+Json.h */,
+				ADF485BC1C43B6D800857F4D /* NSString+Json.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -870,6 +883,8 @@
 				ADF8FDED1C3110DD00E38C80 /* PDCityModel.m */,
 				ADF8FDEF1C31115000E38C80 /* PDCityBaseModel.h */,
 				ADF8FDF01C31115000E38C80 /* PDCityBaseModel.m */,
+				ADF928E11C437127000751A1 /* PDCafeModel.h */,
+				ADF928E21C437127000751A1 /* PDCafeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -891,6 +906,9 @@
 				ADFAC7E71C3CAA5200473EA5 /* PDHistoryCityCell.h */,
 				ADFAC7E81C3CAA5200473EA5 /* PDHistoryCityCell.m */,
 				ADFAC7E91C3CAA5200473EA5 /* PDHistoryCityCell.xib */,
+				AD7F30241C449AB400192647 /* PDCafeCell.h */,
+				AD7F30251C449AB400192647 /* PDCafeCell.m */,
+				AD7F30271C449AC000192647 /* PDCafeCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1169,6 +1187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD5E99F81C16DB98009E14DE /* beep.wav in Resources */,
+				AD7F30281C449AC000192647 /* PDCafeCell.xib in Resources */,
 				ADDA7E901C2803960030208A /* Icon@2x.png in Resources */,
 				ADDA7E881C2803960030208A /* Default-iOS7-568h@2x.png in Resources */,
 				ADDA7E8F1C2803960030208A /* Icon.png in Resources */,
@@ -1238,8 +1257,10 @@
 				AD01FF321C3E5D5100EAC4F9 /* PDCafeAreaView.m in Sources */,
 				ADDA69E11C27D1AC0030208A /* TopNewsCell.m in Sources */,
 				ADDA7EFD1C2808A50030208A /* prng.c in Sources */,
+				ADF928E31C437127000751A1 /* PDCafeModel.m in Sources */,
 				ADFC9F2D1C201689007DC20B /* PDNewestVideoModel.m in Sources */,
 				AD277F4E1C0F335B003E9AA0 /* SDWebImageDownloaderOperation.m in Sources */,
+				ADF485BD1C43B6D800857F4D /* NSString+Json.m in Sources */,
 				ADFC9F2A1C20163A007DC20B /* PDAuthorModel.m in Sources */,
 				ADF8FDF11C31115000E38C80 /* PDCityBaseModel.m in Sources */,
 				ADC3F9021C1841400028E58D /* ZLKViewController.m in Sources */,
@@ -1322,6 +1343,7 @@
 				AD75FFB61C191C6100A48FA3 /* MJRefreshConst.m in Sources */,
 				ADDA7EFA1C2808A50030208A /* entropy.c in Sources */,
 				AD277F851C0F335B003E9AA0 /* PDTabBarViewController.m in Sources */,
+				AD7F30261C449AB400192647 /* PDCafeCell.m in Sources */,
 				ADEC32CC1C2CE145008FEAC7 /* OpenShare+Weixin.m in Sources */,
 				ADEC32C81C2CE145008FEAC7 /* OpenShare+Alipay.m in Sources */,
 				AD277F571C0F335B003E9AA0 /* UIView+WebCacheOperation.m in Sources */,

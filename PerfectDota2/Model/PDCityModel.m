@@ -10,4 +10,12 @@
 
 @implementation PDCityModel
 
+-(void)setArealist:(NSMutableArray *)arealist
+{
+    _arealist = arealist;
+    PDCityBaseModel *quanQu = [[PDCityBaseModel alloc] init];
+    quanQu.name = @"全区";
+    [_arealist insertObject:quanQu atIndex:0];
+}
+
 @end

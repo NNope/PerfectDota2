@@ -52,7 +52,8 @@ static CGFloat TagCount;
         
         [self addChildVc];
         // 添加默认控制器
-        UIViewController *vc1 = [self.childViewControllers firstObject];
+        PDLocalWebViewController *vc1 = [self.childViewControllers firstObject];
+        [vc1 removeSuperTitleView];
         [self.contentScrollView addSubview:vc1.view];
         vc1.view.frame = self.contentScrollView.bounds;
     }
@@ -140,7 +141,7 @@ static CGFloat TagCount;
     
     // so 只要加入对应的要显示的ChildVc就可以
     NSInteger index = scrollView.contentOffset.x/self.contentScrollView.width;
-    UIViewController *indexVc = self.childViewControllers[index];
+    PDLocalWebViewController *indexVc = self.childViewControllers[index];
     
     self.tagView.selectIndex = index;
     self.tagView.isTagChange = YES;
@@ -148,6 +149,7 @@ static CGFloat TagCount;
     if (indexVc.view.superview)
         return;
     [self.contentScrollView addSubview:indexVc.view];
+    [indexVc removeSuperTitleView];
     // scrollView的bounds就是当前偏移后位置
     indexVc.view.frame = self.contentScrollView.bounds;
 }

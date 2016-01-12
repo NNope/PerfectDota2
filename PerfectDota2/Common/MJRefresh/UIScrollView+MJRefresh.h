@@ -121,4 +121,12 @@
 @property (copy, nonatomic) NSString *headerPullToRefreshText; // 默认:@"下拉可以刷新"
 @property (copy, nonatomic) NSString *headerReleaseToRefreshText; // 默认:@"松开立即刷新"
 @property (copy, nonatomic) NSString *headerRefreshingText; // 默认:@"MJ哥正在帮你刷新..."
+
+
+/**
+ *  Tan
+ */
+// 加载不了更多了
+- (void)tableViewNoMore;
+
 @end

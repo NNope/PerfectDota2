@@ -56,7 +56,7 @@ static NSString *const AdImgNameKey = @"AdImgName";
     NSInteger now = [[[NSDate alloc] init] timeIntervalSince1970];
     NSString *path = [NSString stringWithFormat:@"http://www.dota2.com.cn/wapnews/appUpdate.html?%ld/",(long)now];
     // 获取一个没有baseUrl的Manager对象
-    [[[PDNetworkTool sharedNetworkToolsWithoutBaseUrl]GET:path parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary* responseObject) {
+    [[[PDNetworkTool sharedNetworkToolsWithoutBaseUrl]GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         // 如果成功了
         NSDictionary *flashImg = [responseObject valueForKey:@"flashImage"];
         NSString *imgSize = [NSString stringWithFormat:@"size_%d",(int)[UIScreen mainScreen].bounds.size.height*2];

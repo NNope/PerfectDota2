@@ -14,5 +14,5 @@
 /**
  *  市辖区数组 baseCity
  */
-@property (nonatomic, strong) NSArray *arealist;
+@property (nonatomic, strong) NSMutableArray *arealist;
 @end

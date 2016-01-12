@@ -18,7 +18,6 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-    [self distanceClick:nil];
 }
 
 
@@ -26,6 +25,21 @@
 -(void)setPDCafeTabelHeaderViewClickBlock:(clickHandle)clickhandle
 {
     self.clickhandle = clickhandle;
+    
+    // 有问题啊 如果每次
+    [self distanceClick:nil];
+}
+
+/**
+ *  手动让全区按钮恢复收缩状态
+ */
+- (void)resumeAreaBtn
+{
+    self.BtnArea.selected = NO;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.imgArrow.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished) {
+    }];
 }
 
 - (IBAction)areaClick:(id)sender
@@ -34,6 +48,10 @@
     {
         self.clickhandle(PDCafeTabelHeaderBtnArea,sender);
     }
+    [UIView animateWithDuration:0.3 animations:^{
+        self.imgArrow.transform = CGAffineTransformRotate(self.imgArrow.transform,M_PI);
+    } completion:^(BOOL finished) {
+    }];
 }
 
 - (IBAction)distanceClick:(id)sender

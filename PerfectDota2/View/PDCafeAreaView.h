@@ -13,12 +13,17 @@ typedef void (^areaBlock)(PDHistoryCityButton *btn);
 
 @interface PDCafeAreaView : UIView
 
-@property (nonatomic, strong) NSArray *areaList;
+@property (nonatomic, strong) NSMutableArray *areaList;
 @property (nonatomic, strong) NSMutableArray *btnsArr;
 @property (nonatomic, copy) areaBlock areaHandle;
+@property (nonatomic, assign) NSInteger row;
 
--(instancetype)initWithFrame:(CGRect)frame areaList:(NSArray *)arealist;
+-(instancetype)initWithFrame:(CGRect)frame areaList:(NSMutableArray *)arealist;
 
 -(void)setAreaBlock:(areaBlock) handle;
+
+
+- (void)hideAreaView;
+- (void)showAreaView;
 
 @end

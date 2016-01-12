@@ -18,11 +18,11 @@
  *  返回定位结果
  *  一般只需用这个
  */
-- (void)PDLocationToolGetLocationCity:(NSString *)cityName result:(BMKReverseGeoCodeResult *)result;
+- (void)PDLocationToolGetLocationCity:(NSString *)cityName result:(BMKReverseGeoCodeResult *)result Latitude:(CGFloat)latitude Longitude:(CGFloat)longitude;
 /**
  *  定位结束后
  */
-- (void)PDLocationToolDidUpdateLocation:(BMKUserLocation *)userLocation;
+- (void)PDLocationToolDidUpdateLocation:(BMKUserLocation *)userLocation Latitude:(CGFloat)latitude Longitude:(CGFloat)longitude;
 /**
  *  反向地理编码后
  */
@@ -50,6 +50,8 @@
  *  读取上次定位的城市
  */
 - (NSString *)readLastLocationCity;
+- (CGFloat)readLastLocationLatitude;
+- (CGFloat)readLastLocationLongitude;
 /**
  *  读取历史城市
  */

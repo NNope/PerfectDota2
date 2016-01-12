@@ -40,7 +40,7 @@
                         <action selector="areaClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="lNq-nF-A1m"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafe_drop_down_arraw" translatesAutoresizingMaskIntoConstraints="NO" id="3pd-xF-Che">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cafe_drop_down_arraw" translatesAutoresizingMaskIntoConstraints="NO" id="3pd-xF-Che">
                     <rect key="frame" x="75" y="30" width="14" height="7"/>
                     <animations/>
                 </imageView>
@@ -80,6 +80,7 @@
                 <outlet property="BtnArea" destination="mme-8A-cqR" id="cR0-TO-cEJ"/>
                 <outlet property="BtnDistance" destination="EcO-EE-sWo" id="JBv-On-084"/>
                 <outlet property="BtnScale" destination="gtV-Fq-aTn" id="KvG-hJ-5pQ"/>
+                <outlet property="imgArrow" destination="3pd-xF-Che" id="Y8M-b0-56I"/>
             </connections>
             <point key="canvasLocation" x="345.5" y="96"/>
         </view>

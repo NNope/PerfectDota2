@@ -24,8 +24,14 @@ typedef void(^clickHandle)(PDCafeTabelHeaderBtnType btnType,id btn);
 @property (weak, nonatomic) IBOutlet PDCafeConditionButton *BtnDistance;
 @property (weak, nonatomic) IBOutlet PDCafeConditionButton *BtnScale;
 @property (nonatomic, copy)  clickHandle clickhandle;
+@property (weak, nonatomic) IBOutlet UIImageView *imgArrow;
 
 - (void)setPDCafeTabelHeaderViewClickBlock:(clickHandle)clickhandle;
+
+/**
+ *  手动让全区按钮恢复收缩状态
+ */
+- (void)resumeAreaBtn;
 
 - (IBAction)areaClick:(id)sender;
 - (IBAction)distanceClick:(id)sender;

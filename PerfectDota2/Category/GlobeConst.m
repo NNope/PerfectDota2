@@ -24,6 +24,10 @@ NSString *const chooseCityInfoKey = @"chooseCityInfoKey";
 NSString *const isFirstRefresh = @"isFirstRefresh";
 // 上次选择的城市名
 NSString *const lastChooseCityNameKey = @"lastChooseCityNameKey";
+// 上次选择的Latitude
+NSString *const lastChooseLatitudeKey = @"lastChooseLatitudeKey";
+// 上次选择的Longitude
+NSString *const lastChooseLongitudeKey = @"lastChooseLongitudeKey";
 // 上次定位的城市名
 NSString *const lastLocationCityNameKey = @"lastLocationCityNameKey";
 

@@ -24,7 +24,9 @@
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
         
         instance = [[self alloc]initWithBaseURL:url sessionConfiguration:config];
-        
+//        
+//        instance.requestSerializer = [AFHTTPRequestSerializer serializer];
+//        instance.responseSerializer = [AFHTTPResponseSerializer serializer];
         instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
     });
     return instance;
@@ -42,7 +44,10 @@
         
         instance = [[self alloc]initWithBaseURL:url sessionConfiguration:config];
         
+//        instance.requestSerializer = [AFHTTPRequestSerializer serializer];
+//        instance.responseSerializer = [AFJSONResponseSerializer serializer];
         instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
+//        mr.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
     });
     return instance;
 }

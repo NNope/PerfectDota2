@@ -136,7 +136,7 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
     else // 视频模块
     {
         // 视频没有更多 就不自定义了
-        [self videoTableViewNoMore];
+        [self.tableView tableViewNoMore];
     }
 }
 #pragma mark - private

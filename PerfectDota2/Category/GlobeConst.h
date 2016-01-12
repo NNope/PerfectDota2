@@ -32,6 +32,10 @@ extern NSString *const chooseCityInfoKey;
 extern NSString *const isFirstRefresh;
 // 上次选择的城市名
 extern NSString *const lastChooseCityNameKey;
+// 上次选择的Latitude
+extern NSString *const lastChooseLatitudeKey;
+// 上次选择的Longitude
+extern NSString *const lastChooseLongitudeKey;
 // 上次定位的城市名
 extern NSString *const lastLocationCityNameKey;
 
