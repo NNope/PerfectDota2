@@ -225,9 +225,6 @@ static PDLocationTool *locationTool;
         {
             [[NSUserDefaults standardUserDefaults] setObject:self.locationCity forKey:lastChooseCityNameKey];
         }
-//        
-//        [[NSUserDefaults standardUserDefaults] setDouble:self.Latitude forKey:lastChooseLatitudeKey];
-//        [[NSUserDefaults standardUserDefaults] setDouble:self.Longitude forKey:lastChooseLongitudeKey];
         [[NSUserDefaults standardUserDefaults] synchronize]; // 同步
     }
     else

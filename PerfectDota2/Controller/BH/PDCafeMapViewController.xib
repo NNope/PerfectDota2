@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PDCafeMapViewController">
+            <connections>
+                <outlet property="btnLocation" destination="0bd-Fa-gl3" id="8TN-iz-Cvc"/>
+                <outlet property="mapView" destination="TvL-8t-PQD" id="FQf-Hm-ycf"/>
+                <outlet property="view" destination="iN0-l3-epB" id="9D0-5X-P6n"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="起点网吧(前期点)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRF-NT-2X8">
+                    <rect key="frame" x="8" y="509" width="123" height="19.5"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="翠园街道文一西路73号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kr-pa-pNa">
+                    <rect key="frame" x="8" y="531" width="132.5" height="16"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4K-ZS-91S">
+                    <rect key="frame" x="20" y="562" width="270" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="查看路线">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUO-Bj-upl">
+                    <rect key="frame" x="310" y="562" width="270" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="本机地图">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TvL-8t-PQD" userLabel="MapView" customClass="BMKMapView">
+                    <rect key="frame" x="0.0" y="64" width="600" height="440"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bd-Fa-gl3">
+                    <rect key="frame" x="20" y="454" width="42" height="42"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="0bd-Fa-gl3" secondAttribute="height" multiplier="1:1" id="R1M-Rd-hXT"/>
+                        <constraint firstAttribute="width" constant="42" id="ZAE-bw-LWU"/>
+                    </constraints>
+                    <state key="normal" image="icon_map_locate"/>
+                    <connections>
+                        <action selector="btnLocationClick:" destination="-1" eventType="touchUpInside" id="BdR-Ca-zJE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="8kr-pa-pNa" firstAttribute="top" secondItem="lRF-NT-2X8" secondAttribute="bottom" constant="3" id="1ui-Ch-8yk"/>
+                <constraint firstItem="Z4K-ZS-91S" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="2Zs-CG-OLB"/>
+                <constraint firstItem="TvL-8t-PQD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="43s-zx-Apg"/>
+                <constraint firstItem="8kr-pa-pNa" firstAttribute="leading" secondItem="lRF-NT-2X8" secondAttribute="leading" id="68V-pT-HLY"/>
+                <constraint firstItem="Z4K-ZS-91S" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-20" id="6TW-6d-mTY"/>
+                <constraint firstItem="lRF-NT-2X8" firstAttribute="top" secondItem="0bd-Fa-gl3" secondAttribute="bottom" constant="13" id="BWm-uG-M2a"/>
+                <constraint firstAttribute="trailing" secondItem="TvL-8t-PQD" secondAttribute="trailing" id="Bqr-Az-uvE"/>
+                <constraint firstAttribute="trailing" secondItem="RUO-Bj-upl" secondAttribute="trailing" constant="20" id="Cdv-3y-duh"/>
+                <constraint firstAttribute="bottom" secondItem="TvL-8t-PQD" secondAttribute="bottom" constant="96" id="G9u-FV-s1H"/>
+                <constraint firstItem="Z4K-ZS-91S" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="I1Z-4Y-9RS"/>
+                <constraint firstItem="RUO-Bj-upl" firstAttribute="leading" secondItem="Z4K-ZS-91S" secondAttribute="trailing" constant="20" id="J2z-Xc-t7T"/>
+                <constraint firstItem="RUO-Bj-upl" firstAttribute="centerY" secondItem="Z4K-ZS-91S" secondAttribute="centerY" id="KKb-81-Wsm"/>
+                <constraint firstAttribute="trailing" secondItem="RUO-Bj-upl" secondAttribute="trailing" constant="20" id="Lbh-nP-gEu"/>
+                <constraint firstItem="Z4K-ZS-91S" firstAttribute="width" secondItem="RUO-Bj-upl" secondAttribute="width" id="NbI-hK-phf"/>
+                <constraint firstItem="0bd-Fa-gl3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Qwc-tC-GYz"/>
+                <constraint firstItem="TvL-8t-PQD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VPA-Jy-4aR"/>
+                <constraint firstAttribute="bottom" secondItem="Z4K-ZS-91S" secondAttribute="bottom" constant="8" id="eAb-B1-rfp"/>
+                <constraint firstItem="lRF-NT-2X8" firstAttribute="top" secondItem="TvL-8t-PQD" secondAttribute="bottom" constant="5" id="i46-iX-srZ"/>
+                <constraint firstItem="RUO-Bj-upl" firstAttribute="leading" secondItem="Z4K-ZS-91S" secondAttribute="trailing" constant="20" id="oFp-Kp-0WC"/>
+                <constraint firstItem="lRF-NT-2X8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="r9b-Sc-81I"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="2Zs-CG-OLB"/>
+                    <exclude reference="6TW-6d-mTY"/>
+                    <exclude reference="Cdv-3y-duh"/>
+                    <exclude reference="oFp-Kp-0WC"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_map_locate" width="21" height="21"/>
+    </resources>
+</document>

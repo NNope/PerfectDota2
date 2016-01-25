@@ -66,6 +66,7 @@
 		AD44D48A1C228A1B00B436A0 /* PDVideoAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44D4891C228A1B00B436A0 /* PDVideoAlbumCell.m */; };
 		AD44D4961C22B4FF00B436A0 /* PDBHcollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44D4951C22B4FF00B436A0 /* PDBHcollectionCell.m */; };
 		AD44D4991C22B74100B436A0 /* PDBHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44D4981C22B74100B436A0 /* PDBHModel.m */; };
+		AD468E4D1C55BDA5000C5E05 /* PDCafeMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD468E4C1C55BDA5000C5E05 /* PDCafeMapViewController.xib */; };
 		AD4EFC5A1C11804D00407C0C /* PDTagLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4EFC551C11804D00407C0C /* PDTagLabel.m */; };
 		AD4EFC5B1C11804D00407C0C /* PDTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4EFC571C11804D00407C0C /* PDTagView.m */; };
 		AD4EFC5C1C11804D00407C0C /* PDTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4EFC591C11804D00407C0C /* PDTitleView.m */; };
@@ -91,6 +92,11 @@
 		AD75FFBB1C191C6100A48FA3 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = AD75FFB31C191C6100A48FA3 /* UIView+MJExtension.m */; };
 		AD7F30261C449AB400192647 /* PDCafeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7F30251C449AB400192647 /* PDCafeCell.m */; };
 		AD7F30281C449AC000192647 /* PDCafeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7F30271C449AC000192647 /* PDCafeCell.xib */; };
+		AD9128D71C4F2D12003AB36B /* PDCafeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9128D61C4F2D12003AB36B /* PDCafeDetailViewController.m */; };
+		AD9128D91C4F3414003AB36B /* PDCafeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD9128D81C4F3414003AB36B /* PDCafeDetailViewController.xib */; };
+		ADB96F051C51C8E200CE9040 /* PDCafeMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB96F041C51C8E200CE9040 /* PDCafeMapViewController.m */; };
+		ADB96F071C51EFCF00CE9040 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ADB96F061C51EFCF00CE9040 /* mapapi.bundle */; };
+		ADB96F131C51F3A600CE9040 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB96F121C51F3A600CE9040 /* libstdc++.6.0.9.tbd */; };
 		ADBE9DD81C2A93BE00FBA767 /* PDShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBE9DD71C2A93BE00FBA767 /* PDShareView.m */; };
 		ADC3F8F11C1840DB0028E58D /* PDAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F8EE1C1840DB0028E58D /* PDAdManager.m */; };
 		ADC3F8F21C1840DB0028E58D /* PDNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F8F01C1840DB0028E58D /* PDNetworkTool.m */; };
@@ -293,6 +299,7 @@
 		AD44D4951C22B4FF00B436A0 /* PDBHcollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDBHcollectionCell.m; sourceTree = "<group>"; };
 		AD44D4971C22B74100B436A0 /* PDBHModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDBHModel.h; sourceTree = "<group>"; };
 		AD44D4981C22B74100B436A0 /* PDBHModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDBHModel.m; sourceTree = "<group>"; };
+		AD468E4C1C55BDA5000C5E05 /* PDCafeMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDCafeMapViewController.xib; sourceTree = "<group>"; };
 		AD4EFC541C11804D00407C0C /* PDTagLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTagLabel.h; sourceTree = "<group>"; };
 		AD4EFC551C11804D00407C0C /* PDTagLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTagLabel.m; sourceTree = "<group>"; };
 		AD4EFC561C11804D00407C0C /* PDTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTagView.h; sourceTree = "<group>"; };
@@ -337,6 +344,18 @@
 		AD7F30241C449AB400192647 /* PDCafeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeCell.h; sourceTree = "<group>"; };
 		AD7F30251C449AB400192647 /* PDCafeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeCell.m; sourceTree = "<group>"; };
 		AD7F30271C449AC000192647 /* PDCafeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDCafeCell.xib; sourceTree = "<group>"; };
+		AD9128D51C4F2D12003AB36B /* PDCafeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeDetailViewController.h; sourceTree = "<group>"; };
+		AD9128D61C4F2D12003AB36B /* PDCafeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeDetailViewController.m; sourceTree = "<group>"; };
+		AD9128D81C4F3414003AB36B /* PDCafeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDCafeDetailViewController.xib; sourceTree = "<group>"; };
+		ADB96F031C51C8E200CE9040 /* PDCafeMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeMapViewController.h; sourceTree = "<group>"; };
+		ADB96F041C51C8E200CE9040 /* PDCafeMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeMapViewController.m; sourceTree = "<group>"; };
+		ADB96F061C51EFCF00CE9040 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
+		ADB96F081C51F31B00CE9040 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ADB96F0A1C51F32900CE9040 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ADB96F0C1C51F33A00CE9040 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		ADB96F0E1C51F34600CE9040 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		ADB96F101C51F35A00CE9040 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		ADB96F121C51F3A600CE9040 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		ADBE9DD61C2A93BE00FBA767 /* PDShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDShareView.h; sourceTree = "<group>"; };
 		ADBE9DD71C2A93BE00FBA767 /* PDShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDShareView.m; sourceTree = "<group>"; };
 		ADC3F8ED1C1840DB0028E58D /* PDAdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDAdManager.h; sourceTree = "<group>"; };
@@ -508,6 +527,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB96F131C51F3A600CE9040 /* libstdc++.6.0.9.tbd in Frameworks */,
 				AD1064061C322CAE00EB6350 /* libc++.1.tbd in Frameworks */,
 				AD1064051C322CA300EB6350 /* CoreTelephony.framework in Frameworks */,
 				AD1064031C322C8200EB6350 /* libsqlite3.0.tbd in Frameworks */,
@@ -541,6 +561,12 @@
 		AD277D221C0E8124003E9AA0 = {
 			isa = PBXGroup;
 			children = (
+				ADB96F121C51F3A600CE9040 /* libstdc++.6.0.9.tbd */,
+				ADB96F101C51F35A00CE9040 /* SystemConfiguration.framework */,
+				ADB96F0E1C51F34600CE9040 /* OpenGLES.framework */,
+				ADB96F0C1C51F33A00CE9040 /* Security.framework */,
+				ADB96F0A1C51F32900CE9040 /* QuartzCore.framework */,
+				ADB96F081C51F31B00CE9040 /* CoreGraphics.framework */,
 				AD277EBA1C0F335B003E9AA0 /* PerfectDota2 */,
 				AD277D2C1C0E8125003E9AA0 /* Products */,
 			);
@@ -1049,6 +1075,7 @@
 		ADDA7F001C280D180030208A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				ADB96F061C51EFCF00CE9040 /* mapapi.bundle */,
 				AD30534C1C3B9FDD00BD8225 /* Location11.gpx */,
 				ADF8FDF21C31137800E38C80 /* dotacityData.plist */,
 				ADF8FDF31C31137800E38C80 /* dotacitylist.plist */,
@@ -1123,6 +1150,12 @@
 			children = (
 				ADF8FDAE1C30DB7B00E38C80 /* PDCafeTableViewController.h */,
 				ADF8FDAF1C30DB7B00E38C80 /* PDCafeTableViewController.m */,
+				AD9128D51C4F2D12003AB36B /* PDCafeDetailViewController.h */,
+				AD9128D61C4F2D12003AB36B /* PDCafeDetailViewController.m */,
+				AD9128D81C4F3414003AB36B /* PDCafeDetailViewController.xib */,
+				ADB96F031C51C8E200CE9040 /* PDCafeMapViewController.h */,
+				ADB96F041C51C8E200CE9040 /* PDCafeMapViewController.m */,
+				AD468E4C1C55BDA5000C5E05 /* PDCafeMapViewController.xib */,
 				AD1063EF1C3219DC00EB6350 /* PDCityListViewController.h */,
 				AD1063F01C3219DC00EB6350 /* PDCityListViewController.m */,
 			);
@@ -1188,9 +1221,11 @@
 			files = (
 				AD5E99F81C16DB98009E14DE /* beep.wav in Resources */,
 				AD7F30281C449AC000192647 /* PDCafeCell.xib in Resources */,
+				AD9128D91C4F3414003AB36B /* PDCafeDetailViewController.xib in Resources */,
 				ADDA7E901C2803960030208A /* Icon@2x.png in Resources */,
 				ADDA7E881C2803960030208A /* Default-iOS7-568h@2x.png in Resources */,
 				ADDA7E8F1C2803960030208A /* Icon.png in Resources */,
+				ADB96F071C51EFCF00CE9040 /* mapapi.bundle in Resources */,
 				AD277F3B1C0F335B003E9AA0 /* LaunchScreen.storyboard in Resources */,
 				ADFAC7EB1C3CAA5200473EA5 /* PDHistoryCityCell.xib in Resources */,
 				AD5E99FC1C16DB98009E14DE /* cor4.png in Resources */,
@@ -1216,6 +1251,7 @@
 				AD277F3C1C0F335B003E9AA0 /* Main.storyboard in Resources */,
 				ADDA7E8C1C2803960030208A /* Icon-iOS7@2x.png in Resources */,
 				ADDA7E851C2803960030208A /* 37x-Checkmark.png in Resources */,
+				AD468E4D1C55BDA5000C5E05 /* PDCafeMapViewController.xib in Resources */,
 				ADDA7E8E1C2803960030208A /* Icon-Small@2x.png in Resources */,
 				ADDA7E8A1C2803960030208A /* Default.png in Resources */,
 				ADDA7E8D1C2803960030208A /* Icon-Small.png in Resources */,
@@ -1304,6 +1340,7 @@
 				ADEC32DC1C2D092E008FEAC7 /* PDShareModel.m in Sources */,
 				AD03BE4E1C328AD3003CB7A6 /* PDLocationTool.m in Sources */,
 				AD277F431C0F335B003E9AA0 /* AFSecurityPolicy.m in Sources */,
+				AD9128D71C4F2D12003AB36B /* PDCafeDetailViewController.m in Sources */,
 				AD7399EF1C11C299001D17F8 /* PDBaseViewController.m in Sources */,
 				AD01FF251C3E4D3400EAC4F9 /* PDHistoryCityButton.m in Sources */,
 				AD277F4D1C0F335B003E9AA0 /* SDWebImageDownloader.m in Sources */,
@@ -1312,6 +1349,7 @@
 				AD277F4B1C0F335B003E9AA0 /* SDWebImageCompat.m in Sources */,
 				AD4EFC5A1C11804D00407C0C /* PDTagLabel.m in Sources */,
 				ADDA7ED91C2806660030208A /* unzip.c in Sources */,
+				ADB96F051C51C8E200CE9040 /* PDCafeMapViewController.m in Sources */,
 				AD1063F11C3219DC00EB6350 /* PDCityListViewController.m in Sources */,
 				ADFAC7EA1C3CAA5200473EA5 /* PDHistoryCityCell.m in Sources */,
 				ADC3F90F1C184B0F0028E58D /* TopNewsModel.m in Sources */,
@@ -1478,6 +1516,7 @@
 				INFOPLIST_FILE = PerfectDota2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tzt.NewcftTest;
 				PRODUCT_NAME = PerfectDota2;
 				PROVISIONING_PROFILE = "";
@@ -1498,6 +1537,7 @@
 				INFOPLIST_FILE = PerfectDota2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tzt.NewcftTest;
 				PRODUCT_NAME = PerfectDota2;
 				PROVISIONING_PROFILE = "e5c0e4f0-6ae4-492a-8c51-40eed624c2ca";

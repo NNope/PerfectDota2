@@ -66,11 +66,14 @@
     
     [UIView animateWithDuration:0.3 animations:^{
         self.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished) {
+        self.hidden = YES;
     }];
 }
 
 -(void)showAreaView
 {
+    self.hidden = NO;
     [UIView animateWithDuration:0.3 animations:^{
         self.transform = CGAffineTransformTranslate(self.transform, 0, self.height);
     }];

@@ -58,13 +58,13 @@
 /**
  *  发送请求页码
  */
-@property (nonatomic, assign) NSInteger currentpage;
-@property (nonatomic, assign) NSInteger totalPages;
 
-/**
- *  应答回来的当前页码
- */
-//@property (nonatomic, assign) NSInteger responseCurrentpage;
+// 当前页码
+@property (nonatomic, assign) NSInteger currentpage;
+// 总页码
+@property (nonatomic, assign) NSInteger totalPages;
+// 第一次需要自动刷新
+@property (nonatomic, assign) BOOL firstRefresh;
 // 可以开始请求了
 @property (nonatomic, assign) BOOL beginPost;
 // 纬度

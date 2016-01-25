@@ -9,6 +9,7 @@
 #import "PDCafeTableViewController.h"
 #import "PDCityModel.h"
 #import "PDCityListViewController.h"
+#import "PDCafeDetailViewController.h"
 #import "PDProvinceModel.h"
 #import "PDLocationTool.h"
 #import "PDCafeModel.h"
@@ -45,7 +46,10 @@ static  NSString *const PDCafeCellID = @"PDCafeCellID";
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.cafeTableView headerBeginRefreshing];
+    if (self.firstRefresh)
+    {
+        [self.cafeTableView headerBeginRefreshing];
+    }
 }
 
 - (void)setUpconfigure
@@ -53,6 +57,7 @@ static  NSString *const PDCafeCellID = @"PDCafeCellID";
     self.titleView.title = @"特权网吧";
     self.titleView.titleType = PDTitleTypeInfoAndShare;
     self.chooseArea = @"全区";
+    self.firstRefresh = YES;
     self.view.backgroundColor = PDGrayColor;
     
     // 得到对应的市辖区
@@ -257,6 +262,7 @@ static  NSString *const PDCafeCellID = @"PDCafeCellID";
 // 下拉刷新用
 - (void)refresh
 {
+    self.firstRefresh = NO;
     if (self.beginPost)
     {
         self.currentpage = 1;
@@ -395,6 +401,13 @@ static  NSString *const PDCafeCellID = @"PDCafeCellID";
     PDCafeCell *cell = [tableView dequeueReusableCellWithIdentifier:PDCafeCellID];
     cell.cafeModel = self.cafeList[indexPath.row];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PDCafeDetailViewController *detailVc = [[PDCafeDetailViewController alloc] init];
+    detailVc.cafeModel = self.cafeList[indexPath.row];
+    [self.navigationController pushViewController:detailVc animated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
