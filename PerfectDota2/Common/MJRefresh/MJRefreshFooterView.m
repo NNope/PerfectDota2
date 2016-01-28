@@ -130,18 +130,30 @@
     // 4.根据状态来设置属性
 	switch (state)
     {
-		case MJRefreshStateNormal:
+        //  Tjf 修改
+		case MJRefreshStateNormal: // 变回普通状态
         {
-            // 刷新完毕
-            if (MJRefreshStateRefreshing == oldState) {
+            if (MJRefreshStateRefreshing == oldState)  // 由刷新变回 说明刷新完毕
+            {
+                // 因为我在刷新时 修改了文字 在动画结束后修改回来 不然下次文字不修改
                 self.arrowImage.transform = CGAffineTransformMakeRotation(M_PI);
                 [UIView animateWithDuration:MJRefreshSlowAnimationDuration animations:^{
                     self.scrollView.mj_contentInsetBottom = self.scrollViewOriginalInset.bottom;
+                } completion:^(BOOL finished) {
+                    self.pullToRefreshText = MJRefreshFooterPullToRefresh;
+                    self.releaseToRefreshText = MJRefreshFooterReleaseToRefresh;
+                    self.refreshingText = MJRefreshFooterRefreshing;
                 }];
-            } else {
+            }
+            else // 不是由刷新 说明取消了刷新
+            {
                 // 执行动画
-                [UIView animateWithDuration:MJRefreshFastAnimationDuration animations:^{
+                [UIView animateWithDuration:MJRefreshSlowAnimationDuration animations:^{
                     self.arrowImage.transform = CGAffineTransformMakeRotation(M_PI);
+                } completion:^(BOOL finished) {
+                    self.pullToRefreshText = MJRefreshFooterPullToRefresh;
+                    self.releaseToRefreshText = MJRefreshFooterReleaseToRefresh;
+                    self.refreshingText = MJRefreshFooterRefreshing;
                 }];
             }
             
@@ -151,6 +163,7 @@
             if (MJRefreshStateRefreshing == oldState && deltaH > 0 && currentCount != self.lastRefreshCount) {
                 self.scrollView.mj_contentOffsetY = self.scrollView.mj_contentOffsetY;
             }
+            
 			break;
         }
             

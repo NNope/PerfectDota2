@@ -14,6 +14,7 @@
 #import "PDCityModel.h"
 #import "PDProvinceModel.h"
 #import "PDCafeModel.h"
+#import "PDWallModel.h"
 
 @implementation MJExtensionConfig
 /**
@@ -39,6 +40,11 @@
                  };
     }];
     [PDCafeModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{
+                 @"ID" : @"id"
+                 };
+    }];
+    [PDWallModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{
                  @"ID" : @"id"
                  };

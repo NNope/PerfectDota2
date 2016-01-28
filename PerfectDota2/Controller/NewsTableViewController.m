@@ -15,6 +15,7 @@
 #import "PDNewestVideoModel.h"
 #import "PDWebViewController.h"
 #import "MJRefreshFooterView.h"
+#import "PDDataBase.h"
 
 
 static  NSString *const TopNewsCellID = @"TopNewsCellID";
@@ -40,13 +41,15 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
     if (self.pdNewsTableType == PDNewsTableTypeAll)
     {
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(advanceRefresh) name:PDNewsAllRefresh object:nil];
-//        self.hasAutoRefresh = YES;
     }
     self.hasAutoRefresh = NO;
     
     [self.tableView addHeaderWithTarget:self action:@selector(refresh)];
     [self.tableView addFooterWithTarget:self action:@selector(loadMoreNews)];
-
+    
+    // 先显示数据库缓存新闻
+//    self.newsList = [PDDataBase listItemClass:[PDNewsModel class]];
+    PDLog(@"11");
 }
 
 // 通知用的 提前刷新，防止cell需要用
@@ -196,11 +199,11 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
 {
     // 请求其他分类的新闻
     NSString *hotNewsUrl = [NSString stringWithFormat:@"%@index.html?%ld",self.typeBaseUrl,(long)[[[NSDate alloc] init] timeIntervalSince1970]];
-    [[PDNetworkTool sharedNetworkToolsWithoutBaseUrl]GET:hotNewsUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        self.newsList = [NSMutableArray arrayWithArray:responseObject[@"data"]];
+    [PDNetworkTool getNewsWithUrl:hotNewsUrl param:nil modelClass:[PDNewsModel class] SuccessBlock:^(id responseArr) {
+        self.newsList = responseArr;
         [self.tableView headerEndRefreshing];
         [self.tableView reloadData];
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    } FailureBlock:^(NSError *error) {
         PDLog(@"%@",error);
         [self.tableView headerEndRefreshing];
     }];
@@ -223,15 +226,23 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
     
     // 请求全部
     NSString *hotNewsUrl = [NSString stringWithFormat:@"http://www.dota2.com.cn/wapnews/hotnewsList.html?%ld",(long)[[[NSDate alloc] init] timeIntervalSince1970]];
-    [[PDNetworkTool sharedNetworkToolsWithoutBaseUrl]GET:hotNewsUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        
-        self.newsList = [NSMutableArray arrayWithArray:responseObject[@"data"]];
-        //        self.newsList = responseObject[@"data"];
+    [PDNetworkTool getNewsWithUrl:hotNewsUrl param:nil modelClass:[PDNewsModel class] SuccessBlock:^(id responseArr) {
+        self.newsList = responseArr;
         self.newSuccess = YES;
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    } FailureBlock:^(NSError *error) {
         PDLog(@"%@",error);
         [self.tableView headerEndRefreshing];
     }];
+//    [[PDNetworkTool sharedNetworkToolsWithoutBaseUrl]GET:hotNewsUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+//        
+//        // 应该做数据库保存
+//        
+//        self.newsList = [PDNewsModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+//        self.newSuccess = YES;
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        PDLog(@"%@",error);
+//        [self.tableView headerEndRefreshing];
+//    }];
 }
 
 #pragma mark - Table view data source
@@ -290,8 +301,7 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
         }
             // 其余新闻模块
             PDNewsCell *newsCell = [tableView dequeueReusableCellWithIdentifier:PDNewsCellID forIndexPath:indexPath];
-            PDNewsModel *newsModel = [PDNewsModel mj_objectWithKeyValues:self.newsList[index]];
-            newsCell.pdNewsModel = newsModel;
+            newsCell.pdNewsModel = self.newsList[index];
             return newsCell;
         
     }

@@ -87,7 +87,7 @@ static CGFloat const WhiteHeight = 110;
         msg.title = @"";
         msg.desc = @"";
         msg.link = @"";
-        msg.image = @"";
+//        msg.image = @"";
     }
     
     if ([currentTitle isEqualToString:@"微信朋友"])

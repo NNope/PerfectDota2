@@ -10,7 +10,7 @@
 
 @interface BHViewController : PDBaseViewController
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, copy) NSArray *collectionList;
+@property (nonatomic, strong) NSMutableArray *collectionList;
 @property (nonatomic, assign) BOOL isAutoRefresh;
 
 @end

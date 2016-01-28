@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PDWallpaperCell" id="gTV-IL-0wX" customClass="PDWallpaperCell">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="295"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="140" height="295"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YRv-n9-0wr">
+                        <rect key="frame" x="0.0" y="14" width="140" height="243"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="243" id="t6N-Nd-OTL"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="死亡先知" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnU-Zj-eWN">
+                        <rect key="frame" x="0.0" y="263" width="140" height="18"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者：佳佳里" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRq-D7-l5L">
+                        <rect key="frame" x="0.0" y="282" width="140" height="13.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <animations/>
+            <constraints>
+                <constraint firstItem="YRv-n9-0wr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="14" id="8oL-Ua-G6a"/>
+                <constraint firstItem="EnU-Zj-eWN" firstAttribute="top" secondItem="YRv-n9-0wr" secondAttribute="bottom" constant="6" id="9Sa-AU-QXq"/>
+                <constraint firstItem="YRv-n9-0wr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ACF-RD-fLo"/>
+                <constraint firstItem="EnU-Zj-eWN" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Fmo-2P-1Me"/>
+                <constraint firstItem="EnU-Zj-eWN" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="KVt-T1-YNd"/>
+                <constraint firstItem="YRq-D7-l5L" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="USX-Gy-sd0"/>
+                <constraint firstItem="YRq-D7-l5L" firstAttribute="top" secondItem="EnU-Zj-eWN" secondAttribute="bottom" constant="1" id="YeX-Vl-Ipi"/>
+                <constraint firstAttribute="trailing" secondItem="YRv-n9-0wr" secondAttribute="trailing" id="nLp-8h-Ryb"/>
+                <constraint firstItem="YRq-D7-l5L" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="y1l-Uz-jLN"/>
+            </constraints>
+            <size key="customSize" width="213" height="247"/>
+            <connections>
+                <outlet property="imgWall" destination="YRv-n9-0wr" id="z8R-Xn-vrV"/>
+                <outlet property="lblAuthor" destination="YRq-D7-l5L" id="hhP-JP-QGi"/>
+                <outlet property="lblFileName" destination="EnU-Zj-eWN" id="XJG-p5-Pbn"/>
+            </connections>
+            <point key="canvasLocation" x="197" y="279.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -305,8 +305,18 @@ static char MJRefreshFooterViewKey;
             foot.pullToRefreshText = @"没有更多了";
             foot.releaseToRefreshText = @"没有更多了";
             foot.refreshingText = @"没有更多了";
+            [self footerEndRefreshing];
         }
     }
-    [self footerEndRefreshing];
+//    for (UIView *view in self.subviews)
+//    {
+//        if ([view isKindOfClass:[MJRefreshFooterView class]])
+//        {
+//            MJRefreshFooterView *foot = (MJRefreshFooterView *)view;
+//            foot.pullToRefreshText = @"上拉加载";
+//            foot.releaseToRefreshText = @"释放加载";
+//            foot.refreshingText = @"正在加载";
+//        }
+//    }
 }
 @end

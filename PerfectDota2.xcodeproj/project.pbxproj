@@ -12,7 +12,6 @@
 		AD01FF261C3E4D3400EAC4F9 /* PDShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD01FF231C3E4D3400EAC4F9 /* PDShareButton.m */; };
 		AD01FF321C3E5D5100EAC4F9 /* PDCafeAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD01FF311C3E5D5100EAC4F9 /* PDCafeAreaView.m */; };
 		AD03BE4E1C328AD3003CB7A6 /* PDLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = AD03BE4D1C328AD3003CB7A6 /* PDLocationTool.m */; };
-		AD1063F11C3219DC00EB6350 /* PDCityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1063F01C3219DC00EB6350 /* PDCityListViewController.m */; };
 		AD1063FB1C322ACE00EB6350 /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1063F81C322ACE00EB6350 /* BaiduMapAPI_Base.framework */; };
 		AD1063FC1C322ACE00EB6350 /* BaiduMapAPI_Location.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1063F91C322ACE00EB6350 /* BaiduMapAPI_Location.framework */; };
 		AD1063FD1C322ACE00EB6350 /* BaiduMapAPI_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1063FA1C322ACE00EB6350 /* BaiduMapAPI_Search.framework */; };
@@ -60,13 +59,13 @@
 		AD277F841C0F335B003E9AA0 /* PDTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD277F301C0F335B003E9AA0 /* PDTabBarButton.m */; };
 		AD277F851C0F335B003E9AA0 /* PDTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD277F321C0F335B003E9AA0 /* PDTabBarViewController.m */; };
 		AD277F861C0F335B003E9AA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD277F351C0F335B003E9AA0 /* ViewController.m */; };
+		AD27B25F1C589C5B00429526 /* PDWallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27B25E1C589C5B00429526 /* PDWallModel.m */; };
 		AD30534D1C3B9FDD00BD8225 /* Location11.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AD30534C1C3B9FDD00BD8225 /* Location11.gpx */; };
 		AD44D4611C22833800B436A0 /* PDVideoAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44D4601C22833800B436A0 /* PDVideoAlbumModel.m */; };
 		AD44D4641C22841100B436A0 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44D4631C22841100B436A0 /* NSString+Extension.m */; };
 		AD44D48A1C228A1B00B436A0 /* PDVideoAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44D4891C228A1B00B436A0 /* PDVideoAlbumCell.m */; };
 		AD44D4961C22B4FF00B436A0 /* PDBHcollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44D4951C22B4FF00B436A0 /* PDBHcollectionCell.m */; };
 		AD44D4991C22B74100B436A0 /* PDBHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44D4981C22B74100B436A0 /* PDBHModel.m */; };
-		AD468E4D1C55BDA5000C5E05 /* PDCafeMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD468E4C1C55BDA5000C5E05 /* PDCafeMapViewController.xib */; };
 		AD4EFC5A1C11804D00407C0C /* PDTagLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4EFC551C11804D00407C0C /* PDTagLabel.m */; };
 		AD4EFC5B1C11804D00407C0C /* PDTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4EFC571C11804D00407C0C /* PDTagView.m */; };
 		AD4EFC5C1C11804D00407C0C /* PDTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4EFC591C11804D00407C0C /* PDTitleView.m */; };
@@ -92,9 +91,6 @@
 		AD75FFBB1C191C6100A48FA3 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = AD75FFB31C191C6100A48FA3 /* UIView+MJExtension.m */; };
 		AD7F30261C449AB400192647 /* PDCafeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7F30251C449AB400192647 /* PDCafeCell.m */; };
 		AD7F30281C449AC000192647 /* PDCafeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7F30271C449AC000192647 /* PDCafeCell.xib */; };
-		AD9128D71C4F2D12003AB36B /* PDCafeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9128D61C4F2D12003AB36B /* PDCafeDetailViewController.m */; };
-		AD9128D91C4F3414003AB36B /* PDCafeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD9128D81C4F3414003AB36B /* PDCafeDetailViewController.xib */; };
-		ADB96F051C51C8E200CE9040 /* PDCafeMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB96F041C51C8E200CE9040 /* PDCafeMapViewController.m */; };
 		ADB96F071C51EFCF00CE9040 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ADB96F061C51EFCF00CE9040 /* mapapi.bundle */; };
 		ADB96F131C51F3A600CE9040 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB96F121C51F3A600CE9040 /* libstdc++.6.0.9.tbd */; };
 		ADBE9DD81C2A93BE00FBA767 /* PDShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBE9DD71C2A93BE00FBA767 /* PDShareView.m */; };
@@ -108,6 +104,21 @@
 		ADC3F9051C1841CE0028E58D /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F9041C1841CE0028E58D /* News.storyboard */; };
 		ADC3F90F1C184B0F0028E58D /* TopNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F90E1C184B0F0028E58D /* TopNewsModel.m */; };
 		ADC3F9581C1862350028E58D /* PDTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F9571C1862350028E58D /* PDTransitionAnimator.m */; };
+		ADD42CAC1C5A0FEC00A0025E /* PDDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD42CAB1C5A0FEC00A0025E /* PDDataBase.m */; };
+		ADD42CB91C5A104F00A0025E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD42CAF1C5A104F00A0025E /* FMDatabase.m */; };
+		ADD42CBA1C5A104F00A0025E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD42CB11C5A104F00A0025E /* FMDatabaseAdditions.m */; };
+		ADD42CBB1C5A104F00A0025E /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD42CB31C5A104F00A0025E /* FMDatabasePool.m */; };
+		ADD42CBC1C5A104F00A0025E /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD42CB51C5A104F00A0025E /* FMDatabaseQueue.m */; };
+		ADD42CBD1C5A104F00A0025E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD42CB81C5A104F00A0025E /* FMResultSet.m */; };
+		ADD53C1F1C585EC10068292D /* PDCafeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD53C151C585EC10068292D /* PDCafeDetailViewController.m */; };
+		ADD53C201C585EC10068292D /* PDCafeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD53C161C585EC10068292D /* PDCafeDetailViewController.xib */; };
+		ADD53C211C585EC10068292D /* PDCafeMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD53C181C585EC10068292D /* PDCafeMapViewController.m */; };
+		ADD53C221C585EC10068292D /* PDCafeMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD53C191C585EC10068292D /* PDCafeMapViewController.xib */; };
+		ADD53C231C585EC10068292D /* PDCafeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD53C1B1C585EC10068292D /* PDCafeTableViewController.m */; };
+		ADD53C241C585EC10068292D /* PDCityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD53C1D1C585EC10068292D /* PDCityListViewController.m */; };
+		ADD53C271C5865030068292D /* PDWallpaperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD53C261C5865030068292D /* PDWallpaperViewController.m */; };
+		ADD53C2E1C5871510068292D /* PDWallpaperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD53C2C1C5871510068292D /* PDWallpaperCell.m */; };
+		ADD53C2F1C5871510068292D /* PDWallpaperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD53C2D1C5871510068292D /* PDWallpaperCell.xib */; };
 		ADDA69DA1C27D1A00030208A /* PDVideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA69D21C27D1A00030208A /* PDVideoDetailViewController.m */; };
 		ADDA69DB1C27D1A00030208A /* PDVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA69D41C27D1A00030208A /* PDVideoListViewController.m */; };
 		ADDA69E11C27D1AC0030208A /* TopNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA69DF1C27D1AC0030208A /* TopNewsCell.m */; };
@@ -170,7 +181,6 @@
 		ADF6AD601C19BC8100BE12DF /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF6AD531C19BC8100BE12DF /* NSObject+MJKeyValue.m */; };
 		ADF6AD611C19BC8100BE12DF /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF6AD551C19BC8100BE12DF /* NSObject+MJProperty.m */; };
 		ADF6AD621C19BC8100BE12DF /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF6AD571C19BC8100BE12DF /* NSString+MJExtension.m */; };
-		ADF8FDB01C30DB7B00E38C80 /* PDCafeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF8FDAF1C30DB7B00E38C80 /* PDCafeTableViewController.m */; };
 		ADF8FDC21C31061200E38C80 /* PDSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF8FDC11C31061200E38C80 /* PDSearchBar.m */; };
 		ADF8FDE81C31075100E38C80 /* PDCafeSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF8FDE71C31075100E38C80 /* PDCafeSearchView.m */; };
 		ADF8FDEB1C310F5300E38C80 /* PDProvinceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF8FDEA1C310F5300E38C80 /* PDProvinceModel.m */; };
@@ -200,8 +210,6 @@
 		AD01FF311C3E5D5100EAC4F9 /* PDCafeAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeAreaView.m; sourceTree = "<group>"; };
 		AD03BE4C1C328AD3003CB7A6 /* PDLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDLocationTool.h; sourceTree = "<group>"; };
 		AD03BE4D1C328AD3003CB7A6 /* PDLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDLocationTool.m; sourceTree = "<group>"; };
-		AD1063EF1C3219DC00EB6350 /* PDCityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCityListViewController.h; sourceTree = "<group>"; };
-		AD1063F01C3219DC00EB6350 /* PDCityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCityListViewController.m; sourceTree = "<group>"; };
 		AD1063F81C322ACE00EB6350 /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Base.framework; path = SDK/BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
 		AD1063F91C322ACE00EB6350 /* BaiduMapAPI_Location.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Location.framework; path = SDK/BaiduMapAPI_Location.framework; sourceTree = "<group>"; };
 		AD1063FA1C322ACE00EB6350 /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Search.framework; path = SDK/BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
@@ -288,6 +296,8 @@
 		AD277F331C0F335B003E9AA0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		AD277F341C0F335B003E9AA0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AD277F351C0F335B003E9AA0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AD27B25D1C589C5B00429526 /* PDWallModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDWallModel.h; sourceTree = "<group>"; };
+		AD27B25E1C589C5B00429526 /* PDWallModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDWallModel.m; sourceTree = "<group>"; };
 		AD30534C1C3B9FDD00BD8225 /* Location11.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location11.gpx; sourceTree = "<group>"; };
 		AD44D45F1C22833800B436A0 /* PDVideoAlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDVideoAlbumModel.h; sourceTree = "<group>"; };
 		AD44D4601C22833800B436A0 /* PDVideoAlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDVideoAlbumModel.m; sourceTree = "<group>"; };
@@ -299,7 +309,6 @@
 		AD44D4951C22B4FF00B436A0 /* PDBHcollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDBHcollectionCell.m; sourceTree = "<group>"; };
 		AD44D4971C22B74100B436A0 /* PDBHModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDBHModel.h; sourceTree = "<group>"; };
 		AD44D4981C22B74100B436A0 /* PDBHModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDBHModel.m; sourceTree = "<group>"; };
-		AD468E4C1C55BDA5000C5E05 /* PDCafeMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDCafeMapViewController.xib; sourceTree = "<group>"; };
 		AD4EFC541C11804D00407C0C /* PDTagLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTagLabel.h; sourceTree = "<group>"; };
 		AD4EFC551C11804D00407C0C /* PDTagLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTagLabel.m; sourceTree = "<group>"; };
 		AD4EFC561C11804D00407C0C /* PDTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTagView.h; sourceTree = "<group>"; };
@@ -344,17 +353,7 @@
 		AD7F30241C449AB400192647 /* PDCafeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeCell.h; sourceTree = "<group>"; };
 		AD7F30251C449AB400192647 /* PDCafeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeCell.m; sourceTree = "<group>"; };
 		AD7F30271C449AC000192647 /* PDCafeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDCafeCell.xib; sourceTree = "<group>"; };
-		AD9128D51C4F2D12003AB36B /* PDCafeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeDetailViewController.h; sourceTree = "<group>"; };
-		AD9128D61C4F2D12003AB36B /* PDCafeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeDetailViewController.m; sourceTree = "<group>"; };
-		AD9128D81C4F3414003AB36B /* PDCafeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDCafeDetailViewController.xib; sourceTree = "<group>"; };
-		ADB96F031C51C8E200CE9040 /* PDCafeMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeMapViewController.h; sourceTree = "<group>"; };
-		ADB96F041C51C8E200CE9040 /* PDCafeMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeMapViewController.m; sourceTree = "<group>"; };
 		ADB96F061C51EFCF00CE9040 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
-		ADB96F081C51F31B00CE9040 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		ADB96F0A1C51F32900CE9040 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		ADB96F0C1C51F33A00CE9040 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		ADB96F0E1C51F34600CE9040 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		ADB96F101C51F35A00CE9040 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		ADB96F121C51F3A600CE9040 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		ADBE9DD61C2A93BE00FBA767 /* PDShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDShareView.h; sourceTree = "<group>"; };
 		ADBE9DD71C2A93BE00FBA767 /* PDShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDShareView.m; sourceTree = "<group>"; };
@@ -377,6 +376,34 @@
 		ADC3F90E1C184B0F0028E58D /* TopNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopNewsModel.m; sourceTree = "<group>"; };
 		ADC3F9561C1862350028E58D /* PDTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTransitionAnimator.h; sourceTree = "<group>"; };
 		ADC3F9571C1862350028E58D /* PDTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTransitionAnimator.m; sourceTree = "<group>"; };
+		ADD42CAA1C5A0FEC00A0025E /* PDDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDDataBase.h; sourceTree = "<group>"; };
+		ADD42CAB1C5A0FEC00A0025E /* PDDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDDataBase.m; sourceTree = "<group>"; };
+		ADD42CAE1C5A104F00A0025E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		ADD42CAF1C5A104F00A0025E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		ADD42CB01C5A104F00A0025E /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		ADD42CB11C5A104F00A0025E /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		ADD42CB21C5A104F00A0025E /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		ADD42CB31C5A104F00A0025E /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		ADD42CB41C5A104F00A0025E /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		ADD42CB51C5A104F00A0025E /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		ADD42CB61C5A104F00A0025E /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		ADD42CB71C5A104F00A0025E /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		ADD42CB81C5A104F00A0025E /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		ADD53C141C585EC10068292D /* PDCafeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeDetailViewController.h; sourceTree = "<group>"; };
+		ADD53C151C585EC10068292D /* PDCafeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeDetailViewController.m; sourceTree = "<group>"; };
+		ADD53C161C585EC10068292D /* PDCafeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDCafeDetailViewController.xib; sourceTree = "<group>"; };
+		ADD53C171C585EC10068292D /* PDCafeMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeMapViewController.h; sourceTree = "<group>"; };
+		ADD53C181C585EC10068292D /* PDCafeMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeMapViewController.m; sourceTree = "<group>"; };
+		ADD53C191C585EC10068292D /* PDCafeMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDCafeMapViewController.xib; sourceTree = "<group>"; };
+		ADD53C1A1C585EC10068292D /* PDCafeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeTableViewController.h; sourceTree = "<group>"; };
+		ADD53C1B1C585EC10068292D /* PDCafeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeTableViewController.m; sourceTree = "<group>"; };
+		ADD53C1C1C585EC10068292D /* PDCityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCityListViewController.h; sourceTree = "<group>"; };
+		ADD53C1D1C585EC10068292D /* PDCityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCityListViewController.m; sourceTree = "<group>"; };
+		ADD53C251C5865030068292D /* PDWallpaperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDWallpaperViewController.h; sourceTree = "<group>"; };
+		ADD53C261C5865030068292D /* PDWallpaperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDWallpaperViewController.m; sourceTree = "<group>"; };
+		ADD53C2B1C5871510068292D /* PDWallpaperCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDWallpaperCell.h; sourceTree = "<group>"; };
+		ADD53C2C1C5871510068292D /* PDWallpaperCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDWallpaperCell.m; sourceTree = "<group>"; };
+		ADD53C2D1C5871510068292D /* PDWallpaperCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDWallpaperCell.xib; sourceTree = "<group>"; };
 		ADDA69D11C27D1A00030208A /* PDVideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDVideoDetailViewController.h; sourceTree = "<group>"; };
 		ADDA69D21C27D1A00030208A /* PDVideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDVideoDetailViewController.m; sourceTree = "<group>"; };
 		ADDA69D31C27D1A00030208A /* PDVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDVideoListViewController.h; sourceTree = "<group>"; };
@@ -492,8 +519,6 @@
 		ADF6AD551C19BC8100BE12DF /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		ADF6AD561C19BC8100BE12DF /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		ADF6AD571C19BC8100BE12DF /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
-		ADF8FDAE1C30DB7B00E38C80 /* PDCafeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeTableViewController.h; sourceTree = "<group>"; };
-		ADF8FDAF1C30DB7B00E38C80 /* PDCafeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDCafeTableViewController.m; sourceTree = "<group>"; };
 		ADF8FDC01C31061200E38C80 /* PDSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSearchBar.h; sourceTree = "<group>"; };
 		ADF8FDC11C31061200E38C80 /* PDSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDSearchBar.m; sourceTree = "<group>"; };
 		ADF8FDE61C31075100E38C80 /* PDCafeSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDCafeSearchView.h; sourceTree = "<group>"; };
@@ -561,12 +586,6 @@
 		AD277D221C0E8124003E9AA0 = {
 			isa = PBXGroup;
 			children = (
-				ADB96F121C51F3A600CE9040 /* libstdc++.6.0.9.tbd */,
-				ADB96F101C51F35A00CE9040 /* SystemConfiguration.framework */,
-				ADB96F0E1C51F34600CE9040 /* OpenGLES.framework */,
-				ADB96F0C1C51F33A00CE9040 /* Security.framework */,
-				ADB96F0A1C51F32900CE9040 /* QuartzCore.framework */,
-				ADB96F081C51F31B00CE9040 /* CoreGraphics.framework */,
 				AD277EBA1C0F335B003E9AA0 /* PerfectDota2 */,
 				AD277D2C1C0E8125003E9AA0 /* Products */,
 			);
@@ -629,6 +648,7 @@
 		AD277EC61C0F335B003E9AA0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				ADD42CAD1C5A104F00A0025E /* fmdb */,
 				ADF6AD3D1C19BC5D00BE12DF /* MJExtensionConfig.h */,
 				ADF6AD3E1C19BC5D00BE12DF /* MJExtensionConfig.m */,
 				ADDA7E751C2803960030208A /* MBProgressHUD */,
@@ -849,6 +869,8 @@
 				ADC3F8EE1C1840DB0028E58D /* PDAdManager.m */,
 				ADC3F8EF1C1840DB0028E58D /* PDNetworkTool.h */,
 				ADC3F8F01C1840DB0028E58D /* PDNetworkTool.m */,
+				ADD42CAA1C5A0FEC00A0025E /* PDDataBase.h */,
+				ADD42CAB1C5A0FEC00A0025E /* PDDataBase.m */,
 				AD03BE4C1C328AD3003CB7A6 /* PDLocationTool.h */,
 				AD03BE4D1C328AD3003CB7A6 /* PDLocationTool.m */,
 			);
@@ -911,6 +933,8 @@
 				ADF8FDF01C31115000E38C80 /* PDCityBaseModel.m */,
 				ADF928E11C437127000751A1 /* PDCafeModel.h */,
 				ADF928E21C437127000751A1 /* PDCafeModel.m */,
+				AD27B25D1C589C5B00429526 /* PDWallModel.h */,
+				AD27B25E1C589C5B00429526 /* PDWallModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -935,8 +959,55 @@
 				AD7F30241C449AB400192647 /* PDCafeCell.h */,
 				AD7F30251C449AB400192647 /* PDCafeCell.m */,
 				AD7F30271C449AC000192647 /* PDCafeCell.xib */,
+				ADD53C2B1C5871510068292D /* PDWallpaperCell.h */,
+				ADD53C2C1C5871510068292D /* PDWallpaperCell.m */,
+				ADD53C2D1C5871510068292D /* PDWallpaperCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		ADD42CAD1C5A104F00A0025E /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				ADD42CAE1C5A104F00A0025E /* FMDatabase.h */,
+				ADD42CAF1C5A104F00A0025E /* FMDatabase.m */,
+				ADD42CB01C5A104F00A0025E /* FMDatabaseAdditions.h */,
+				ADD42CB11C5A104F00A0025E /* FMDatabaseAdditions.m */,
+				ADD42CB21C5A104F00A0025E /* FMDatabasePool.h */,
+				ADD42CB31C5A104F00A0025E /* FMDatabasePool.m */,
+				ADD42CB41C5A104F00A0025E /* FMDatabaseQueue.h */,
+				ADD42CB51C5A104F00A0025E /* FMDatabaseQueue.m */,
+				ADD42CB61C5A104F00A0025E /* FMDB.h */,
+				ADD42CB71C5A104F00A0025E /* FMResultSet.h */,
+				ADD42CB81C5A104F00A0025E /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		ADD53C131C585EC10068292D /* Cafe */ = {
+			isa = PBXGroup;
+			children = (
+				ADD53C141C585EC10068292D /* PDCafeDetailViewController.h */,
+				ADD53C151C585EC10068292D /* PDCafeDetailViewController.m */,
+				ADD53C161C585EC10068292D /* PDCafeDetailViewController.xib */,
+				ADD53C171C585EC10068292D /* PDCafeMapViewController.h */,
+				ADD53C181C585EC10068292D /* PDCafeMapViewController.m */,
+				ADD53C191C585EC10068292D /* PDCafeMapViewController.xib */,
+				ADD53C1A1C585EC10068292D /* PDCafeTableViewController.h */,
+				ADD53C1B1C585EC10068292D /* PDCafeTableViewController.m */,
+				ADD53C1C1C585EC10068292D /* PDCityListViewController.h */,
+				ADD53C1D1C585EC10068292D /* PDCityListViewController.m */,
+			);
+			path = Cafe;
+			sourceTree = "<group>";
+		};
+		ADD53C1E1C585EC10068292D /* Wallpaper */ = {
+			isa = PBXGroup;
+			children = (
+				ADD53C251C5865030068292D /* PDWallpaperViewController.h */,
+				ADD53C261C5865030068292D /* PDWallpaperViewController.m */,
+			);
+			path = Wallpaper;
 			sourceTree = "<group>";
 		};
 		ADDA69D01C27D1A00030208A /* Video */ = {
@@ -1001,6 +1072,7 @@
 		ADDA7EC91C28054F0030208A /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				ADB96F121C51F3A600CE9040 /* libstdc++.6.0.9.tbd */,
 				AD1064041C322CA300EB6350 /* CoreTelephony.framework */,
 				AD1064001C322C7200EB6350 /* CoreLocation.framework */,
 				AD1063FE1C322C3B00EB6350 /* libc++.1.tbd */,
@@ -1148,16 +1220,8 @@
 		ADF8FDAD1C30DB4300E38C80 /* BH */ = {
 			isa = PBXGroup;
 			children = (
-				ADF8FDAE1C30DB7B00E38C80 /* PDCafeTableViewController.h */,
-				ADF8FDAF1C30DB7B00E38C80 /* PDCafeTableViewController.m */,
-				AD9128D51C4F2D12003AB36B /* PDCafeDetailViewController.h */,
-				AD9128D61C4F2D12003AB36B /* PDCafeDetailViewController.m */,
-				AD9128D81C4F3414003AB36B /* PDCafeDetailViewController.xib */,
-				ADB96F031C51C8E200CE9040 /* PDCafeMapViewController.h */,
-				ADB96F041C51C8E200CE9040 /* PDCafeMapViewController.m */,
-				AD468E4C1C55BDA5000C5E05 /* PDCafeMapViewController.xib */,
-				AD1063EF1C3219DC00EB6350 /* PDCityListViewController.h */,
-				AD1063F01C3219DC00EB6350 /* PDCityListViewController.m */,
+				ADD53C131C585EC10068292D /* Cafe */,
+				ADD53C1E1C585EC10068292D /* Wallpaper */,
 			);
 			path = BH;
 			sourceTree = "<group>";
@@ -1221,7 +1285,6 @@
 			files = (
 				AD5E99F81C16DB98009E14DE /* beep.wav in Resources */,
 				AD7F30281C449AC000192647 /* PDCafeCell.xib in Resources */,
-				AD9128D91C4F3414003AB36B /* PDCafeDetailViewController.xib in Resources */,
 				ADDA7E901C2803960030208A /* Icon@2x.png in Resources */,
 				ADDA7E881C2803960030208A /* Default-iOS7-568h@2x.png in Resources */,
 				ADDA7E8F1C2803960030208A /* Icon.png in Resources */,
@@ -1249,9 +1312,11 @@
 				AD277F801C0F335B003E9AA0 /* Images.xcassets in Resources */,
 				ADDA7F021C280D180030208A /* app1.zip in Resources */,
 				AD277F3C1C0F335B003E9AA0 /* Main.storyboard in Resources */,
+				ADD53C2F1C5871510068292D /* PDWallpaperCell.xib in Resources */,
 				ADDA7E8C1C2803960030208A /* Icon-iOS7@2x.png in Resources */,
 				ADDA7E851C2803960030208A /* 37x-Checkmark.png in Resources */,
-				AD468E4D1C55BDA5000C5E05 /* PDCafeMapViewController.xib in Resources */,
+				ADD53C201C585EC10068292D /* PDCafeDetailViewController.xib in Resources */,
+				ADD53C221C585EC10068292D /* PDCafeMapViewController.xib in Resources */,
 				ADDA7E8E1C2803960030208A /* Icon-Small@2x.png in Resources */,
 				ADDA7E8A1C2803960030208A /* Default.png in Resources */,
 				ADDA7E8D1C2803960030208A /* Icon-Small.png in Resources */,
@@ -1272,6 +1337,7 @@
 				ADEC32CD1C2CE145008FEAC7 /* OpenShare.m in Sources */,
 				AD277F401C0F335B003E9AA0 /* AFHTTPRequestOperationManager.m in Sources */,
 				ADDA69E51C27D1B90030208A /* PDWebViewController.m in Sources */,
+				AD27B25F1C589C5B00429526 /* PDWallModel.m in Sources */,
 				ADF6AD5D1C19BC8100BE12DF /* MJPropertyType.m in Sources */,
 				ADDA7E911C2803960030208A /* MBProgressHUD.m in Sources */,
 				ADDA7EFB1C2808A50030208A /* fileenc.c in Sources */,
@@ -1296,10 +1362,12 @@
 				ADF928E31C437127000751A1 /* PDCafeModel.m in Sources */,
 				ADFC9F2D1C201689007DC20B /* PDNewestVideoModel.m in Sources */,
 				AD277F4E1C0F335B003E9AA0 /* SDWebImageDownloaderOperation.m in Sources */,
+				ADD42CAC1C5A0FEC00A0025E /* PDDataBase.m in Sources */,
 				ADF485BD1C43B6D800857F4D /* NSString+Json.m in Sources */,
 				ADFC9F2A1C20163A007DC20B /* PDAuthorModel.m in Sources */,
 				ADF8FDF11C31115000E38C80 /* PDCityBaseModel.m in Sources */,
 				ADC3F9021C1841400028E58D /* ZLKViewController.m in Sources */,
+				ADD42CBB1C5A104F00A0025E /* FMDatabasePool.m in Sources */,
 				AD7399F01C11C299001D17F8 /* PDNavigationController.m in Sources */,
 				ADDA7ED71C2806660030208A /* ioapi.c in Sources */,
 				AD277F421C0F335B003E9AA0 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1307,15 +1375,19 @@
 				AD277F4A1C0F335B003E9AA0 /* SDImageCache.m in Sources */,
 				ADF6AD621C19BC8100BE12DF /* NSString+MJExtension.m in Sources */,
 				ADF6AD581C19BC8100BE12DF /* MJDictionaryCache.m in Sources */,
+				ADD42CBC1C5A104F00A0025E /* FMDatabaseQueue.m in Sources */,
 				ADF6AD3F1C19BC5D00BE12DF /* MJExtensionConfig.m in Sources */,
 				AD277F491C0F335B003E9AA0 /* NSData+ImageContentType.m in Sources */,
+				ADD53C231C585EC10068292D /* PDCafeTableViewController.m in Sources */,
 				ADC3F8F21C1840DB0028E58D /* PDNetworkTool.m in Sources */,
 				ADF6AD591C19BC8100BE12DF /* MJExtensionConst.m in Sources */,
 				AD75FFA21C19102100A48FA3 /* NewsTableViewController.m in Sources */,
 				ADDA69F01C27D5710030208A /* PDLocalWebViewController.m in Sources */,
 				AD277F461C0F335B003E9AA0 /* AFURLResponseSerialization.m in Sources */,
+				ADD53C1F1C585EC10068292D /* PDCafeDetailViewController.m in Sources */,
 				AD277F4C1C0F335B003E9AA0 /* SDWebImageDecoder.m in Sources */,
 				AD277F841C0F335B003E9AA0 /* PDTabBarButton.m in Sources */,
+				ADD42CBD1C5A104F00A0025E /* FMResultSet.m in Sources */,
 				AD44D4991C22B74100B436A0 /* PDBHModel.m in Sources */,
 				AD277F861C0F335B003E9AA0 /* ViewController.m in Sources */,
 				ADF6AD601C19BC8100BE12DF /* NSObject+MJKeyValue.m in Sources */,
@@ -1340,7 +1412,7 @@
 				ADEC32DC1C2D092E008FEAC7 /* PDShareModel.m in Sources */,
 				AD03BE4E1C328AD3003CB7A6 /* PDLocationTool.m in Sources */,
 				AD277F431C0F335B003E9AA0 /* AFSecurityPolicy.m in Sources */,
-				AD9128D71C4F2D12003AB36B /* PDCafeDetailViewController.m in Sources */,
+				ADD53C241C585EC10068292D /* PDCityListViewController.m in Sources */,
 				AD7399EF1C11C299001D17F8 /* PDBaseViewController.m in Sources */,
 				AD01FF251C3E4D3400EAC4F9 /* PDHistoryCityButton.m in Sources */,
 				AD277F4D1C0F335B003E9AA0 /* SDWebImageDownloader.m in Sources */,
@@ -1349,8 +1421,6 @@
 				AD277F4B1C0F335B003E9AA0 /* SDWebImageCompat.m in Sources */,
 				AD4EFC5A1C11804D00407C0C /* PDTagLabel.m in Sources */,
 				ADDA7ED91C2806660030208A /* unzip.c in Sources */,
-				ADB96F051C51C8E200CE9040 /* PDCafeMapViewController.m in Sources */,
-				AD1063F11C3219DC00EB6350 /* PDCityListViewController.m in Sources */,
 				ADFAC7EA1C3CAA5200473EA5 /* PDHistoryCityCell.m in Sources */,
 				ADC3F90F1C184B0F0028E58D /* TopNewsModel.m in Sources */,
 				AD277F411C0F335B003E9AA0 /* AFHTTPSessionManager.m in Sources */,
@@ -1363,7 +1433,7 @@
 				AD277F531C0F335B003E9AA0 /* UIImage+MultiFormat.m in Sources */,
 				ADF8FDEE1C3110DD00E38C80 /* PDCityModel.m in Sources */,
 				AD277F451C0F335B003E9AA0 /* AFURLRequestSerialization.m in Sources */,
-				ADF8FDB01C30DB7B00E38C80 /* PDCafeTableViewController.m in Sources */,
+				ADD53C211C585EC10068292D /* PDCafeMapViewController.m in Sources */,
 				AD277F501C0F335B003E9AA0 /* SDWebImagePrefetcher.m in Sources */,
 				AD277F471C0F335B003E9AA0 /* AFURLSessionManager.m in Sources */,
 				ADC3F9031C1841400028E58D /* ZXViewController.m in Sources */,
@@ -1387,6 +1457,8 @@
 				AD277F571C0F335B003E9AA0 /* UIView+WebCacheOperation.m in Sources */,
 				ADEC32CB1C2CE145008FEAC7 /* OpenShare+Weibo.m in Sources */,
 				AD277F4F1C0F335B003E9AA0 /* SDWebImageManager.m in Sources */,
+				ADD53C2E1C5871510068292D /* PDWallpaperCell.m in Sources */,
+				ADD42CBA1C5A104F00A0025E /* FMDatabaseAdditions.m in Sources */,
 				ADDA7EFC1C2808A50030208A /* hmac.c in Sources */,
 				AD277F3A1C0F335B003E9AA0 /* AppDelegate.m in Sources */,
 				AD4EFC5C1C11804D00407C0C /* PDTitleView.m in Sources */,
@@ -1396,6 +1468,8 @@
 				ADDCEAC81C213D3A00E0AE98 /* PDNewestVideoCell.m in Sources */,
 				AD5E99EF1C16D991009E14DE /* QRCodeReaderView.m in Sources */,
 				AD277F581C0F335B003E9AA0 /* TTAdsCell.m in Sources */,
+				ADD42CB91C5A104F00A0025E /* FMDatabase.m in Sources */,
+				ADD53C271C5865030068292D /* PDWallpaperViewController.m in Sources */,
 				AD277F3D1C0F335B003E9AA0 /* GlobeConst.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

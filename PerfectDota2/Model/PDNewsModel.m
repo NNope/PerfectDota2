@@ -40,4 +40,10 @@
         _type = [type copy];
     
 }
+
+// 转换完成后 做缓存
+-(void)mj_keyValuesDidFinishConvertingToObject
+{
+    
+}
 @end

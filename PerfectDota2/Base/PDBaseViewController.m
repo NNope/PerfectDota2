@@ -9,6 +9,8 @@
 #import "PDBaseViewController.h"
 #import "PDTabBar.h"
 #import "PDShareView.h"
+#import "PDCafeTableViewController.h"
+#import "PDCafeDetailViewController.h"
 @interface PDBaseViewController ()<PDTitleViewDelegate>
 
 @end
@@ -37,7 +39,7 @@
     [super viewDidLoad];
     
     self.navigationController.navigationBarHidden = YES;
-    
+    self.view.backgroundColor = PDGrayColor;
     [self.view addSubview:self.titleView];
     self.titleView.title = self.title;
     
@@ -125,7 +127,19 @@
             NSArray *imgs = @[@"wechat_",@"friends",@"QQ",@"sina"];
             NSArray *titles = @[@"微信朋友",@"微信朋友圈",@"QQ好友",@"新浪微博"];
             PDShareView *sv = [[PDShareView alloc] initWithFrame:self.view.bounds ShareBtnImgs:imgs btnTitles:titles];
-            sv.shareModel = self.shareModel;
+            // 特权网吧 网吧详情特殊指定分享内容
+            if ([self isKindOfClass:[PDCafeDetailViewController class]] || [self isKindOfClass:[PDCafeTableViewController class]])
+            {
+                sv.shareModel = [[PDShareModel alloc] init];
+                sv.shareModel.shareLink = @"http://app.dota2.com.cn/web.html";
+                sv.shareModel.shareDesc = @"快去下载完美刀塔APP吧，跟我一起享受特权！";
+                sv.shareModel.shareTitle = @"特权网吧畅玩《DOTA2》享受特权";
+                sv.shareModel.shereThumbImage = [UIImage imageNamed:@"comment_default_avatar"];
+            }
+            else
+            {
+                sv.shareModel = self.shareModel;
+            }
             [self.view addSubview:sv];
             
         }

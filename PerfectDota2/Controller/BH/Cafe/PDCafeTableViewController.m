@@ -381,6 +381,7 @@ static  NSString *const PDCafeCellID = @"PDCafeCellID";
     }
     else
     {
+        // 没有更多了
         [self.cafeTableView tableViewNoMore];
     }
 
@@ -450,6 +451,8 @@ static  NSString *const PDCafeCellID = @"PDCafeCellID";
     // 比较城市是否相同
     [self ChooseIsEqualToLocation];
 }
+
+#pragma mark - PDTitleViewDelegate
 
 
 

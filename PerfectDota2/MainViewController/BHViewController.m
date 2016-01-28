@@ -10,6 +10,8 @@
 #import "PDBHcollectionCell.h"
 #import "MJRefreshHeaderView.h"
 #import "PDCafeTableViewController.h"
+#import "PDWallpaperViewController.h"
+#import "PDWebViewController.h"
 
 @interface BHViewController ()<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -28,8 +30,10 @@ static NSString * const reuseIdentifier = @"PDBHcollectionCellID";
     self.titleView.titleType = PDTitleTypeRefresh;
     // 比super调的晚就没用了  外界创建可以用
     self.titleView.title = @"宝盒";
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    // 添加刷新
     [self.collectionView addHeaderWithTarget:self action:@selector(refresh)];
-    [self blackHeadColor];
+//    [self blackHeadColor];
 
 }
 
@@ -54,28 +58,24 @@ static NSString * const reuseIdentifier = @"PDBHcollectionCellID";
 {
     [[PDNetworkTool sharedNetworkToolsWithoutBaseUrl]GET:[NSString stringWithFormat:@"http://www.dota2.com.cn/wapnews/baoheListData.html?%ld",(long)[[[NSDate alloc] init] timeIntervalSince1970]] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *data = responseObject[@"data"][0];
-//        self.collectionList = [NSMutableArray arrayWithArray:data[@"list"]];
-        self.collectionList = [PDBHModel mj_objectArrayWithKeyValuesArray:data[@"list"]];
+        NSMutableArray *m = [PDBHModel mj_objectArrayWithKeyValuesArray:data[@"list"]];
+        self.collectionList = [NSMutableArray arrayWithArray:m];
+        for (PDBHModel *item in m)
+        {
+            // 暂时去除
+            if ([item.title isEqualToString:@"我的2015"] || [item.title isEqualToString:@"好友PK"] || [item.title isEqualToString:@"背景音乐"])
+            {
+                [self.collectionList removeObject:item];
+            }
+        }
         [self.collectionView headerEndRefreshing];
         [self.collectionView reloadData];
-        self.collectionView.backgroundColor = [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         PDLog(@"%@",error);
         [self.collectionView headerEndRefreshing];
     }];
 }
-// 视频下拉没有加载
-- (void)blackHeadColor
-{
-    for (UIView *view in self.collectionView.subviews)
-    {
-        if ([view isKindOfClass:[MJRefreshHeaderView class]])
-        {
-            MJRefreshHeaderView *head = (MJRefreshHeaderView *)view;
-            head.statusLabel.textColor = [UIColor blackColor];
-        }
-    }
-}
+
 
 #pragma getter
 
@@ -90,7 +90,7 @@ static NSString * const reuseIdentifier = @"PDBHcollectionCellID";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.collectionList.count - 1;
+    return self.collectionList.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -103,22 +103,46 @@ static NSString * const reuseIdentifier = @"PDBHcollectionCellID";
 #pragma mark <UICollectionViewDelegate>
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    // type 原生
+    
     PDBHModel *item = self.collectionList[indexPath.item];
-    UIViewController *pushVc;
-    if (item.type)
+    if (item.type)// 有type 原生
     {
-        if ([item.type isEqualToString:@"dota2cafe"])
+        UIViewController *pushVc;
+        if ([item.type isEqualToString:@"dota2cafe"])// 特权网吧
         {
             pushVc = [[PDCafeTableViewController alloc] init];
             
+        }
+        /*
+         {
+         "pic": "http://dota2.wanmei.com/resources/png/151019/10251445244000110.png",
+         "title": "DOTA2壁纸",
+         "url": "",
+         "type": "dota2wallpaper",
+         "tag": "New"
+         },
+         */
+        else if ([item.type isEqualToString:@"dota2wallpaper"]) // 壁纸
+        {
+            pushVc = [[PDWallpaperViewController alloc] init];
         }
         [self.navigationController pushViewController:pushVc animated:YES];
     }
     else  // no type   web
     {
-        
+        PDWebViewController *webVc = [[PDWebViewController alloc] init];
+        /**
+         *
+         "title": "天梯排行",
+         "url": "http://www.dota2.com.cn/event/201406/ttph/index.htm"
+         */
+//        if ([item.title isEqualToString:@"天梯排行"])
+//        {
+            webVc.webUrl = item.url;
+//        }
+        [self.navigationController pushViewController:webVc animated:YES];
     }
+    
 }
 
 #pragma mark <UICollectionViewDelegateFlowLayout>
@@ -131,13 +155,10 @@ static NSString * const reuseIdentifier = @"PDBHcollectionCellID";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     // 2边间距 + 中间的1 *2
-    CGFloat length = (int)(SCREENWIDTH-((kCollectionMargin+kCellMargin) * (kCellLineCount-1)))/kCellLineCount;
-    
-    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, (length+kCellMargin)*kCellLineCount, SCREENWIDTH - kCollectionMargin*(kCellLineCount-1), 400)];
-    bottomView.backgroundColor = [UIColor colorWithRed:225/255.0 green:225/255.0 blue:225/255.0 alpha:1];
-    [self.collectionView addSubview:bottomView];
+    CGFloat length = SCREENWIDTH/kCellLineCount;
     
     return CGSizeMake(length, length);
 }
+
 
 @end
