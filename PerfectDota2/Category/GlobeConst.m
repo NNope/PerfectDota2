@@ -22,6 +22,12 @@ NSString *const chooseCityInfoKey = @"chooseCityInfoKey";
 
 // 程序启动第一次不要执行didappear
 NSString *const isFirstRefresh = @"isFirstRefresh";
+NSString *const topNewsDict = @"topNewsDict";
+
+
+/**
+ *  Cafe
+ */
 // 上次选择的城市名
 NSString *const lastChooseCityNameKey = @"lastChooseCityNameKey";
 // 上次选择的Latitude

@@ -22,6 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    PDLog(@"沙盒Caches目录-----%@",[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]);
     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:isFirstRefresh];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     // 增加网络监控

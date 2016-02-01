@@ -178,6 +178,10 @@ static CGFloat const TITLEHEIGHT = 25;
 
         });
     }
+    // 如果使用缓存 需要在重新设置数据源的时候 设置分页 刷新图片 刷新第一个lable
+    _pageControl.numberOfPages = self.urlArray.count;
+    [self.AdsCollectView reloadData];
+    self.titleLabel.text = self.titleArray[0];
 
 }
 

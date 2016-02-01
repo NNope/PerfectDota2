@@ -15,6 +15,7 @@
 #import "PDProvinceModel.h"
 #import "PDCafeModel.h"
 #import "PDWallModel.h"
+#import "PDNewestVideoModel.h"
 
 @implementation MJExtensionConfig
 /**
@@ -47,6 +48,11 @@
     [PDWallModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{
                  @"ID" : @"id"
+                 };
+    }];
+    [PDNewestVideoModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{
+                 @"_id" : @"id"
                  };
     }];
     

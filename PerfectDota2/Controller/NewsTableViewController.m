@@ -42,14 +42,14 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
     {
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(advanceRefresh) name:PDNewsAllRefresh object:nil];
     }
+    // 控制是否自动刷新
     self.hasAutoRefresh = NO;
     
     [self.tableView addHeaderWithTarget:self action:@selector(refresh)];
     [self.tableView addFooterWithTarget:self action:@selector(loadMoreNews)];
     
     // 先显示数据库缓存新闻
-//    self.newsList = [PDDataBase listItemClass:[PDNewsModel class]];
-    PDLog(@"11");
+    [self showDataBaseNews];
 }
 
 // 通知用的 提前刷新，防止cell需要用
@@ -124,7 +124,7 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
         else
         {
             // 加载其他分类更多
-            moreNewsUrl = [NSString stringWithFormat:@"%@index%lu.html?%ld",self.typeBaseUrl,self.newsList.count/20,(long)[[[NSDate alloc] init] timeIntervalSince1970]];
+            moreNewsUrl = [NSString stringWithFormat:@"http://www.dota2.com.cn/wapnews/%@/index%lu.html?%ld",self.typeBaseUrl,self.newsList.count/20,(long)[[[NSDate alloc] init] timeIntervalSince1970]];
         }
         [[PDNetworkTool sharedNetworkToolsWithoutBaseUrl]GET:moreNewsUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             NSArray *moreNews = responseObject[@"data"];
@@ -174,18 +174,22 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
 - (void)refreshVideo
 {
     NSString *url = @"";
+    Class class;
     // 最新模块
+    
     if (self.pdVideoTableType == PDVideoTableTypeNewest)
     {
         url = [NSString stringWithFormat:@"http://www.dota2.com.cn/app1/data/videoNewest.json?%ld",(long)[[[NSDate alloc] init] timeIntervalSince1970]];
+        class = [PDNewestVideoModel class];
         
     }
     else if (self.pdVideoTableType != PDVideoTableTypeLive)// 赛事 集锦 解说
     {
         url = [NSString stringWithFormat:@"http://www.dota2.com.cn/app1/data/sorts/%lu.json?%ld",self.cid,(long)[[[NSDate alloc] init] timeIntervalSince1970]];
+        class = [PDVideoAlbumModel class];
     }
     [[PDNetworkTool sharedNetworkToolsWithoutBaseUrl]GET:url parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        self.videoList = [NSMutableArray arrayWithArray:responseObject];
+        self.videoList = [class mj_objectArrayWithKeyValuesArray:responseObject];
         [self.tableView headerEndRefreshing];
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -198,8 +202,8 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
 - (void)refreshNewsOrther
 {
     // 请求其他分类的新闻
-    NSString *hotNewsUrl = [NSString stringWithFormat:@"%@index.html?%ld",self.typeBaseUrl,(long)[[[NSDate alloc] init] timeIntervalSince1970]];
-    [PDNetworkTool getNewsWithUrl:hotNewsUrl param:nil modelClass:[PDNewsModel class] SuccessBlock:^(id responseArr) {
+    NSString *hotNewsUrl = [NSString stringWithFormat:@"http://www.dota2.com.cn/wapnews/%@/index.html?%ld",self.typeBaseUrl,(long)[[[NSDate alloc] init] timeIntervalSince1970]];
+    [PDNetworkTool getNewsWithUrl:hotNewsUrl Type:self.typeBaseUrl param:nil modelClass:[PDNewsModel class] SuccessBlock:^(id responseArr) {
         self.newsList = responseArr;
         [self.tableView headerEndRefreshing];
         [self.tableView reloadData];
@@ -214,10 +218,12 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
 {
     // 这只是all的时候。。。。
     // 请求轮播
-    /*http://www.dota2.com.cn/wapnews/sliderImagesData_v2.html?2655449187*/
     NSString *sliderUrl = [NSString stringWithFormat:@"http://www.dota2.com.cn/wapnews/sliderImagesData_v2.html?%ld",(long)[[[NSDate alloc] init] timeIntervalSince1970]];
     [[PDNetworkTool sharedNetworkToolsWithoutBaseUrl]GET:sliderUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
         self.topNewsList = responseObject[@"data"];
+        // 缓存轮播
+        [[NSUserDefaults standardUserDefaults] setObject:responseObject forKey:topNewsDict];
         self.topSuccess = YES;
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         PDLog(@"%@",error);
@@ -226,23 +232,58 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
     
     // 请求全部
     NSString *hotNewsUrl = [NSString stringWithFormat:@"http://www.dota2.com.cn/wapnews/hotnewsList.html?%ld",(long)[[[NSDate alloc] init] timeIntervalSince1970]];
-    [PDNetworkTool getNewsWithUrl:hotNewsUrl param:nil modelClass:[PDNewsModel class] SuccessBlock:^(id responseArr) {
+    [PDNetworkTool getNewsWithUrl:hotNewsUrl Type:nil param:nil modelClass:[PDNewsModel class] SuccessBlock:^(id responseArr) {
         self.newsList = responseArr;
         self.newSuccess = YES;
     } FailureBlock:^(NSError *error) {
         PDLog(@"%@",error);
         [self.tableView headerEndRefreshing];
     }];
-//    [[PDNetworkTool sharedNetworkToolsWithoutBaseUrl]GET:hotNewsUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-//        
-//        // 应该做数据库保存
-//        
-//        self.newsList = [PDNewsModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
-//        self.newSuccess = YES;
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        PDLog(@"%@",error);
-//        [self.tableView headerEndRefreshing];
-//    }];
+}
+
+/**
+ *  先显示数据库缓存数据
+ */
+- (void)showDataBaseNews
+{
+    if (!self.isVideo)
+    {
+        // 新闻资讯
+        // 全部列表
+        switch (self.pdNewsTableType)
+        {
+            case PDNewsTableTypeAll:
+            {
+                // 轮播采用事先保存的plist的数据 不然第一次进来是白的
+                NSDictionary *dataDict = [[NSUserDefaults standardUserDefaults] objectForKey:topNewsDict];
+                NSArray *data = dataDict[@"data"];
+                if (data)
+                {
+                    self.topNewsList = data;
+                }
+                else
+                {
+                    // 防止没有轮播数据  闪退
+                    return;
+                }
+                // 取数据库中 前20
+                self.newsList = [PDDataBase listTbale:@"TNewsAll" WithRange:NSMakeRange(0, 20) ItemClass:[PDNewsModel class] type:nil];
+               
+                
+            }
+                break;
+                
+            default:
+            {
+                // 其他模块新闻
+                self.newsList = [PDDataBase listTbale:@"TNews" WithRange:NSMakeRange(0, 20) ItemClass:[PDNewsModel class] type:self.typeBaseUrl];
+                PDLog(@"READ other news ");
+            }
+                break;
+        }
+        
+    }
+    // 视频资讯
 }
 
 #pragma mark - Table view data source
@@ -310,15 +351,13 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
         if (self.pdVideoTableType == PDVideoTableTypeNewest)
         {
             PDNewestVideoCell *videoCell = [tableView dequeueReusableCellWithIdentifier:PDNewestVideoCellID forIndexPath:indexPath];
-            PDNewestVideoModel *videoModel = [PDNewestVideoModel mj_objectWithKeyValues:self.videoList[indexPath.row]];
-            videoCell.pdNewestVideoModel = videoModel;
+            videoCell.pdNewestVideoModel = self.videoList[indexPath.row];
             return videoCell;
         }
         else
         {
             PDVideoAlbumCell *albumCell = [tableView dequeueReusableCellWithIdentifier:PDVideoAlbumCellID forIndexPath:indexPath];
-            PDVideoAlbumModel *albumModel = [PDVideoAlbumModel mj_objectWithKeyValues:self.videoList[indexPath.row]];
-            albumCell.pdVideoAlbumModel = albumModel;
+            albumCell.pdVideoAlbumModel = self.videoList[indexPath.row];
             return albumCell;
         }
         
@@ -416,24 +455,24 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
             break;
         case PDNewsTableTypeGov:
         {
-            self.typeBaseUrl = @"http://www.dota2.com.cn/wapnews/govnews/";
+            self.typeBaseUrl = @"govnews";
         }
             break;
             
         case PDNewsTableTypeUpdate:
         {
-            self.typeBaseUrl = @"http://www.dota2.com.cn/wapnews/vernews/";
+            self.typeBaseUrl = @"vernews";
         }
             break;
             
         case PDNewsTableTypeMedia:
         {
-            self.typeBaseUrl = @"http://www.dota2.com.cn/wapnews/medianews/";
+            self.typeBaseUrl = @"medianews";
         }
             break;
         case PDNewsTableTypeMatch:
         {
-            self.typeBaseUrl = @"http://www.dota2.com.cn/wapnews/matchnews/";
+            self.typeBaseUrl = @"matchnews";
         }
             break;
             

@@ -24,9 +24,13 @@ typedef void (^requestFailureBlock) (NSError *error);
 + (instancetype)sharedNetworkTools;
 + (instancetype)sharedNetworkToolsWithoutBaseUrl;
 /**
- *  缓存 新闻 data
+ *  缓存 新闻 data  带type，用来存储，不然不知道什么type
  */
-+ (void)getNewsWithUrl:(NSString *)url param:(id)param modelClass:(Class)modelClass SuccessBlock:(newsSuccessBlock)successBlock FailureBlock:(requestFailureBlock)failureBlock;
++ (void)getNewsWithUrl:(NSString *)url  Type:(NSString *)type param:(id)param modelClass:(Class)modelClass SuccessBlock:(newsSuccessBlock)successBlock FailureBlock:(requestFailureBlock)failureBlock;
+/**
+ *  获取视频资讯
+ */
++ (void)getVideosWithUrl:(NSString *)url  Type:(NSString *)type param:(id)param modelClass:(Class)modelClass SuccessBlock:(newsSuccessBlock)successBlock FailureBlock:(requestFailureBlock)failureBlock;
 
 
 

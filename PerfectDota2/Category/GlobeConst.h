@@ -30,6 +30,12 @@ extern NSString *const chooseCityInfoKey;
  */
 // 程序启动第一次不要执行didappear
 extern NSString *const isFirstRefresh;
+extern NSString *const topNewsDict;
+
+
+/**
+ *  Cafe
+ */
 // 上次选择的城市名
 extern NSString *const lastChooseCityNameKey;
 // 上次选择的Latitude

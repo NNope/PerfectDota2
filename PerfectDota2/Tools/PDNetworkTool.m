@@ -16,10 +16,6 @@
     static PDNetworkTool *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        
-        // http://c.m.163.com//nc/article/list/T1348649654285/0-20.html
-        // http://c.m.163.com/photo/api/set/0096/57255.json
-        // http://c.m.163.com/photo/api/set/54GI0096/57203.html
         NSURL *url = [NSURL URLWithString:@"http://c.m.163.com/"];
         
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -56,27 +52,31 @@
 /**
  *  缓存 新闻 data
  */
-+ (void)getNewsWithUrl:(NSString *)url param:(id)param modelClass:(Class)modelClass SuccessBlock:(newsSuccessBlock)successBlock FailureBlock:(requestFailureBlock)failureBlock
++(void)getNewsWithUrl:(NSString *)url Type:(NSString *)type param:(id)param modelClass:(Class)modelClass SuccessBlock:(newsSuccessBlock)successBlock FailureBlock:(requestFailureBlock)failureBlock
 {
     [[self sharedNetworkToolsWithoutBaseUrl] GET:url parameters:param success:^(NSURLSessionDataTask *task, id responseObject) {
-        // 要缓存到数据库 只需要把数组传递出去
-        // 模型数组
-//        NSMutableArray *dataArr = [modelClass mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
-        // 因为要把dict直接保存，所以要遍历两次 就不使用上面的方法直接转数组
+        
         NSArray *lists = responseObject[@"data"];
+        // 倒序数组 存入数据库
+        NSArray *reverseLists = [lists.reverseObjectEnumerator allObjects];
         // 传出去的模型数组
         NSMutableArray *modelArray = [NSMutableArray array];
-        for (NSDictionary *dict in lists)
+        for (NSDictionary *dict in reverseLists)
         {
-            // 单个模型
-            [modelArray addObject:[modelClass mj_objectWithKeyValues:dict]];
+            // 单个模型 要正序的
+            [modelArray insertObject:[modelClass mj_objectWithKeyValues:dict] atIndex:0];
             
             //先判断数据是否存储过，如果没有，网络请求新数据存入数据库
-            if (![PDDataBase isExistWithId:dict[@"id"]])
+            // 分表格判断
+            if (![PDDataBase isExistTable:type?@"TNews":@"TNewsAll" WithId:dict[@"id"]])
             {
-                //存数据库
-                PDLog(@"存入数据库");
-                [PDDataBase saveItemDict:dict];
+                NSMutableDictionary *mDict = [NSMutableDictionary dictionaryWithDictionary:dict];
+                //存数据库  问题来了 只有全部模块有type
+                if (type)
+                {
+                    [mDict setObject:type forKey:@"newsType"];
+                }
+                [PDDataBase saveTable:type?@"TNews":@"TNewsAll" ItemDict:mDict];
             }
         }
         // 给外面模型数组
@@ -86,15 +86,41 @@
         // 回调给外面的fail
         failureBlock(error);
     }];
-//    [XLNetworkRequest getRequest:url params:param success:^(id responseObj) {
-//        //数组、字典转化为模型数组
-//        
-//        dataObj = [self modelTransformationWithResponseObj:responseObj modelClass:modelClass];
-//        responseDataBlock(dataObj, nil);
-//        
-//    } failure:^(NSError *error) {
-//        
-//        responseDataBlock(nil, error);
-//    }];
+                
 }
+
+
+//+ (void)getVideosWithUrl:(NSString *)url  Type:(NSString *)type param:(id)param modelClass:(Class)modelClass SuccessBlock:(newsSuccessBlock)successBlock FailureBlock:(requestFailureBlock)failureBlock
+//{
+//    [[self sharedNetworkToolsWithoutBaseUrl] GET:url parameters:param success:^(NSURLSessionDataTask *task, id responseObject) {
+//        
+//        // 传出去的模型数组
+//        NSMutableArray *modelArray = [NSMutableArray array];
+//        for (NSDictionary *dict in responseObject)
+//        {
+//            // 单个模型 要正序的
+//            [modelArray insertObject:[modelClass mj_objectWithKeyValues:dict] atIndex:0];
+//            
+//            // 有type就是 分类的  无type就是全部 最新
+//            NSString *videoType = dict[@"type"];
+//            if (![PDDataBase isExistTable:videoType?@"TVideo":@"TVideoNew" WithId:dict[@"_id"]])
+//            {
+//                NSMutableDictionary *mDict = [NSMutableDictionary dictionaryWithDictionary:dict];
+//                //存数据库  问题来了 只有全部模块有type
+//                if (videoType)
+//                {
+//                    [mDict setObject:type forKey:@"videoType"];
+//                }
+//                [PDDataBase saveTable:videoType?@"TVideo":@"TVideoNew" ItemDict:mDict];
+//            }
+//        }
+//        // 给外面模型数组
+//        successBlock(modelArray);
+//        
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        // 回调给外面的fail
+//        failureBlock(error);
+//    }];
+//
+//}
 @end

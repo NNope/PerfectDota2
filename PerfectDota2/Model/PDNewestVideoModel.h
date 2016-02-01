@@ -37,6 +37,7 @@
 *  4解说 2集锦  3赛事
 */
 @property (nonatomic, assign) NSInteger cid;
+@property (nonatomic, copy) NSString *_id;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *type;
 @property (nonatomic, assign) NSInteger duration;

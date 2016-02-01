@@ -14,13 +14,13 @@
  *
  *  @param itemDict <#itemDict description#>
  */
-+ (void)saveItemDict:(NSDictionary *)itemDict;
++ (void)saveTable:(NSString *)table ItemDict:(NSDictionary *)itemDict;
 /**
  *  读取列表
  *
  *  @return <#return value description#>
  */
-+ (NSMutableArray *)listItemClass:(Class)itemclass;
++ (NSMutableArray *)listTbale:(NSString *)table ItemClass:(Class)itemclass type:(NSString *)type;
 /**
  *  分页读取列表
  *
@@ -28,13 +28,14 @@
  *
  *  @return <#return value description#>
  */
-+ (NSMutableArray *)listWithRange:(NSRange)range ItemClass:(Class)itemclass;
++ (NSMutableArray *)listTbale:(NSString *)table WithRange:(NSRange)range ItemClass:(Class)itemclass type:(NSString *)type;
+/**
+ *  删除某个表 多余的条数
+ */
++ (BOOL)deleteSurplusTable:(NSString *)table;
 /**
  *  判断是否存在
- *
- *  @param idStr <#idStr description#>
- *
- *  @return <#return value description#>
  */
-+ (BOOL)isExistWithId:(NSString *)idStr;
++ (BOOL)isExistTable:(NSString *)table WithId:(NSString *)idStr;
+
 @end

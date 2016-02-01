@@ -34,6 +34,10 @@
  */
 @property (nonatomic, copy) NSString *filefrom;
 /**
+ *  来源
+ */
+@property (nonatomic, copy) NSString *author;
+/**
  *  缩略图
  */
 @property (nonatomic, copy) NSString *thumbnail;

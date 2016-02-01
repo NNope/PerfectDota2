@@ -18,7 +18,7 @@
 {
     _wallModel = wallModel;
     self.lblFileName.text = wallModel.filename;
-    self.lblAuthor.text = wallModel.filefrom;
+    self.lblAuthor.text = wallModel.author;
     [self.imgWall sd_setImageWithURL:[NSURL URLWithString:wallModel.thumbnail] placeholderImage:[UIImage imageNamed:@"Loading-wall"]];
 }
 
