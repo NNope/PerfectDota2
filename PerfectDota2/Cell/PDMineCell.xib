@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PDMineCellID" id="gTV-IL-0wX" customClass="PDMineCell">
+            <rect key="frame" x="0.0" y="0.0" width="124" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="124" height="80"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_icon_friend" translatesAutoresizingMaskIntoConstraints="NO" id="AAH-5H-iRr">
+                        <rect key="frame" x="41" y="8" width="42" height="42"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="AAH-5H-iRr" secondAttribute="height" multiplier="1:1" id="PoO-cM-UQi"/>
+                            <constraint firstAttribute="width" constant="42" id="yeG-yn-xcg"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好友" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rC-IU-S0Q">
+                        <rect key="frame" x="49" y="54" width="26" height="16"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <animations/>
+            <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="AAH-5H-iRr" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="VVm-nv-H2K"/>
+                <constraint firstItem="AAH-5H-iRr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="ZBN-AE-t7r"/>
+                <constraint firstItem="6rC-IU-S0Q" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="aEh-Xk-Pwt"/>
+                <constraint firstItem="6rC-IU-S0Q" firstAttribute="top" secondItem="AAH-5H-iRr" secondAttribute="bottom" constant="4" id="lsG-dZ-yXL"/>
+            </constraints>
+            <size key="customSize" width="113" height="121"/>
+            <connections>
+                <outlet property="imgIcon" destination="AAH-5H-iRr" id="ST6-bJ-BWD"/>
+                <outlet property="lblName" destination="6rC-IU-S0Q" id="6iC-sT-HTk"/>
+            </connections>
+            <point key="canvasLocation" x="234" y="338"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="mine_icon_friend" width="42" height="42"/>
+    </resources>
+</document>

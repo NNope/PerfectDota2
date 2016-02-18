@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>撼地者</string>
+		<key>image</key>
+		<string>earthshaker</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>斯温</string>
+		<key>image</key>
+		<string>sven</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>小小</string>
+		<key>image</key>
+		<string>tiny</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>兽王</string>
+		<key>image</key>
+		<string>beastmaster</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>龙骑士</string>
+		<key>image</key>
+		<string>dragon_knight</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>发条技师</string>
+		<key>image</key>
+		<string>rattletrap</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>哈斯卡</string>
+		<key>image</key>
+		<string>huskar</string>
+	</dict>
+</array>
+</plist>

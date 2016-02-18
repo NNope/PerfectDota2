@@ -33,8 +33,8 @@
     popRecognizer.edges = UIRectEdgeLeft;
     [gestureView addGestureRecognizer:popRecognizer];
     
-    NSOperation *op = [[NSOperation alloc] init];
-    [op main];
+//    NSOperation *op = [[NSOperation alloc] init];
+//    [op main];
     
 }
 

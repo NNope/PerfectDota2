@@ -141,7 +141,6 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaJ-8i-Cdp">
                                     <rect key="frame" x="8" y="77" width="584" height="76"/>
                                     <animations/>
-                                    <state key="normal" title="Button"/>
                                     <connections>
                                         <action selector="btnToMap:" destination="-1" eventType="touchUpInside" id="1sN-X7-9TQ"/>
                                     </connections>

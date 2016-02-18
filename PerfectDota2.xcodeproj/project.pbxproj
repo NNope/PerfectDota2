@@ -61,6 +61,10 @@
 		AD277F861C0F335B003E9AA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD277F351C0F335B003E9AA0 /* ViewController.m */; };
 		AD27B25F1C589C5B00429526 /* PDWallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27B25E1C589C5B00429526 /* PDWallModel.m */; };
 		AD30534D1C3B9FDD00BD8225 /* Location11.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AD30534C1C3B9FDD00BD8225 /* Location11.gpx */; };
+		AD32D18E1C609968004B89F2 /* PDMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32D18C1C609968004B89F2 /* PDMineCell.m */; };
+		AD32D18F1C609968004B89F2 /* PDMineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD32D18D1C609968004B89F2 /* PDMineCell.xib */; };
+		AD32D1931C60A95E004B89F2 /* PDMineCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32D1921C60A95E004B89F2 /* PDMineCellModel.m */; };
+		AD32D1951C60AAE0004B89F2 /* PDMineIcon.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD32D1941C60AAE0004B89F2 /* PDMineIcon.plist */; };
 		AD44D4611C22833800B436A0 /* PDVideoAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44D4601C22833800B436A0 /* PDVideoAlbumModel.m */; };
 		AD44D4641C22841100B436A0 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44D4631C22841100B436A0 /* NSString+Extension.m */; };
 		AD44D48A1C228A1B00B436A0 /* PDVideoAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD44D4891C228A1B00B436A0 /* PDVideoAlbumCell.m */; };
@@ -78,6 +82,7 @@
 		AD5E99FB1C16DB98009E14DE /* cor3.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5E99F51C16DB98009E14DE /* cor3.png */; };
 		AD5E99FC1C16DB98009E14DE /* cor4.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5E99F61C16DB98009E14DE /* cor4.png */; };
 		AD5E99FD1C16DB98009E14DE /* QRCodeScanLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5E99F71C16DB98009E14DE /* QRCodeScanLine@2x.png */; };
+		AD6598881C61DA5E0063ED8D /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5A1F881C604C500039AFF6 /* MineViewController.m */; };
 		AD7399EF1C11C299001D17F8 /* PDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7399EC1C11C299001D17F8 /* PDBaseViewController.m */; };
 		AD7399F01C11C299001D17F8 /* PDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7399EE1C11C299001D17F8 /* PDNavigationController.m */; };
 		AD75FFA21C19102100A48FA3 /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD75FFA11C19102100A48FA3 /* NewsTableViewController.m */; };
@@ -104,6 +109,12 @@
 		ADC3F9051C1841CE0028E58D /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F9041C1841CE0028E58D /* News.storyboard */; };
 		ADC3F90F1C184B0F0028E58D /* TopNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F90E1C184B0F0028E58D /* TopNewsModel.m */; };
 		ADC3F9581C1862350028E58D /* PDTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F9571C1862350028E58D /* PDTransitionAnimator.m */; };
+		ADCDFBE51C75997B00D975EF /* PDHero.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCDFBE41C75997B00D975EF /* PDHero.m */; };
+		ADCDFBEC1C759B6E00D975EF /* PDLikeHeroView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCDFBEA1C759B6E00D975EF /* PDLikeHeroView.m */; };
+		ADCDFBED1C759B6E00D975EF /* PDLikeHeroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCDFBEB1C759B6E00D975EF /* PDLikeHeroView.xib */; };
+		ADCDFBF11C75A93700D975EF /* PDLikeHeroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCDFBEF1C75A93700D975EF /* PDLikeHeroCell.m */; };
+		ADCDFBF21C75A93700D975EF /* PDLikeHeroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCDFBF01C75A93700D975EF /* PDLikeHeroCell.xib */; };
+		ADCDFBF41C75AC3000D975EF /* TempLikeHeros.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADCDFBF31C75AC3000D975EF /* TempLikeHeros.plist */; };
 		ADD42CAC1C5A0FEC00A0025E /* PDDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD42CAB1C5A0FEC00A0025E /* PDDataBase.m */; };
 		ADD42CB91C5A104F00A0025E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD42CAF1C5A104F00A0025E /* FMDatabase.m */; };
 		ADD42CBA1C5A104F00A0025E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD42CB11C5A104F00A0025E /* FMDatabaseAdditions.m */; };
@@ -299,6 +310,12 @@
 		AD27B25D1C589C5B00429526 /* PDWallModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDWallModel.h; sourceTree = "<group>"; };
 		AD27B25E1C589C5B00429526 /* PDWallModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDWallModel.m; sourceTree = "<group>"; };
 		AD30534C1C3B9FDD00BD8225 /* Location11.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location11.gpx; sourceTree = "<group>"; };
+		AD32D18B1C609968004B89F2 /* PDMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDMineCell.h; sourceTree = "<group>"; };
+		AD32D18C1C609968004B89F2 /* PDMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDMineCell.m; sourceTree = "<group>"; };
+		AD32D18D1C609968004B89F2 /* PDMineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDMineCell.xib; sourceTree = "<group>"; };
+		AD32D1911C60A95E004B89F2 /* PDMineCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDMineCellModel.h; sourceTree = "<group>"; };
+		AD32D1921C60A95E004B89F2 /* PDMineCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDMineCellModel.m; sourceTree = "<group>"; };
+		AD32D1941C60AAE0004B89F2 /* PDMineIcon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PDMineIcon.plist; sourceTree = "<group>"; };
 		AD44D45F1C22833800B436A0 /* PDVideoAlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDVideoAlbumModel.h; sourceTree = "<group>"; };
 		AD44D4601C22833800B436A0 /* PDVideoAlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDVideoAlbumModel.m; sourceTree = "<group>"; };
 		AD44D4621C22841100B436A0 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
@@ -315,6 +332,8 @@
 		AD4EFC571C11804D00407C0C /* PDTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTagView.m; sourceTree = "<group>"; };
 		AD4EFC581C11804D00407C0C /* PDTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTitleView.h; sourceTree = "<group>"; };
 		AD4EFC591C11804D00407C0C /* PDTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTitleView.m; sourceTree = "<group>"; };
+		AD5A1F871C604C500039AFF6 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		AD5A1F881C604C500039AFF6 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		AD5E99E71C16D991009E14DE /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCameraSwitchButton.h; sourceTree = "<group>"; };
 		AD5E99E81C16D991009E14DE /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCameraSwitchButton.m; sourceTree = "<group>"; };
 		AD5E99E91C16D991009E14DE /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderDelegate.h; sourceTree = "<group>"; };
@@ -376,6 +395,15 @@
 		ADC3F90E1C184B0F0028E58D /* TopNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopNewsModel.m; sourceTree = "<group>"; };
 		ADC3F9561C1862350028E58D /* PDTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTransitionAnimator.h; sourceTree = "<group>"; };
 		ADC3F9571C1862350028E58D /* PDTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTransitionAnimator.m; sourceTree = "<group>"; };
+		ADCDFBE31C75997B00D975EF /* PDHero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDHero.h; sourceTree = "<group>"; };
+		ADCDFBE41C75997B00D975EF /* PDHero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDHero.m; sourceTree = "<group>"; };
+		ADCDFBE91C759B6E00D975EF /* PDLikeHeroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDLikeHeroView.h; sourceTree = "<group>"; };
+		ADCDFBEA1C759B6E00D975EF /* PDLikeHeroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDLikeHeroView.m; sourceTree = "<group>"; };
+		ADCDFBEB1C759B6E00D975EF /* PDLikeHeroView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDLikeHeroView.xib; sourceTree = "<group>"; };
+		ADCDFBEE1C75A93700D975EF /* PDLikeHeroCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDLikeHeroCell.h; sourceTree = "<group>"; };
+		ADCDFBEF1C75A93700D975EF /* PDLikeHeroCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDLikeHeroCell.m; sourceTree = "<group>"; };
+		ADCDFBF01C75A93700D975EF /* PDLikeHeroCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDLikeHeroCell.xib; sourceTree = "<group>"; };
+		ADCDFBF31C75AC3000D975EF /* TempLikeHeros.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TempLikeHeros.plist; sourceTree = "<group>"; };
 		ADD42CAA1C5A0FEC00A0025E /* PDDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDDataBase.h; sourceTree = "<group>"; };
 		ADD42CAB1C5A0FEC00A0025E /* PDDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDDataBase.m; sourceTree = "<group>"; };
 		ADD42CAE1C5A104F00A0025E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -858,6 +886,9 @@
 				ADF8FE211C3131D100E38C80 /* PDCafeTabelHeaderView.xib */,
 				AD01FF301C3E5D5100EAC4F9 /* PDCafeAreaView.h */,
 				AD01FF311C3E5D5100EAC4F9 /* PDCafeAreaView.m */,
+				ADCDFBE91C759B6E00D975EF /* PDLikeHeroView.h */,
+				ADCDFBEA1C759B6E00D975EF /* PDLikeHeroView.m */,
+				ADCDFBEB1C759B6E00D975EF /* PDLikeHeroView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -904,6 +935,8 @@
 				ADC3F8FC1C1841400028E58D /* ZLKViewController.m */,
 				ADC3F8FD1C1841400028E58D /* ZXViewController.h */,
 				ADC3F8FE1C1841400028E58D /* ZXViewController.m */,
+				AD5A1F871C604C500039AFF6 /* MineViewController.h */,
+				AD5A1F881C604C500039AFF6 /* MineViewController.m */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -935,6 +968,10 @@
 				ADF928E21C437127000751A1 /* PDCafeModel.m */,
 				AD27B25D1C589C5B00429526 /* PDWallModel.h */,
 				AD27B25E1C589C5B00429526 /* PDWallModel.m */,
+				AD32D1911C60A95E004B89F2 /* PDMineCellModel.h */,
+				AD32D1921C60A95E004B89F2 /* PDMineCellModel.m */,
+				ADCDFBE31C75997B00D975EF /* PDHero.h */,
+				ADCDFBE41C75997B00D975EF /* PDHero.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -962,6 +999,12 @@
 				ADD53C2B1C5871510068292D /* PDWallpaperCell.h */,
 				ADD53C2C1C5871510068292D /* PDWallpaperCell.m */,
 				ADD53C2D1C5871510068292D /* PDWallpaperCell.xib */,
+				AD32D18B1C609968004B89F2 /* PDMineCell.h */,
+				AD32D18C1C609968004B89F2 /* PDMineCell.m */,
+				AD32D18D1C609968004B89F2 /* PDMineCell.xib */,
+				ADCDFBEE1C75A93700D975EF /* PDLikeHeroCell.h */,
+				ADCDFBEF1C75A93700D975EF /* PDLikeHeroCell.m */,
+				ADCDFBF01C75A93700D975EF /* PDLikeHeroCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1151,6 +1194,8 @@
 				AD30534C1C3B9FDD00BD8225 /* Location11.gpx */,
 				ADF8FDF21C31137800E38C80 /* dotacityData.plist */,
 				ADF8FDF31C31137800E38C80 /* dotacitylist.plist */,
+				AD32D1941C60AAE0004B89F2 /* PDMineIcon.plist */,
+				ADCDFBF31C75AC3000D975EF /* TempLikeHeros.plist */,
 				ADDA7F011C280D180030208A /* app1.zip */,
 			);
 			path = Resource;
@@ -1303,16 +1348,20 @@
 				ADF8FDF51C31137800E38C80 /* dotacitylist.plist in Resources */,
 				ADF8FDF41C31137800E38C80 /* dotacityData.plist in Resources */,
 				ADF8FE221C3131D100E38C80 /* PDCafeTabelHeaderView.xib in Resources */,
+				AD32D1951C60AAE0004B89F2 /* PDMineIcon.plist in Resources */,
 				ADDA7E861C2803960030208A /* 37x-Checkmark@2x.png in Resources */,
 				ADDA7E8B1C2803960030208A /* Default@2x.png in Resources */,
+				AD32D18F1C609968004B89F2 /* PDMineCell.xib in Resources */,
 				AD30534D1C3B9FDD00BD8225 /* Location11.gpx in Resources */,
 				AD277F591C0F335B003E9AA0 /* TTAdsCell.xib in Resources */,
 				AD5E99FD1C16DB98009E14DE /* QRCodeScanLine@2x.png in Resources */,
 				ADDA7E891C2803960030208A /* Default-iOS7@2x.png in Resources */,
 				AD277F801C0F335B003E9AA0 /* Images.xcassets in Resources */,
+				ADCDFBED1C759B6E00D975EF /* PDLikeHeroView.xib in Resources */,
 				ADDA7F021C280D180030208A /* app1.zip in Resources */,
 				AD277F3C1C0F335B003E9AA0 /* Main.storyboard in Resources */,
 				ADD53C2F1C5871510068292D /* PDWallpaperCell.xib in Resources */,
+				ADCDFBF21C75A93700D975EF /* PDLikeHeroCell.xib in Resources */,
 				ADDA7E8C1C2803960030208A /* Icon-iOS7@2x.png in Resources */,
 				ADDA7E851C2803960030208A /* 37x-Checkmark.png in Resources */,
 				ADD53C201C585EC10068292D /* PDCafeDetailViewController.xib in Resources */,
@@ -1320,6 +1369,7 @@
 				ADDA7E8E1C2803960030208A /* Icon-Small@2x.png in Resources */,
 				ADDA7E8A1C2803960030208A /* Default.png in Resources */,
 				ADDA7E8D1C2803960030208A /* Icon-Small.png in Resources */,
+				ADCDFBF41C75AC3000D975EF /* TempLikeHeros.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1361,13 +1411,16 @@
 				ADDA7EFD1C2808A50030208A /* prng.c in Sources */,
 				ADF928E31C437127000751A1 /* PDCafeModel.m in Sources */,
 				ADFC9F2D1C201689007DC20B /* PDNewestVideoModel.m in Sources */,
+				ADCDFBEC1C759B6E00D975EF /* PDLikeHeroView.m in Sources */,
 				AD277F4E1C0F335B003E9AA0 /* SDWebImageDownloaderOperation.m in Sources */,
 				ADD42CAC1C5A0FEC00A0025E /* PDDataBase.m in Sources */,
 				ADF485BD1C43B6D800857F4D /* NSString+Json.m in Sources */,
 				ADFC9F2A1C20163A007DC20B /* PDAuthorModel.m in Sources */,
 				ADF8FDF11C31115000E38C80 /* PDCityBaseModel.m in Sources */,
+				AD32D18E1C609968004B89F2 /* PDMineCell.m in Sources */,
 				ADC3F9021C1841400028E58D /* ZLKViewController.m in Sources */,
 				ADD42CBB1C5A104F00A0025E /* FMDatabasePool.m in Sources */,
+				AD6598881C61DA5E0063ED8D /* MineViewController.m in Sources */,
 				AD7399F01C11C299001D17F8 /* PDNavigationController.m in Sources */,
 				ADDA7ED71C2806660030208A /* ioapi.c in Sources */,
 				AD277F421C0F335B003E9AA0 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1464,11 +1517,14 @@
 				AD4EFC5C1C11804D00407C0C /* PDTitleView.m in Sources */,
 				AD44D4961C22B4FF00B436A0 /* PDBHcollectionCell.m in Sources */,
 				ADC3F8F11C1840DB0028E58D /* PDAdManager.m in Sources */,
+				ADCDFBF11C75A93700D975EF /* PDLikeHeroCell.m in Sources */,
 				ADF6AD5F1C19BC8100BE12DF /* NSObject+MJCoding.m in Sources */,
 				ADDCEAC81C213D3A00E0AE98 /* PDNewestVideoCell.m in Sources */,
+				AD32D1931C60A95E004B89F2 /* PDMineCellModel.m in Sources */,
 				AD5E99EF1C16D991009E14DE /* QRCodeReaderView.m in Sources */,
 				AD277F581C0F335B003E9AA0 /* TTAdsCell.m in Sources */,
 				ADD42CB91C5A104F00A0025E /* FMDatabase.m in Sources */,
+				ADCDFBE51C75997B00D975EF /* PDHero.m in Sources */,
 				ADD53C271C5865030068292D /* PDWallpaperViewController.m in Sources */,
 				AD277F3D1C0F335B003E9AA0 /* GlobeConst.m in Sources */,
 			);

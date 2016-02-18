@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>image</key>
+		<string>mine_icon_friend.png</string>
+		<key>name</key>
+		<string>好友</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>mine_icon_score.png</string>
+		<key>name</key>
+		<string>战绩</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>mine_icon_comment.png</string>
+		<key>name</key>
+		<string>我的评论</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>mine_icon_video_cache.png</string>
+		<key>name</key>
+		<string>视频缓存</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>mine_icon_background.png</string>
+		<key>name</key>
+		<string>背景封面</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>mine_icon_news.png</string>
+		<key>name</key>
+		<string>文章收藏</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>mine_icon_video.png</string>
+		<key>name</key>
+		<string>视频收藏</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>mine_icon_items.png</string>
+		<key>name</key>
+		<string>物品收藏</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>mine_icon_setting.png</string>
+		<key>name</key>
+		<string>设置</string>
+	</dict>
+</array>
+</plist>

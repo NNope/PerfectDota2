@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.titleView.title = @"网吧路线及周边地图";
-//    self.view.backgroundColor = PDGrayColor;
+    self.view.backgroundColor = [UIColor whiteColor];
     self.view.size = [UIScreen mainScreen].bounds.size;
     
     // 修改按钮
