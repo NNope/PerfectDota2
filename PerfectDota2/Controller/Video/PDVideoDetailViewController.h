@@ -7,7 +7,14 @@
 //
 
 #import "PDBaseViewController.h"
+#import "PDAVPlayerView.h"
 
 @interface PDVideoDetailViewController : PDBaseViewController
+@property (nonatomic ,strong) AVPlayer *player;
+@property (nonatomic ,strong) AVPlayerItem *playerItem;
+@property (nonatomic ,strong) AVPlayerLayer *playerLayer;
+@property (weak, nonatomic) IBOutlet UIView *playerView;
 
+
+- (IBAction)cacheClick:(id)sender;
 @end

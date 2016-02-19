@@ -166,6 +166,7 @@
 		ADDA7EFF1C2808A50030208A /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = ADDA7EF51C2808A50030208A /* sha1.c */; };
 		ADDA7F021C280D180030208A /* app1.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADDA7F011C280D180030208A /* app1.zip */; };
 		ADDCEAC81C213D3A00E0AE98 /* PDNewestVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDCEAC71C213D3A00E0AE98 /* PDNewestVideoCell.m */; };
+		ADE2F2291C76B7AE00884EA0 /* PDAVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE2F2281C76B7AE00884EA0 /* PDAVPlayerView.m */; };
 		ADEC32C81C2CE145008FEAC7 /* OpenShare+Alipay.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEC32BC1C2CE145008FEAC7 /* OpenShare+Alipay.m */; };
 		ADEC32C91C2CE145008FEAC7 /* OpenShare+QQ.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEC32BE1C2CE145008FEAC7 /* OpenShare+QQ.m */; };
 		ADEC32CA1C2CE145008FEAC7 /* OpenShare+Renren.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEC32C01C2CE145008FEAC7 /* OpenShare+Renren.m */; };
@@ -494,6 +495,8 @@
 		ADDA7F011C280D180030208A /* app1.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = app1.zip; sourceTree = "<group>"; };
 		ADDCEAC61C213D3A00E0AE98 /* PDNewestVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNewestVideoCell.h; sourceTree = "<group>"; };
 		ADDCEAC71C213D3A00E0AE98 /* PDNewestVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNewestVideoCell.m; sourceTree = "<group>"; };
+		ADE2F2271C76B7AE00884EA0 /* PDAVPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDAVPlayerView.h; sourceTree = "<group>"; };
+		ADE2F2281C76B7AE00884EA0 /* PDAVPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDAVPlayerView.m; sourceTree = "<group>"; };
 		ADEC32BB1C2CE145008FEAC7 /* OpenShare+Alipay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+Alipay.h"; sourceTree = "<group>"; };
 		ADEC32BC1C2CE145008FEAC7 /* OpenShare+Alipay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+Alipay.m"; sourceTree = "<group>"; };
 		ADEC32BD1C2CE145008FEAC7 /* OpenShare+QQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+QQ.h"; sourceTree = "<group>"; };
@@ -873,22 +876,12 @@
 		ADBE9DD51C2A93AD00FBA767 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ADE2F2261C76B78800884EA0 /* Video */,
+				ADE2F2251C76B32700884EA0 /* Mine */,
+				ADE2F2241C76B31A00884EA0 /* Cafe */,
 				AD01FF1D1C3E4D3400EAC4F9 /* Button */,
 				ADBE9DD61C2A93BE00FBA767 /* PDShareView.h */,
 				ADBE9DD71C2A93BE00FBA767 /* PDShareView.m */,
-				ADF8FDC01C31061200E38C80 /* PDSearchBar.h */,
-				ADF8FDC11C31061200E38C80 /* PDSearchBar.m */,
-				ADF8FDE61C31075100E38C80 /* PDCafeSearchView.h */,
-				ADF8FDE71C31075100E38C80 /* PDCafeSearchView.m */,
-				ADF8FE1C1C3126E200E38C80 /* PDCafeSearchView.xib */,
-				ADF8FE1E1C31319900E38C80 /* PDCafeTabelHeaderView.h */,
-				ADF8FE1F1C31319900E38C80 /* PDCafeTabelHeaderView.m */,
-				ADF8FE211C3131D100E38C80 /* PDCafeTabelHeaderView.xib */,
-				AD01FF301C3E5D5100EAC4F9 /* PDCafeAreaView.h */,
-				AD01FF311C3E5D5100EAC4F9 /* PDCafeAreaView.m */,
-				ADCDFBE91C759B6E00D975EF /* PDLikeHeroView.h */,
-				ADCDFBEA1C759B6E00D975EF /* PDLikeHeroView.m */,
-				ADCDFBEB1C759B6E00D975EF /* PDLikeHeroView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1201,6 +1194,42 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		ADE2F2241C76B31A00884EA0 /* Cafe */ = {
+			isa = PBXGroup;
+			children = (
+				ADF8FDC01C31061200E38C80 /* PDSearchBar.h */,
+				ADF8FDC11C31061200E38C80 /* PDSearchBar.m */,
+				ADF8FDE61C31075100E38C80 /* PDCafeSearchView.h */,
+				ADF8FDE71C31075100E38C80 /* PDCafeSearchView.m */,
+				ADF8FE1C1C3126E200E38C80 /* PDCafeSearchView.xib */,
+				ADF8FE1E1C31319900E38C80 /* PDCafeTabelHeaderView.h */,
+				ADF8FE1F1C31319900E38C80 /* PDCafeTabelHeaderView.m */,
+				ADF8FE211C3131D100E38C80 /* PDCafeTabelHeaderView.xib */,
+				AD01FF301C3E5D5100EAC4F9 /* PDCafeAreaView.h */,
+				AD01FF311C3E5D5100EAC4F9 /* PDCafeAreaView.m */,
+			);
+			name = Cafe;
+			sourceTree = "<group>";
+		};
+		ADE2F2251C76B32700884EA0 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				ADCDFBE91C759B6E00D975EF /* PDLikeHeroView.h */,
+				ADCDFBEA1C759B6E00D975EF /* PDLikeHeroView.m */,
+				ADCDFBEB1C759B6E00D975EF /* PDLikeHeroView.xib */,
+			);
+			name = Mine;
+			sourceTree = "<group>";
+		};
+		ADE2F2261C76B78800884EA0 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				ADE2F2271C76B7AE00884EA0 /* PDAVPlayerView.h */,
+				ADE2F2281C76B7AE00884EA0 /* PDAVPlayerView.m */,
+			);
+			name = Video;
+			sourceTree = "<group>";
+		};
 		ADEC32BA1C2CE145008FEAC7 /* openshare */ = {
 			isa = PBXGroup;
 			children = (
@@ -1406,6 +1435,7 @@
 				ADDA69DA1C27D1A00030208A /* PDVideoDetailViewController.m in Sources */,
 				ADF199CE1C3B587F00C493FA /* pinyin.c in Sources */,
 				ADF199CD1C3B587F00C493FA /* ChineseString.m in Sources */,
+				ADE2F2291C76B7AE00884EA0 /* PDAVPlayerView.m in Sources */,
 				AD01FF321C3E5D5100EAC4F9 /* PDCafeAreaView.m in Sources */,
 				ADDA69E11C27D1AC0030208A /* TopNewsCell.m in Sources */,
 				ADDA7EFD1C2808A50030208A /* prng.c in Sources */,

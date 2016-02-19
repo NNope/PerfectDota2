@@ -38,7 +38,7 @@
 }
 
 /**
- *  毫秒转换
+ *  时间长度转为字符串
  */
 + (NSString *)stringWithDuration:(NSInteger)duration
 {
@@ -73,5 +73,14 @@
     else
         return [NSString stringWithFormat:@"%lu",time];
 }
+
+// JSON字符串转为字典格式
++(NSDictionary *)parseJSONStringToNSDictionary:(NSString *)JSONString
+{
+    NSData *JSONData = [JSONString dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *responseJSON = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableLeaves error:nil];
+    return responseJSON;
+}
+
 
 @end

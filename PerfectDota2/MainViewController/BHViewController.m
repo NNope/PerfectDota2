@@ -18,8 +18,8 @@
 @end
 
 // 左右间距
-static const CGFloat kCollectionMargin = 15;
-static const CGFloat kCellMargin = 1;
+//static const CGFloat kCollectionMargin = 15;
+//static const CGFloat kCellMargin = 1;
 static const CGFloat kCellLineCount = 3;
 static NSString * const reuseIdentifier = @"PDBHcollectionCellID";
 @implementation BHViewController
