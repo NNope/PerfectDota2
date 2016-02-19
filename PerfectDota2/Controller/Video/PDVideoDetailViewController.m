@@ -17,7 +17,7 @@
     self.titleView.titleType = PDTitleTypeLikeAndShare;
     
     // 视频url
-    NSURL *videoUrl = [NSURL URLWithString:@"http://msgpush.dota2.com.cn:8282/m3u8/1455845665597.m3u8"];
+    NSURL *videoUrl = [NSURL URLWithString:@"http://msgpush.dota2.com.cn:8282/m3u8/1455868083345.m3u8"];
     // 创建一个item
     self.playerItem = [AVPlayerItem playerItemWithURL:videoUrl];
     // 创建player
@@ -43,13 +43,21 @@
     self.playerLayer.frame = self.playerView.bounds;
 }
 
--(void)dealloc
+-(void)viewDidDisappear:(BOOL)animated
 {
+    [super viewDidDisappear:animated];
+    
     [self.playerItem removeObserver:self forKeyPath:@"status"];
     [self.playerItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self.player replaceCurrentItemWithPlayerItem:nil];
 }
 
+-(void)dealloc
+{
+}
+
+#pragma mark - 监听
 /**
  *  KVO监听
  *
@@ -86,7 +94,7 @@
     {
         // 计算缓冲进度
         NSTimeInterval timeInterval = [self availableDuration];
-        NSLog(@"Time Interval:%f",timeInterval);
+        NSLog(@"Time Interval缓冲:%f",timeInterval);
         CMTime duration = self.playerItem.duration;
         CGFloat totalDuration = CMTimeGetSeconds(duration);
 //        [self.videoProgress setProgress:timeInterval / totalDuration animated:YES];
@@ -136,6 +144,7 @@
     }];
 }
 
+#pragma mark - 事件
 - (IBAction)cacheClick:(id)sender {
     [self.player play];
 }
