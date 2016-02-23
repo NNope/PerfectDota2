@@ -23,4 +23,13 @@
 	UI界面，收藏英雄显示等。设置模块。
 	
 	---
+	![](http://ww2.sinaimg.cn/large/b798f4c1jw1f1962zqs4pj20ku12an4c.jpg)
+	![](http://ww2.sinaimg.cn/large/b798f4c1jw1f19638v9woj20ku12athx.jpg)
+	![](http://ww2.sinaimg.cn/large/b798f4c1jw1f1964wrxr0j20ku12a79w.jpg)
+	![](http://ww4.sinaimg.cn/large/b798f4c1jw1f1963twkihj20ku12a45j.jpg)
+	
+	![](http://ww3.sinaimg.cn/large/b798f4c1jw1f19656ua98j20ku12an5n.jpg)
+	![](http://ww2.sinaimg.cn/large/b798f4c1jw1f1965f5nocj20ku12aah6.jpg)
+	
+	---
  <455067828@qq.com>
