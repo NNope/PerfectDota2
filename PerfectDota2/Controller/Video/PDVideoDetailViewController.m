@@ -17,7 +17,7 @@
     self.titleView.titleType = PDTitleTypeLikeAndShare;
     
     // 视频url
-    NSURL *videoUrl = [NSURL URLWithString:@"http://msgpush.dota2.com.cn:8282/m3u8/1455868083345.m3u8"];
+    NSURL *videoUrl = [NSURL URLWithString:@"http://pan.baidu.com/play/video#video/path=%2FMov%2FS6E03%20720p.mp4&t=-1"];
     // 创建一个item
     self.playerItem = [AVPlayerItem playerItemWithURL:videoUrl];
     // 创建player
@@ -43,18 +43,30 @@
     self.playerLayer.frame = self.playerView.bounds;
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.player replaceCurrentItemWithPlayerItem:nil];
+    [self.playerItem removeObserver:self forKeyPath:@"status"];
+    [self.playerItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 -(void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
     
-    [self.playerItem removeObserver:self forKeyPath:@"status"];
-    [self.playerItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self.player replaceCurrentItemWithPlayerItem:nil];
+    
+//    [self.player pause];
+//    [self.player.currentItem cancelPendingSeeks];
+//    [self.player.currentItem.asset cancelLoading];
+//    self.player = nil;
+//    self.playerItem = nil;
 }
 
 -(void)dealloc
 {
+    PDLog(@"11");
 }
 
 #pragma mark - 监听
