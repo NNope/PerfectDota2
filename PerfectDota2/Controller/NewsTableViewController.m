@@ -16,6 +16,7 @@
 #import "PDWebViewController.h"
 #import "MJRefreshFooterView.h"
 #import "PDDataBase.h"
+#import "PDVideoDetailViewController.h"
 
 
 static  NSString *const TopNewsCellID = @"TopNewsCellID";
@@ -392,9 +393,21 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
         [self.navigationController pushViewController:detailVC animated:YES];
 
     }
+    else
+    {
+        // 视频的点击要另外处理
+    }
     
-    // 视频的点击要另外处理
 
+}
+
+//  跳转视频后 执行segue后 会调用的方法
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSInteger x = self.tableView.indexPathForSelectedRow.row;
+    PDVideoDetailViewController *contactVc = (PDVideoDetailViewController *)segue.destinationViewController;// 目标VC
+    contactVc.videoModel = self.videoList[x];
+    
 }
 
 #pragma mark - TopCellDelagate

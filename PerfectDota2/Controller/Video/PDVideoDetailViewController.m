@@ -16,8 +16,33 @@
     self.titleView.title = @"视频";
     self.titleView.titleType = PDTitleTypeLikeAndShare;
     
+    PDLog(@"%@",self.videoModel);
+    
+    // 发送请求获取视频info
+//    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+//    [param setObject:@"wanmeidota2" forKey:@"appid"];
+//    [param setObject:@"0daec764d638e42e70690f98e0b1bbad" forKey:@"sig"];
+//    [param setObject:@"mp4" forKey:@"type"];
+//    [param setObject:self.videoModel.link forKey:@"url"];
+//    
+//    NSString *Url = [NSString stringWithFormat:@"http://msgpush.dota2.com.cn:8282/api/public/video/youkuVideoFile"];
+//    PDLog(@"%@",param);
+//    AFHTTPSessionManager *mr = [[AFHTTPSessionManager alloc] init];
+//    // 置空 从NSdata
+//    mr.responseSerializer = [AFHTTPResponseSerializer serializer];
+////    mr.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
+//    [mr POST:Url parameters:param success:^(NSURLSessionDataTask *task, id responseObject) {
+//        // 先转为字符串
+//        NSString *strData = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+//        // 解析为字典
+//        NSDictionary *dict = [NSString parseJSONStringToNSDictionary:strData];
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        PDLog(@"%@",error);
+//    }];
+
+    
     // 视频url
-    NSURL *videoUrl = [NSURL URLWithString:@"http://pan.baidu.com/play/video#video/path=%2FMov%2FS6E03%20720p.mp4&t=-1"];
+    NSURL *videoUrl = [NSURL URLWithString:@"http://120.25.226.186:32812/resources/videos/minion_01.mp4"];
     // 创建一个item
     self.playerItem = [AVPlayerItem playerItemWithURL:videoUrl];
     // 创建player
@@ -66,7 +91,7 @@
 
 -(void)dealloc
 {
-    PDLog(@"11");
+    PDLog(@"dealloc");
 }
 
 #pragma mark - 监听

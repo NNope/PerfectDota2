@@ -10,5 +10,12 @@
 
 @interface NSString (Json)
 
+/**
+ *  json字符串转字典
+ *
+ *  @param JSONString <#JSONString description#>
+ *
+ *  @return <#return value description#>
+ */
 +(NSDictionary *)parseJSONStringToNSDictionary:(NSString *)JSONString;
 @end

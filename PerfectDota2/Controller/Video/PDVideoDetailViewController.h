@@ -8,12 +8,16 @@
 
 #import "PDBaseViewController.h"
 #import "PDAVPlayerView.h"
+#import "PDNewestVideoModel.h"
 
 @interface PDVideoDetailViewController : PDBaseViewController
 @property (nonatomic ,strong) AVPlayer *player;
 @property (nonatomic ,strong) AVPlayerItem *playerItem;
 @property (nonatomic ,strong) AVPlayerLayer *playerLayer;
 @property (weak, nonatomic) IBOutlet UIView *playerView;
+
+@property (nonatomic, strong) PDNewestVideoModel *videoModel;
+
 
 
 - (IBAction)cacheClick:(id)sender;

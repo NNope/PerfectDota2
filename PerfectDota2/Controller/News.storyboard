@@ -234,7 +234,7 @@
                                     <outlet property="imgView" destination="5nJ-Ru-jQm" id="Hit-sd-dF0"/>
                                     <outlet property="titleLabel" destination="sS5-z8-DSJ" id="AwO-Ku-o48"/>
                                     <outlet property="typeLabel" destination="YHg-ie-r2h" id="4ig-hd-Iqq"/>
-                                    <segue destination="RMa-j0-jNk" kind="show" id="x0Y-uj-qd3"/>
+                                    <segue destination="RMa-j0-jNk" kind="show" id="o0h-vs-XO6"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PDVideoAlbumCellID" rowHeight="90" id="SPN-h1-SsI" customClass="PDVideoAlbumCell">
@@ -326,7 +326,6 @@
                                     <outlet property="last_upedLabel" destination="RBe-o6-DFc" id="Iko-HT-oR3"/>
                                     <outlet property="titleLabel" destination="2tM-5r-HwY" id="yHD-rq-Cui"/>
                                     <outlet property="totalLabel" destination="zM6-cY-0Db" id="4aR-JN-7Fv"/>
-                                    <segue destination="4In-0y-man" kind="show" id="y5o-fN-Wgj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -339,31 +338,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Tk-2t-kql" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="453" y="768"/>
-        </scene>
-        <!--Video List View Controller-->
-        <scene sceneID="bl5-TB-8Iq">
-            <objects>
-                <viewController id="4In-0y-man" customClass="PDVideoListViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xgY-aB-Nei"/>
-                        <viewControllerLayoutGuide type="bottom" id="1EL-6f-Yzn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YGU-Zi-haI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="common_instruct_img" translatesAutoresizingMaskIntoConstraints="NO" id="40j-tM-H7h">
-                                <rect key="frame" x="256" y="219" width="89" height="89"/>
-                                <animations/>
-                            </imageView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QfT-DO-zg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1239" y="1090"/>
         </scene>
         <!--Video Detail View Controller-->
         <scene sceneID="8Wd-w1-UMd">
@@ -502,7 +476,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="common_instruct_img" width="89" height="89"/>
         <image name="video_cach" width="22" height="22"/>
     </resources>
 </document>

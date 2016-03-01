@@ -10,6 +10,7 @@
 #import "PDMineCell.h"
 #import "PDLikeHeroView.h"
 #import "PDHero.h"
+#import "PDSettingViewController.h"
 
 #define kWindowHeight 256.0f
 #define kImageHeight 375.0f
@@ -43,6 +44,16 @@ static  NSString *const PDMineCellID = @"PDMineCellID";
     PDMineCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:PDMineCellID forIndexPath:indexPath];
     cell.mineCellModel = self.collectionList[indexPath.item];
     return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    PDMineCellModel *model = self.collectionList[indexPath.item];
+    if ([model.name isEqualToString:@"设置"])
+    {
+        PDSettingViewController *b = [[PDSettingViewController alloc] init];
+        [self.navigationController pushViewController:b animated:YES];
+    }
 }
 
 // header footer
