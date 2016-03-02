@@ -343,7 +343,7 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
         }
             // 其余新闻模块
             PDNewsCell *newsCell = [tableView dequeueReusableCellWithIdentifier:PDNewsCellID forIndexPath:indexPath];
-            newsCell.pdNewsModel = self.newsList[index];
+            newsCell.pdNewsModel = [PDNewsModel mj_objectWithKeyValues:self.newsList[index]];
             return newsCell;
         
     }
