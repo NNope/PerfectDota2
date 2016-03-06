@@ -16,7 +16,7 @@
 - (void)pdTitleView:(PDTitleView *)titleView clickRrightButton:(UIButton *)rightbtn;
 @end
 
-typedef enum {
+typedef NS_ENUM(NSInteger,PDTitleType) {
     PDTitleTypeNone,           // 无
     PDTitleTypeLike,           // 收藏
     PDTitleTypeInfo,           // 信息
@@ -24,8 +24,16 @@ typedef enum {
     PDTitleTypeLikeAndShare,   // 收藏+分享
     PDTitleTypeInfoAndShare,   // 信息+分享
     PDTitleTypeRefresh,        // 刷新
-
-}PDTitleType;
+    
+};
+//typedef NS_ENUM(NSInteger,PDTitleType) {
+//    PDTitleTypeNone           = 0,      // 无
+//    PDTitleTypeLike           = 1 << 0, // 收藏
+//    PDTitleTypeInfo           = 1 << 1,// 信息
+//    PDTitleTypeShare          = 1 << 2,// 分享
+//    PDTitleTypeRefresh        = 1 << 3,// 刷新
+//    
+//};
 
 @interface PDTitleView : UIView
 @property (nonatomic, weak) id<PDTitleViewDelegate> delegate;

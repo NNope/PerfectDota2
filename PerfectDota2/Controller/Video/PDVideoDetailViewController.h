@@ -9,8 +9,13 @@
 #import "PDBaseViewController.h"
 #import "PDAVPlayerView.h"
 #import "PDNewestVideoModel.h"
+#import "AFURLSessionManager.h"
+
 
 @interface PDVideoDetailViewController : PDBaseViewController
+{
+    AFURLSessionManager *sessionMgr;
+}
 @property (nonatomic ,strong) AVPlayer *player;
 @property (nonatomic ,strong) AVPlayerItem *playerItem;
 @property (nonatomic ,strong) AVPlayerLayer *playerLayer;
