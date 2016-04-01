@@ -9,6 +9,31 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (Frame)
+
+
+/**
+ *  添加渐变图层
+ *
+ *  @param cgColorArray 颜色数组 其余默认值
+ */
+- (void)addGradientLayerWithColors:(NSArray *)cgColorArray;
+
+/**
+ *  增加渐变图层
+ *
+ *  @param cgColorArray  颜色数组
+ *  @param floatNumArray 区间分布
+ *  @param startPoint    0,0左上角
+ *  @param endPoint      1,1右下角
+ */
+- (void)addGradientLayerWithColors:(NSArray *)cgColorArray locations:(NSArray *)floatNumArray startPoint:(CGPoint )startPoint endPoint:(CGPoint)endPoint;
+
+
+
+
+/**
+ * *********************    Frame      *********************
+ */
 - (void)setX:(CGFloat)x;
 
 - (CGFloat)x;

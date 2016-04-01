@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="b4E-AA-Mab">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="b4E-AA-Mab">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -15,7 +15,6 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Q4q-cv-k21">
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -47,7 +46,6 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSh-Ac-Qxe">
                                         <rect key="frame" x="563" y="33" width="25" height="25"/>
-                                        <animations/>
                                         <state key="normal" image="qrcode"/>
                                         <connections>
                                             <action selector="scanClick:" destination="IwK-JN-4aN" eventType="touchUpInside" id="WJ3-E8-lpe"/>
@@ -58,14 +56,12 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j35-VT-evj" userLabel="RedLine">
                                                 <rect key="frame" x="0.0" y="43" width="556" height="1"/>
-                                                <animations/>
                                                 <color key="backgroundColor" red="0.9882352941176471" green="0.050980392156862744" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="AHI-z4-8tW"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="j35-VT-evj" secondAttribute="trailing" id="8i2-JU-WIn"/>
@@ -74,7 +70,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.074509803921568626" green="0.070588235294117646" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="36B-iP-9Et" firstAttribute="top" secondItem="xD2-0u-jhT" secondAttribute="top" constant="20" id="16j-Hr-0cv"/>
@@ -88,10 +83,8 @@
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24a-v2-pK9">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <animations/>
                             </scrollView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="24a-v2-pK9" firstAttribute="leading" secondItem="pk4-6s-6pu" secondAttribute="leading" id="3uY-0f-UXM"/>
@@ -132,7 +125,6 @@
                     <view key="view" contentMode="scaleToFill" id="dkx-4I-AHY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -157,19 +149,16 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcb-iP-UAa" userLabel="TagView" customClass="PDTagView">
                                         <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                        <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWW-ev-eDO">
                                         <rect key="frame" x="566" y="30" width="26" height="26"/>
-                                        <animations/>
                                         <state key="normal" image="navi_btn_info"/>
                                         <connections>
                                             <action selector="zlkInfoClick:" destination="eqn-Z5-dAj" eventType="touchUpInside" id="2qH-Up-et1"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.074509803920000006" green="0.070588235289999995" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="pcb-iP-UAa" secondAttribute="trailing" id="2Mt-3z-9Kp"/>
@@ -183,10 +172,8 @@
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XlE-DJ-y3S">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <animations/>
                             </scrollView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GUk-jQ-y6t" firstAttribute="leading" secondItem="dME-kV-Cop" secondAttribute="leading" id="8hp-Jw-Olh"/>
@@ -216,7 +203,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x8b-sV-R1i">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="eqn-Z5-dAj" kind="relationship" relationship="rootViewController" id="csp-e6-qkG"/>
@@ -240,7 +226,6 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UF7-gs-fWf">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lAw-hO-GKV">
                                     <size key="itemSize" width="50" height="50"/>
@@ -258,7 +243,6 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cJU-Xt-ZRe">
                                                     <rect key="frame" x="17" y="15" width="80" height="80"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="cJU-Xt-ZRe" secondAttribute="height" multiplier="1:1" id="0dH-1u-2la"/>
                                                         <constraint firstAttribute="width" constant="80" id="ocR-Ub-x5Q"/>
@@ -266,16 +250,13 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="特权网吧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWM-Jn-3k3">
                                                     <rect key="frame" x="0.0" y="95" width="114" height="25"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                         <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="cJU-Xt-ZRe" firstAttribute="top" secondItem="jvA-ax-Lv2" secondAttribute="top" constant="15" id="Fex-sa-2gj"/>
@@ -298,7 +279,6 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="UF7-gs-fWf" firstAttribute="leading" secondItem="1lv-67-bXB" secondAttribute="leading" id="4gT-f9-Ak0"/>
@@ -339,7 +319,6 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t98-sl-TLf">
                                         <rect key="frame" x="558" y="29" width="22" height="22"/>
-                                        <animations/>
                                         <state key="normal" image="video_cach"/>
                                         <connections>
                                             <action selector="scanClick:" destination="IwK-JN-4aN" eventType="touchUpInside" id="f4x-ma-tDx"/>
@@ -347,11 +326,9 @@
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ree-0e-oFM" userLabel="TagView" customClass="PDTagView">
                                         <rect key="frame" x="0.0" y="20" width="540" height="44"/>
-                                        <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.074509803920000006" green="0.070588235289999995" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Ree-0e-oFM" secondAttribute="bottom" id="7cs-co-yLX"/>
@@ -371,10 +348,8 @@
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ea-aw-69r">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <animations/>
                             </scrollView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qRc-vz-vDx" firstAttribute="leading" secondItem="mb6-XO-m6r" secondAttribute="leading" id="38N-hy-nSM"/>
@@ -404,7 +379,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="psP-bh-j34">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="biu-Ze-pmr" kind="relationship" relationship="rootViewController" id="iGP-Cd-G1f"/>
@@ -425,7 +399,6 @@
                     <view key="view" contentMode="scaleToFill" id="7iX-VZ-Ek8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="sPY-HO-Kaa"/>
@@ -448,7 +421,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ta1-si-0Mm">
                                 <rect key="frame" x="38" y="93" width="46" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="ffj-Fa-JRr" kind="show" id="QPH-DL-7Xa"/>
@@ -456,7 +428,6 @@
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hmy-UH-rHk">
                                 <rect key="frame" x="154" y="132" width="388" height="267"/>
-                                <animations/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1YC-jp-Xqx">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
@@ -470,25 +441,20 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sWR-62-Hlw">
                                     <rect key="frame" x="0.0" y="0.0" width="388" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
                                 </collectionReusableView>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6Gc-HU-wdl">
                                     <rect key="frame" x="0.0" y="100" width="388" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
                                 </collectionReusableView>
                             </collectionView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -507,7 +473,6 @@
                     <view key="view" contentMode="scaleToFill" id="DPP-gd-JYB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -523,7 +488,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VAO-0Z-9Kw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="8Pt-nV-irA" kind="relationship" relationship="rootViewController" id="J1N-8J-RBm"/>
@@ -542,7 +506,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zZA-hm-W8r">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="EDa-uA-j6e" kind="relationship" relationship="rootViewController" id="uFW-He-ZnJ"/>
@@ -561,7 +524,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IP4-Em-QfL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="IwK-JN-4aN" kind="relationship" relationship="rootViewController" id="nen-cy-Z4y"/>

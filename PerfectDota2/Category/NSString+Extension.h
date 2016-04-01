@@ -34,4 +34,56 @@
  *  @return <#return value description#>
  */
 +(NSDictionary *)parseJSONStringToNSDictionary:(NSString *)JSONString;
+
+
+/**
+ *  MD5处理
+ */
++ (NSString *)md5Encode:(NSString *)str;
+
+/**
+ *  根据error获得string
+ *
+ *  @param error
+ *
+ *  @return NSString
+ */
++ (NSString *)stringFromError:(NSError *)error;
+
+
+/**
+ **************** url处理 ********************
+ */
+
+//判断获取url 后缀名
++ (BOOL)isUrl:(NSString *)url SuffixInArray:(NSArray *)arraySuffix;
+
+//获取去除参数的url
++ (NSString *)getUrlWithoutParameter:(NSString *)url;
+
+//获取url 参数值
++ (NSString *)getValueOfParameter:(NSString *)key url:(NSString *)url;
+
+
+
+
+
+/**
+ ***************** 设备 ********************
+ */
+
+/**
+ *  获取当前版本号
+ *
+ *  @return 当前软件版本号
+ */
++ (NSString *)getCurrentVersion;
+
+/**
+ *  获得运营商
+ *
+ *  @return 运营商
+ */
++(NSString*)getCarrier;
+
 @end

@@ -183,32 +183,34 @@
 
 #pragma mark - 事件
 - (IBAction)cacheClick:(id)sender {
-//    [self.player play];
+    
+    [self.player play];
+    
     //致空请求
-    if (sessionMgr) {
-        sessionMgr = nil;
-    }
-    
-    //创建请求
-    sessionMgr = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    
-    //添加请求接口
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://msgpush.dota2.com.cn/m3u8/1457159547765.m3u8"]];
-    //发送下载请求
-    NSURLSessionDownloadTask *downloadTask = [sessionMgr downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
-        
-        //设置存放文件的位置（此Demo把文件保存在iPhone沙盒中的Documents文件夹中。关于如何获取文件路径，请自行搜索相关资料）
-        NSURL *filePath = [NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]];
-        // 应答信息中的文件名
-        return [filePath URLByAppendingPathComponent:[response suggestedFilename]];
-        
-    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
-        
-        //下载完成
-        NSLog(@"Finish and Download to: %@", filePath);
-    }];
-    
-    //开始下载
-    [downloadTask resume];
+//    if (sessionMgr) {
+//        sessionMgr = nil;
+//    }
+//    
+//    //创建请求
+//    sessionMgr = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+//    
+//    //添加请求接口
+//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://msgpush.dota2.com.cn/m3u8/1457159547765.m3u8"]];
+//    //发送下载请求
+//    NSURLSessionDownloadTask *downloadTask = [sessionMgr downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+//        
+//        //设置存放文件的位置（此Demo把文件保存在iPhone沙盒中的Documents文件夹中。关于如何获取文件路径，请自行搜索相关资料）
+//        NSURL *filePath = [NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]];
+//        // 应答信息中的文件名
+//        return [filePath URLByAppendingPathComponent:[response suggestedFilename]];
+//        
+//    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+//        
+//        //下载完成
+//        NSLog(@"Finish and Download to: %@", filePath);
+//    }];
+//    
+//    //开始下载
+//    [downloadTask resume];
 }
 @end

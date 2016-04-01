@@ -130,6 +130,7 @@
 		ADD53C271C5865030068292D /* PDWallpaperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD53C261C5865030068292D /* PDWallpaperViewController.m */; };
 		ADD53C2E1C5871510068292D /* PDWallpaperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD53C2C1C5871510068292D /* PDWallpaperCell.m */; };
 		ADD53C2F1C5871510068292D /* PDWallpaperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD53C2D1C5871510068292D /* PDWallpaperCell.xib */; };
+		ADD652581C914715001FE9EE /* NSDictionary+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD652571C914715001FE9EE /* NSDictionary+Category.m */; };
 		ADDA69DA1C27D1A00030208A /* PDVideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA69D21C27D1A00030208A /* PDVideoDetailViewController.m */; };
 		ADDA69DB1C27D1A00030208A /* PDVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA69D41C27D1A00030208A /* PDVideoListViewController.m */; };
 		ADDA69E11C27D1AC0030208A /* TopNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA69DF1C27D1AC0030208A /* TopNewsCell.m */; };
@@ -166,6 +167,7 @@
 		ADDA7EFF1C2808A50030208A /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = ADDA7EF51C2808A50030208A /* sha1.c */; };
 		ADDA7F021C280D180030208A /* app1.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADDA7F011C280D180030208A /* app1.zip */; };
 		ADDCEAC81C213D3A00E0AE98 /* PDNewestVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDCEAC71C213D3A00E0AE98 /* PDNewestVideoCell.m */; };
+		ADDD11591C97DABD006E7489 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDD11581C97DABD006E7489 /* UIImage+Category.m */; };
 		ADE2F2291C76B7AE00884EA0 /* PDAVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE2F2281C76B7AE00884EA0 /* PDAVPlayerView.m */; };
 		ADE6ED771C7C22D6007AA79A /* PDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE6ED761C7C22D6007AA79A /* PDSettingViewController.m */; };
 		ADE6ED7A1C7C241F007AA79A /* PDSetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE6ED791C7C241F007AA79A /* PDSetItem.m */; };
@@ -440,6 +442,8 @@
 		ADD53C2B1C5871510068292D /* PDWallpaperCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDWallpaperCell.h; sourceTree = "<group>"; };
 		ADD53C2C1C5871510068292D /* PDWallpaperCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDWallpaperCell.m; sourceTree = "<group>"; };
 		ADD53C2D1C5871510068292D /* PDWallpaperCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDWallpaperCell.xib; sourceTree = "<group>"; };
+		ADD652561C914715001FE9EE /* NSDictionary+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Category.h"; sourceTree = "<group>"; };
+		ADD652571C914715001FE9EE /* NSDictionary+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Category.m"; sourceTree = "<group>"; };
 		ADDA69D11C27D1A00030208A /* PDVideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDVideoDetailViewController.h; sourceTree = "<group>"; };
 		ADDA69D21C27D1A00030208A /* PDVideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDVideoDetailViewController.m; sourceTree = "<group>"; };
 		ADDA69D31C27D1A00030208A /* PDVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDVideoListViewController.h; sourceTree = "<group>"; };
@@ -502,6 +506,8 @@
 		ADDA7F011C280D180030208A /* app1.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = app1.zip; sourceTree = "<group>"; };
 		ADDCEAC61C213D3A00E0AE98 /* PDNewestVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNewestVideoCell.h; sourceTree = "<group>"; };
 		ADDCEAC71C213D3A00E0AE98 /* PDNewestVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNewestVideoCell.m; sourceTree = "<group>"; };
+		ADDD11571C97DABD006E7489 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
+		ADDD11581C97DABD006E7489 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		ADE2F2271C76B7AE00884EA0 /* PDAVPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDAVPlayerView.h; sourceTree = "<group>"; };
 		ADE2F2281C76B7AE00884EA0 /* PDAVPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDAVPlayerView.m; sourceTree = "<group>"; };
 		ADE6ED751C7C22D6007AA79A /* PDSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSettingViewController.h; sourceTree = "<group>"; };
@@ -693,6 +699,10 @@
 				AD44D4631C22841100B436A0 /* NSString+Extension.m */,
 				ADF485BB1C43B6D800857F4D /* NSString+Json.h */,
 				ADF485BC1C43B6D800857F4D /* NSString+Json.m */,
+				ADD652561C914715001FE9EE /* NSDictionary+Category.h */,
+				ADD652571C914715001FE9EE /* NSDictionary+Category.m */,
+				ADDD11571C97DABD006E7489 /* UIImage+Category.h */,
+				ADDD11581C97DABD006E7489 /* UIImage+Category.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1366,6 +1376,7 @@
 				TargetAttributes = {
 					AD277D2A1C0E8125003E9AA0 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 22AC4HSXH4;
 					};
 				};
 			};
@@ -1502,8 +1513,10 @@
 				ADC3F8F21C1840DB0028E58D /* PDNetworkTool.m in Sources */,
 				ADF6AD591C19BC8100BE12DF /* MJExtensionConst.m in Sources */,
 				AD75FFA21C19102100A48FA3 /* NewsTableViewController.m in Sources */,
+				ADD652581C914715001FE9EE /* NSDictionary+Category.m in Sources */,
 				ADDA69F01C27D5710030208A /* PDLocalWebViewController.m in Sources */,
 				AD277F461C0F335B003E9AA0 /* AFURLResponseSerialization.m in Sources */,
+				ADDD11591C97DABD006E7489 /* UIImage+Category.m in Sources */,
 				ADD53C1F1C585EC10068292D /* PDCafeDetailViewController.m in Sources */,
 				AD277F4C1C0F335B003E9AA0 /* SDWebImageDecoder.m in Sources */,
 				AD277F841C0F335B003E9AA0 /* PDTabBarButton.m in Sources */,
@@ -1709,6 +1722,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1720,7 +1734,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tzt.NewcftTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tzt111;
 				PRODUCT_NAME = PerfectDota2;
 				PROVISIONING_PROFILE = "";
 			};
@@ -1731,7 +1745,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: First Capital Securities Co.,Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1742,9 +1757,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tzt.NewcftTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tzt111;
 				PRODUCT_NAME = PerfectDota2;
-				PROVISIONING_PROFILE = "0990275c-d526-4d9f-8db6-72a59d5f2482";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

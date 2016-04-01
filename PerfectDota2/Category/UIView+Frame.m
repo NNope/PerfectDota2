@@ -9,6 +9,43 @@
 #import "UIView+Frame.h"
 
 @implementation UIView (Frame)
+
+/**
+ *  添加渐变图层
+ *
+ *  @param cgColorArray 颜色数组 其余默认值
+ */
+- (void)addGradientLayerWithColors:(NSArray *)cgColorArray
+{
+    [self addGradientLayerWithColors:cgColorArray locations:nil startPoint:CGPointMake(0.0, 0.5) endPoint:CGPointMake(1.0, 0.5)];
+}
+
+/**
+ *  增加渐变图层
+ *
+ *  @param cgColorArray  颜色数组
+ *  @param floatNumArray 区间分布
+ *  @param startPoint    0,0左上角
+ *  @param endPoint      1,1右下角
+ */
+- (void)addGradientLayerWithColors:(NSArray *)cgColorArray locations:(NSArray *)floatNumArray startPoint:(CGPoint )startPoint endPoint:(CGPoint)endPoint
+{
+    CAGradientLayer *layer = [CAGradientLayer layer];
+    layer.frame = self.bounds;
+    if (cgColorArray && [cgColorArray count] > 0) {
+        layer.colors = cgColorArray;
+    }else{
+        return;
+    }
+    if (floatNumArray && [floatNumArray count] == [cgColorArray count]) {
+        layer.locations = floatNumArray;
+    }
+    layer.startPoint = startPoint;
+    layer.endPoint = endPoint;
+    [self.layer addSublayer:layer];
+}
+
+
 - (void)setX:(CGFloat)x
 {
     CGRect frame = self.frame;
