@@ -62,7 +62,7 @@ static NSString *const AdImgNameKey = @"AdImgName";
         NSString *imgSize = [NSString stringWithFormat:@"size_%d",(int)[UIScreen mainScreen].bounds.size.height*2];
         // 好蠢 没有6的尺寸
         if (IS_Iphone6)
-            imgSize = @"size_1136";
+            imgSize = @"size_1920";
         // url
         NSString *imgUrl = flashImg[imgSize];
         NSString *imgName = [self getImgNameWithUrl:imgUrl];
