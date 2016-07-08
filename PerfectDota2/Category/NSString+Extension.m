@@ -67,6 +67,7 @@
     return [NSString stringWithFormat:@"%@:%@:%@",strHou,strMin,strSec];
 }
 
+// 获取2位时间
 + (NSString *)getTwoLength:(NSInteger)time
 {
     if (time < 10)
@@ -147,9 +148,67 @@
 }
 
 
-/**
- **************** url处理 ********************
- */
+#pragma mark - 文件处理
+// 获取该路径下的 所有子文件目录
+- (NSMutableArray *)contentsFilenames
+{
+    // 1.文件管理者
+    NSFileManager *mgr = [NSFileManager defaultManager];
+    NSMutableArray *arr = [NSMutableArray array];
+    // 2.判断file是否存在
+    BOOL isDirectory = NO;
+    BOOL fileExists = [mgr fileExistsAtPath:self isDirectory:&isDirectory];
+    // 文件\文件夹不存在
+    if (fileExists == NO) return 0;
+    
+    // 3.判断file是否为文件夹
+    if (isDirectory) {
+        // 是文件夹  子文件
+        NSArray *subpaths = [mgr contentsOfDirectoryAtPath:self error:nil];
+        for (NSString *subpath in subpaths)
+        {
+            NSString *fullSubpath = [self stringByAppendingPathComponent:subpath];
+            [arr addObjectsFromArray:[fullSubpath contentsFilenames]];
+        }
+        return arr;
+    }
+    else
+    {
+        // 不是文件夹, 文件
+        [arr addObject:self];
+        return arr;
+    }
+}
+
+// 获取该目录下的 文件夹总大小
+- (long long)fileSize
+{
+    // 1.文件管理者
+    NSFileManager *mgr = [NSFileManager defaultManager];
+    
+    // 2.判断file是否存在
+    BOOL isDirectory = NO;
+    BOOL fileExists = [mgr fileExistsAtPath:self isDirectory:&isDirectory];
+    // 文件\文件夹不存在
+    if (fileExists == NO) return 0;
+    
+    // 3.判断file是否为文件夹
+    if (isDirectory) { // 是文件夹
+        NSArray *subpaths = [mgr contentsOfDirectoryAtPath:self error:nil];
+        long long totalSize = 0;
+        for (NSString *subpath in subpaths) {
+            NSString *fullSubpath = [self stringByAppendingPathComponent:subpath];
+            totalSize += [fullSubpath fileSize];
+        }
+        return totalSize;
+    } else { // 不是文件夹, 文件
+        // 直接计算当前文件的尺寸
+        NSDictionary *attr = [mgr attributesOfItemAtPath:self error:nil];
+        return [attr[NSFileSize] longLongValue];
+    }
+}
+
+#pragma mark - url处理
 
 //判断获取url 后缀名
 + (BOOL)isUrl:(NSString *)url SuffixInArray:(NSArray *)arraySuffix
@@ -211,11 +270,8 @@
     return @"0";
 }
 
+#pragma mark - 设备
 
-
-/**
- ***************** 设备 ********************
- */
 // 得到当前软件版本号
 + (NSString *)getCurrentVersion
 {

@@ -51,6 +51,19 @@
 + (NSString *)stringFromError:(NSError *)error;
 
 
+
+/**
+ **************** 文件处理 ********************
+ */
+// 获取该路径下的 所有子文件目录
+- (NSMutableArray *)contentsFilenames;
+
+// 获取该目录下的 文件夹总大小
+- (long long)fileSize;
+
+
+
+
 /**
  **************** url处理 ********************
  */
