@@ -36,14 +36,17 @@ extern NSString *const topNewsDict;
 /**
  *  Cafe
  */
-// 上次选择的城市名
+// 上次选择的城市名 首页显示的选择城市
 extern NSString *const lastChooseCityNameKey;
 // 上次选择的Latitude
 extern NSString *const lastChooseLatitudeKey;
 // 上次选择的Longitude
 extern NSString *const lastChooseLongitudeKey;
-// 上次定位的城市名
+// 上次定位的城市名 城市列表中显示的定位城市
 extern NSString *const lastLocationCityNameKey;
+
+// 历史城市数组
+// #define historyCityFileNameKey
 
 /**
  *  Library/Caches

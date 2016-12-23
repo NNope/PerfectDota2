@@ -26,7 +26,7 @@
     UIView *gestureView = gesture.view;
     
     
-    
+    // 修改左滑pop的动画
     self.transition = [[PDTransitionAnimator alloc] initWithNavigationController:self];
     UIScreenEdgePanGestureRecognizer *popRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self.transition action:@selector(panPopAction:)];
     popRecognizer.delegate = self;

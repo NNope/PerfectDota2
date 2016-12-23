@@ -103,11 +103,6 @@
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - PDTabBarDelegate
 -(void)tabBar:(PDTabBar *)tabBar didSelectItemFrom:(NSInteger)from To:(NSInteger)to
 {

@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <BaiduMapAPI_Location/BMKLocationComponent.h>
 #import <BaiduMapAPI_Search/BMKSearchComponent.h>
-#import <BaiduMapAPI_Map/BMKMapComponent.h>
 
 @protocol PDLocationToolDelegate <NSObject>
 
@@ -43,17 +42,17 @@
 + (instancetype)shareTocationTool;
 
 /**
- *  读取上次选择的城市
+ *  读取上次选择的城市 用于首页显示的选择城市
  */
 - (NSString *)readLastChooseCity;
 /**
- *  读取上次定位的城市
+ *  读取上次定位的城市 用于城市列表中显示的定位城市
  */
 - (NSString *)readLastLocationCity;
 - (CGFloat)readLastLocationLatitude;
 - (CGFloat)readLastLocationLongitude;
 /**
- *  读取历史城市
+ *  读取历史城市 用于最近选择过的城市
  */
 - (NSMutableArray *)readHistoryCity;
 
@@ -64,7 +63,7 @@
 - (void)saveChooseCity:(NSString *)chooseCityName;
 
 /**
- *  定位最新的城市
+ *  定位最新的城市 进行定位
  */
 - (void)getLocationCity;
 
