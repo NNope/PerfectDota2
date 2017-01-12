@@ -16,7 +16,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PerfectDota2/View/PDCafeAreaView.m"
@@ -26,6 +26,22 @@
             startingLineNumber = "20"
             endingLineNumber = "20"
             landmarkName = "-initWithFrame:areaList:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PerfectDota2/Controller/BH/Cafe/PDCafeTableViewController.m"
+            timestampString = "505719382.572708"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "-ChooseIsEqualToLocation"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

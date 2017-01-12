@@ -26,7 +26,7 @@
         for (int i = 0; i < self.areaList.count; i++)
         {
             PDHistoryCityButton *btn = [[PDHistoryCityButton alloc] init];
-            [btn addTarget:self action:@selector(chooseArea:) forControlEvents:UIControlEventTouchDown];
+            [btn addTarget:self action:@selector(chooseArea:) forControlEvents:UIControlEventTouchUpInside];
             // 取出这个市辖区
             PDCityBaseModel *area = (PDCityBaseModel *)self.areaList[i];
             [btn setTitle:area.name forState:UIControlStateNormal];
