@@ -17,10 +17,56 @@
 
 @end
 
+
+//static NSUncaughtExceptionHandler newhandler;
+static void (*ori_NSSetUncaughtExceptionHandler)(NSUncaughtExceptionHandler * handler );
+static void my_NSSetUncaughtExceptionHandler( NSUncaughtExceptionHandler * handler);
+
+// 我的捕获handler
+static NSUncaughtExceptionHandler custom_exceptionHandler;
+static NSUncaughtExceptionHandler *oldhandler;
 @implementation AppDelegate
 
+// 注册
+-(BOOL)install
+{
+    if(NSGetUncaughtExceptionHandler() != custom_exceptionHandler)
+        oldhandler = NSGetUncaughtExceptionHandler();
+    
+        NSSetUncaughtExceptionHandler(&custom_exceptionHandler);
+
+    return YES;
+}
+// 注册回原有的
+void uninstall()
+{
+    NSSetUncaughtExceptionHandler(oldhandler);
+}
+
+// 我的实现
+void custom_exceptionHandler(NSException *exception)
+{
+    NSArray *arr = [exception callStackSymbols];//得到当前调用栈信息
+    NSString *reason = [exception reason];//非常重要，就是崩溃的原因
+    NSString *name = [exception name];//异常类型
+    // 本地化
+    NSString * strM = [NSString stringWithFormat:@" Version : %@ \n ExceptionTime : %@ \n Exception type : %@ \n Crash reason : %@ \n Call stack info : %@",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"],[NSDate date],name, reason, arr];
+    [[NSUserDefaults standardUserDefaults] setObject:strM forKey:@"EXCEPTION"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    // 注册回之前的handler
+    uninstall();
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+//    NSSetUncaughtExceptionHandler(&my_uncaught_exception_handler);
+//    my_NSSetUncaughtExceptionHandler(my_uncaught_exception_handler);
+    
+    [self install];
+    // 增加异常捕获
+//    NSSetUncaughtExceptionHandler(&getExceptionLog);
     
     PDLog(@"沙盒Caches目录-----%@",[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]);
     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:isFirstRefresh];
@@ -39,6 +85,10 @@
     if (!ret) {
         NSLog(@"manager start failed!");
     }
+    
+    
+    
+    
     return YES;
 }
 
