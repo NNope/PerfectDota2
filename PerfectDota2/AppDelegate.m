@@ -64,7 +64,7 @@ void custom_exceptionHandler(NSException *exception)
 //    NSSetUncaughtExceptionHandler(&my_uncaught_exception_handler);
 //    my_NSSetUncaughtExceptionHandler(my_uncaught_exception_handler);
     
-    [self install];
+//    [self install];
     // 增加异常捕获
 //    NSSetUncaughtExceptionHandler(&getExceptionLog);
     

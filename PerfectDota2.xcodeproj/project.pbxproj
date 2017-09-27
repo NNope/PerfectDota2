@@ -20,6 +20,7 @@
 		AD1064051C322CA300EB6350 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1064041C322CA300EB6350 /* CoreTelephony.framework */; };
 		AD1064061C322CAE00EB6350 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1063FE1C322C3B00EB6350 /* libc++.1.tbd */; };
 		AD1064081C322E1800EB6350 /* BaiduMapAPI_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1064071C322E1800EB6350 /* BaiduMapAPI_Map.framework */; };
+		AD11E6391ED2FC5100C24117 /* LocationC.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AD11E6381ED2FC5100C24117 /* LocationC.gpx */; };
 		AD277F3A1C0F335B003E9AA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD277EBC1C0F335B003E9AA0 /* AppDelegate.m */; };
 		AD277F3B1C0F335B003E9AA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD277EBD1C0F335B003E9AA0 /* LaunchScreen.storyboard */; };
 		AD277F3C1C0F335B003E9AA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD277EBF1C0F335B003E9AA0 /* Main.storyboard */; };
@@ -239,6 +240,7 @@
 		AD1064021C322C8200EB6350 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		AD1064041C322CA300EB6350 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		AD1064071C322E1800EB6350 /* BaiduMapAPI_Map.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Map.framework; path = SDK/BaiduMapAPI_Map.framework; sourceTree = "<group>"; };
+		AD11E6381ED2FC5100C24117 /* LocationC.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LocationC.gpx; sourceTree = "<group>"; };
 		AD277D2B1C0E8125003E9AA0 /* PerfectDota2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectDota2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD277EBB1C0F335B003E9AA0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD277EBC1C0F335B003E9AA0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1230,6 +1232,7 @@
 			children = (
 				ADB96F061C51EFCF00CE9040 /* mapapi.bundle */,
 				AD30534C1C3B9FDD00BD8225 /* Location11.gpx */,
+				AD11E6381ED2FC5100C24117 /* LocationC.gpx */,
 				ADF8FDF21C31137800E38C80 /* dotacityData.plist */,
 				ADF8FDF31C31137800E38C80 /* dotacitylist.plist */,
 				AD32D1941C60AAE0004B89F2 /* PDMineIcon.plist */,
@@ -1431,6 +1434,7 @@
 				AD277F591C0F335B003E9AA0 /* TTAdsCell.xib in Resources */,
 				AD5E99FD1C16DB98009E14DE /* QRCodeScanLine@2x.png in Resources */,
 				ADDA7E891C2803960030208A /* Default-iOS7@2x.png in Resources */,
+				AD11E6391ED2FC5100C24117 /* LocationC.gpx in Resources */,
 				AD277F801C0F335B003E9AA0 /* Images.xcassets in Resources */,
 				ADCDFBED1C759B6E00D975EF /* PDLikeHeroView.xib in Resources */,
 				ADDA7F021C280D180030208A /* app1.zip in Resources */,
@@ -1724,6 +1728,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 22AC4HSXH4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1734,7 +1739,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tzt.NewcftTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.txx.dev;
 				PRODUCT_NAME = PerfectDota2;
 				PROVISIONING_PROFILE = "";
 			};
@@ -1747,6 +1752,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 22AC4HSXH4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1757,7 +1763,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tzt.NewcftTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.txx.dev;
 				PRODUCT_NAME = PerfectDota2;
 				PROVISIONING_PROFILE = "";
 			};
