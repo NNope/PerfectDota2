@@ -1,4 +1,4 @@
-//
+
 //  ZXViewController.m
 //  PrefectDota2
 //
@@ -18,9 +18,6 @@ static CGFloat TagLabelWidth;
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
-    
     [self removeSuperTitleView];
     
     // 全部 官方 更新 媒体  赛事
@@ -30,8 +27,7 @@ static CGFloat TagLabelWidth;
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    
+
     if (self.childViewControllers.count<=0)
     {
             [[NSNotificationCenter defaultCenter]postNotificationName:PDNewsAllRefresh object:nil];
@@ -45,7 +41,7 @@ static CGFloat TagLabelWidth;
         UIViewController *vc1 = [self.childViewControllers firstObject];
         vc1.view.frame = self.contentScrollView.bounds;
         
-        vc1.view.frame = CGRectMake(0, -20, SCREENWIDTH, self.contentScrollView.height);
+        vc1.view.frame = CGRectMake(0, 0, SCREENWIDTH, self.contentScrollView.height);
         
         [self.contentScrollView addSubview:vc1.view];
 

@@ -41,6 +41,17 @@ static NSString * const reuseIdentifier = @"PDBHcollectionCellID";
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    if (@available(iOS 11.0, *))
+    {
+        self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        
+    }
+    else
+    {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+        
+    }
+    
     if (!self.isAutoRefresh)
     {
         [self.collectionView headerBeginRefreshing];

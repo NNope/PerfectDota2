@@ -171,8 +171,10 @@ static CGFloat const TITLEHEIGHT = 25;
             
             [_urlArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 //                [NSThread sleepForTimeInterval:5];
-                UIImageView *temp = [[UIImageView alloc] init];
-                [temp sd_setImageWithURL:obj placeholderImage:nil];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    UIImageView *temp = [[UIImageView alloc] init];
+                    [temp sd_setImageWithURL:obj placeholderImage:nil];
+                });
                 
             }];
 

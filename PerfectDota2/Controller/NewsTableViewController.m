@@ -33,6 +33,7 @@ static  NSString *const PDVideoAlbumCellID = @"PDVideoAlbumCellID";
 #pragma mark - lifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // 注册cell
     if (self.pdNewsTableType == PDNewsTableTypeAll)
     {
