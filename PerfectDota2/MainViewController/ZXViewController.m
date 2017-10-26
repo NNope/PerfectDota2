@@ -27,7 +27,13 @@ static CGFloat TagLabelWidth;
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-
+    if (@available(iOS 11,*))
+    {
+    }
+    else
+    {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     if (self.childViewControllers.count<=0)
     {
             [[NSNotificationCenter defaultCenter]postNotificationName:PDNewsAllRefresh object:nil];
@@ -41,7 +47,7 @@ static CGFloat TagLabelWidth;
         UIViewController *vc1 = [self.childViewControllers firstObject];
         vc1.view.frame = self.contentScrollView.bounds;
         
-        vc1.view.frame = CGRectMake(0, 0, SCREENWIDTH, self.contentScrollView.height);
+//        vc1.view.frame = CGRectMake(0, 0, SCREENWIDTH, self.contentScrollView.height);
         
         [self.contentScrollView addSubview:vc1.view];
 
