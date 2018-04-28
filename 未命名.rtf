@@ -1,0 +1,119 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab543
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\b\fs18 \cf2 \CocoaLigature0 2018-04-23 13:52:29.131368+0800 QDBankdemo[3151:503681] 
+\f1 \'bc\'d3\'d4\'d8\'d7\'ca\'d4\'b4\'ba\'cd
+\f0 theme
+\f1 \'cd\'ea\'b1\'cf
+\f0 \
+2018-04-23 13:52:29.131660+0800 QDBankdemo[3151:503681] AntUI
+\f1 \'bc\'d3\'d4\'d8\'b2\'e5\'bc\'fe\'cd\'ea\'b1\'cf
+\f0 \
+2018-04-23 13:52:29.166188+0800 QDBankdemo[3151:503681] +[CATransaction synchronize] called within transaction\
+2018-04-23 13:52:29.291444+0800 QDBankdemo[3151:503681] You've implemented -[<UIApplicationDelegate> application:performFetchWithCompletionHandler:], but you still need to add "fetch" to the list of your supported UIBackgroundModes in your Info.plist.\
+2018-04-23 13:52:29.294607+0800 QDBankdemo[3151:503681] UniformRpcGateway: https://cn-hangzhou-component-gw.cloud.alipay.com/mgw.htm\
+2018-04-23 13:52:29.295037+0800 QDBankdemo[3151:503681] resendMap:\{\
+\}\
+=================================================================\
+Main Thread Checker: UI API called on a background thread: -[UIApplication applicationState]\
+PID: 3151, TID: 503753, Thread name: APFileLog, Queue name: com.apple.root.default-qos.overcommit, QoS: 21\
+Backtrace:\
+4   QDBankdemo                          0x000000010a5d1152 -[APFileLog writeAesFileLogImpl:] + 357\
+5   Foundation                          0x000000010dea01e8 __NSThreadPerformPerform + 334\
+6   CoreFoundation                      0x000000010fb0e101 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17\
+7   CoreFoundation                      0x000000010fbadf71 __CFRunLoopDoSource0 + 81\
+8   CoreFoundation                      0x000000010faf2a19 __CFRunLoopDoSources0 + 185\
+9   CoreFoundation                      0x000000010faf1fff __CFRunLoopRun + 1279\
+10  CoreFoundation                      0x000000010faf1889 CFRunLoopRunSpecific + 409\
+11  CoreFoundation                      0x000000010fb2de03 CFRunLoopRun + 99\
+12  QDBankdemo                          0x000000010a5d075f -[APFileLog runLogThread] + 94\
+13  Foundation                          0x000000010de6812c __NSThread__start__ + 1197\
+14  libsystem_pthread.dylib             0x0000000111fa893b _pthread_body + 180\
+15  libsystem_pthread.dylib             0x0000000111fa8887 _pthread_body + 0\
+16  libsystem_pthread.dylib             0x0000000111fa808d thread_start + 13\
+2018-04-23 13:52:29.296036+0800 QDBankdemo[3151:503753] [reports] Main Thread Checker: UI API called on a background thread: -[UIApplication applicationState]\
+PID: 3151, TID: 503753, Thread name: APFileLog, Queue name: com.apple.root.default-qos.overcommit, QoS: 21\
+Backtrace:\
+4   QDBankdemo                          0x000000010a5d1152 -[APFileLog writeAesFileLogImpl:] + 357\
+5   Foundation                          0x000000010dea01e8 __NSThreadPerformPerform + 334\
+6   CoreFoundation                      0x000000010fb0e101 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17\
+7   CoreFoundation                      0x000000010fbadf71 __CFRunLoopDoSource0 + 81\
+8   CoreFoundation                      0x000000010faf2a19 __CFRunLoopDoSources0 + 185\
+9   CoreFoundation                      0x000000010faf1fff __CFRunLoopRun + 1279\
+10  CoreFoundation                      0x000000010faf1889 CFRunLoopRunSpecific + 409\
+11  CoreFoundation                      0x000000010fb2de03 CFRunLoopRun + 99\
+12  QDBankdemo                          0x000000010a5d075f -[APFileLog runLogThread] + 94\
+13  Foundation                          0x000000010de6812c __NSThread__start__ + 1197\
+14  libsystem_pthread.dylib             0x0000000111fa893b _pthread_body + 180\
+15  libsystem_pthread.dylib             0x0000000111fa8887 _pthread_body + 0\
+16  libsystem_pthread.dylib             0x0000000111fa808d thread_start + 13\
+2018-04-23 13:52:29.566128+0800 QDBankdemo[3151:503681] [DynamicRelease] Initialize. Current version: 1.0.0.0. Bandage meta version: 1.0.0.0\
+2018-04-23 13:52:29.568620+0800 QDBankdemo[3151:503681] Could not successfully update network info during initialization.\
+2018-04-23 13:52:29.574055+0800 QDBankdemo[3151:503761] [DynamicRelease] Local bandage uuids: (\
+)\
+2018-04-23 13:52:29.653516+0800 QDBankdemo[3151:503681] [DynamicRelease] Initialize. Current version: 1.0.0.0. Bandage meta version: 1.0.0.0\
+2018-04-23 13:52:29.654059+0800 QDBankdemo[3151:503681] LoginServiceImpl started\
+2018-04-23 13:52:29.656072+0800 QDBankdemo[3151:503681] [Sync] biz CMDSDK-NOTIFY hasRegisterNotification\
+2018-04-23 13:52:29.656586+0800 QDBankdemo[3151:503766] [RavenDB] Initialized in main thread ? No\
+2018-04-23 13:52:29.657485+0800 QDBankdemo[3151:503681] [Sync] biz CMDSDK-USER hasRegisterNotification\
+2018-04-23 13:52:29.658521+0800 QDBankdemo[3151:503766] [logging] misuse at line 147979 of [2b0954060f]\
+2018-04-23 13:52:29.667615+0800 QDBankdemo[3151:503766] [Sync] mpaasConfigRead change:0\
+2018-04-23 13:52:29.668232+0800 QDBankdemo[3151:503681] Could not successfully update network info during initialization.\
+2018-04-23 13:52:29.668618+0800 QDBankdemo[3151:503766] [Sync] mpaasConfigInit appId:7CF4C64190946 appKey:7CF4C64190946_IOS syncport:443 syncserver:cn-hangzhou-mss-link.cloud.alipay.com workspaceId:FinMallDev appVersion:1.0.0.0 deviceid:WnfLsql5apsDAOS/N213VSgZ isIPServer:0 productId:7CF4C64190946_IOS-FinMallDev\
+2018-04-23 13:52:29.669683+0800 QDBankdemo[3151:503681] [DynamicRelease] Local bandage uuids: (\
+)\
+2018-04-23 13:52:29.670266+0800 QDBankdemo[3151:503766] [Sync] load cfg from storage:(null)\
+2018-04-23 13:52:29.672370+0800 QDBankdemo[3151:503736] rpc timeout
+\f1 \'a3\'ba
+\f0 20.000000\
+2018-04-23 13:52:29.674443+0800 QDBankdemo[3151:503766] [Sync] has column name=pushData\
+2018-04-23 13:52:29.676406+0800 QDBankdemo[3151:503766] [Sync] has column name=saveType\
+2018-04-23 13:52:29.684612+0800 QDBankdemo[3151:503767] Rpc sign string v2:\
+Operation-Type=alipay.client.getUnionResource&Request-Data=CAESHDdDRjRDNjQxOTA5NDZfSU9TLUZpbk1hbGxEZXYaBzEuMC4wLjAiBzEuMC4wLjAqGFduZkxzcWw1YXBzREFPUy9OMjEzVlNnWjIAOgVhcHBsZUIGaVBob25lYgQxMS4yagRXSUZJegQIAxoAegIIAYIBAA==&Ts=MBn3uVq\
+2018-04-23 13:52:29.691187+0800 QDBankdemo[3151:503767] request.allHTTPHeaderFields2:\{\
+    AppId = 7CF4C64190946;\
+    "Content-Type" = "application/protobuf";\
+    Did = "WnfLsql5apsDAOS/N213VSgZ";\
+    "Operation-Type" = "alipay.client.getUnionResource";\
+    Platform = IOS;\
+    Sign = 98bf8d7371d3e00f6d02bc06b81f02d6;\
+    Ts = MBn3uVq;\
+    UniformGateway = "https://cn-hangzhou-component-gw.cloud.alipay.com/mgw.htm";\
+    Version = 2;\
+    WorkspaceId = FinMallDev;\
+\},url:https://cn-hangzhou-component-gw.cloud.alipay.com/mgw.htm\
+2018-04-23 13:52:29.693038+0800 QDBankdemo[3151:503767] start h2:alipay.client.getUnionResource\
+2018-04-23 13:52:29.740948+0800 QDBankdemo[3151:503681] current VC is <DFNavigationController: 0x7ff14b01f400>\
+2018-04-23 13:52:29.743621+0800 QDBankdemo[3151:503681] current VC is <MPTabBarController: 0x7ff14b83c800>\
+2018-04-23 13:52:29.746536+0800 QDBankdemo[3151:503681] current VC is <DemoViewController: 0x7ff14ac2d1b0>\
+2018-04-23 13:52:30.072180+0800 QDBankdemo[3151:503767] alipay.client.getUnionResource resp:\{\
+    "Content-Length" = 18;\
+    Date = "Mon, 23 Apr 2018 05:52:30 GMT";\
+    Server = Tengine;\
+    "Strict-Transport-Security" = "max-age=31536000";\
+    "result-memo" = "SUCCESS.";\
+    "result-status" = 1000;\
+\}\
+2018-04-23 13:52:30.072541+0800 QDBankdemo[3151:503767] pb class:UnionResourceResult\
+2018-04-23 13:52:30.073017+0800 QDBankdemo[3151:503767] pb class:UnionResourceResult object:success: 1\
+message: 
+\f1 \'b3\'c9\'b9\'a6
+\f0 \
+info \{\
+  bizType: 1\
+  success: 1\
+  rollback: 0\
+\}\
+,len:18\
+2018-04-23 13:52:30.073197+0800 QDBankdemo[3151:503767] alipay.client.getUnionResource,cdn:0,etag:0 spdy:0 h2:1 pb:0-Response:\
+\{\
+    resultStatus = 1000;\
+\}\
+2018-04-23 13:52:30.074014+0800 QDBankdemo[3151:503736] APDynamicDeploymentModel dealloc with <APDynamicDeploymentBusinessRequestModel: 0x60000022fc60>\
+2018-04-23 13:52:30.074151+0800 QDBankdemo[3151:503736] <APDynamicDeploymentBandageInteraction: 0x60000001d1b0> dealloc\
+}
